@@ -165,11 +165,12 @@ function cssUrl(path) {
   return `url("${href.replace(/["\\]/g, "")}")`;
 }
 
-function borderImage(src, slice, width, repeat = "stretch") {
+function borderImage(src, slice, width, repeat = "stretch", imageWidth = 0, outset = 0) {
   const w = `${width}px`;
+  const iw = `${imageWidth || width}px`;
   return `border-style: solid !important;
   border-width: ${w} !important;
-  border-image: ${cssUrl(src)} ${slice} / ${w} / 0 ${repeat} !important;
+  border-image: ${cssUrl(src)} ${slice} / ${iw} / ${outset}px ${repeat} !important;
   border-radius: 0 !important;`;
 }
 
@@ -219,14 +220,14 @@ ${HUD} .portrait-hud .portrait-stat-block:not(.player-details):before {
     out.push(`
 ${HUD} .portrait-hud,
 ${HUD} .ability-menu:before${t.tooltipFrame ? "" : ",\n.ech-tooltip"} {
-  ${borderImage(t.frame, t.frameSlice, t.frameWidth, t.frameRepeat)}
+  ${borderImage(t.frame, t.frameSlice, t.frameWidth, t.frameRepeat, t.frameImageWidth, t.frameOutset)}
 }
 ${HUD} .ability-menu { padding: ${t.frameWidth}px !important; }`);
   }
   if (t.tooltipFrame) {
     out.push(`
 .ech-tooltip {
-  ${borderImage(t.tooltipFrame, t.tooltipFrameSlice, t.tooltipFrameWidth, "stretch")}
+  ${borderImage(t.tooltipFrame, t.tooltipFrameSlice, t.tooltipFrameWidth, t.frameRepeat, t.tooltipFrameImageWidth, t.tooltipFrameOutset)}
 }`);
   }
   if (t.buttonFrame) {
@@ -238,13 +239,13 @@ ${bar ? "" : `${HUD} .actions-container:before,`}
 ${HUD} .movement-hud:not(:has(.button-hud-button)),
 ${HUD} .weapon-sets .weapon-set,
 ${HUD} .portrait-hud .player-button${style.joinedStats ? "" : `,\n${HUD} .portrait-hud .portrait-stat-block:not(.player-details)`} {
-  ${borderImage(t.buttonFrame, t.buttonFrameSlice, t.buttonFrameWidth)}
+  ${borderImage(t.buttonFrame, t.buttonFrameSlice, t.buttonFrameWidth, t.frameRepeat, t.buttonFrameImageWidth, t.buttonFrameOutset)}
 }`);
   }
   if (bar && t.barFrame) {
     out.push(`
 ${HUD} .action-hud .actions-container {
-  ${borderImage(t.barFrame, t.barFrameSlice, t.barFrameWidth, t.frameRepeat)}
+  ${borderImage(t.barFrame, t.barFrameSlice, t.barFrameWidth, t.frameRepeat, t.barFrameImageWidth, t.barFrameOutset)}
 }`);
   }
   if (t.seal) {
@@ -330,7 +331,7 @@ ${HUD} .ability-menu ul > li { border-top: 1px solid #00000099 !important; box-s
 ${HUD} .ability-menu ul > li.ability-title,
 ${HUD} .ability-menu ul.ability-toggle li {
   position: relative;
-  background: linear-gradient(to bottom, #3a2814 0%, #1c130a 55%, #120c06 100%) !important;
+  background: linear-gradient(to bottom, color-mix(in srgb, ${x.headerBg} 75%, #ffffff 25%) 0%, ${x.headerBg} 55%, color-mix(in srgb, ${x.headerBg} 55%, #000000) 100%) !important;
   letter-spacing: 0.05em;
   color: ${x.panelText} !important;
   border: 1px solid ${c["abilityMenu-border"]} !important;
@@ -376,6 +377,107 @@ ${HUD} .ability-menu .asc-skill-icon {
 .ech-tooltip .ech-tooltip-header .asc-skill-icon {
   margin-right: 0.5ch;
   color: ${c["tooltip-header-color"]};
+}`);
+  }
+  if (s.abilityMedallions) {
+    out.push(`
+${HUD} .ability-menu .asc-ability-icon {
+  width: 1.9em; height: 1.9em; line-height: calc(1.9em - 4px);
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #3e3732, #0c0a09 72%);
+  border: 2px solid ${c["abilityMenu-border"]};
+  box-shadow: 0 0 0 1px #000000, inset 0 0 4px #000000;
+  color: ${x.iconTint} !important;
+  opacity: 1 !important;
+  font-size: 0.9em;
+  margin-right: 0.8ch !important;
+  vertical-align: middle;
+}`);
+  }
+  if (s.highlightProficient) {
+    out.push(`
+${HUD} .ability-menu ul > li.asc-proficient {
+  background: ${x.highlight} !important;
+  border: 1px solid ${c["abilityMenu-border"]} !important;
+  border-radius: 999px;
+  box-shadow: inset 0 0 8px #00000033 !important;
+  font-weight: 700;
+}
+${HUD} .ability-menu ul > li.asc-proficient > span:first-child > i.fa-check,
+${HUD} .ability-menu ul > li.asc-proficient > span:first-child > i.fa-check-double {
+  width: 1.35em; height: 1.35em; line-height: calc(1.35em - 4px);
+  text-align: center; border-radius: 50%;
+  background: #17110b; color: ${x.iconTint} !important;
+  border: 2px solid ${c["abilityMenu-border"]};
+  font-size: 0.85em;
+}`);
+  }
+  if (s.tintIcons) {
+    out.push(`
+${HUD} .action-element:not(.item-button)::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: ${x.iconTint};
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}`);
+  }
+  if (s.statBoxColors) {
+    out.push(`
+${HUD} .portrait-hud .portrait-stat-block:not(.player-details):before {
+  background-image: none !important;
+  background-color: ${x.statBackground} !important;
+}
+${HUD} .portrait-hud .portrait-stat-block:not(.player-details):nth-child(1 of .portrait-stat-block:not(.player-details)):before {
+  background: linear-gradient(to bottom, color-mix(in srgb, ${x.hpBox} 80%, #ffffff 20%), ${x.hpBox} 60%, color-mix(in srgb, ${x.hpBox} 60%, #000000)) !important;
+}
+${HUD} .portrait-hud .portrait-stat-block span[style*="movement-baseMovement-background"] {
+  align-self: stretch;
+  display: flex; align-items: center;
+  margin: -0.75rem -0.75rem -0.75rem 0.35em;
+  padding: 0 0.55em;
+  background: linear-gradient(to bottom, color-mix(in srgb, ${x.accentBox} 80%, #ffffff 20%), ${x.accentBox} 60%);
+  border-left: 1px solid ${c["mainAction-base-border"]};
+}`);
+  }
+  if (s.tooltipDivider) {
+    out.push(`
+.ech-tooltip .ech-tooltip-header::after {
+  content: "";
+  display: block;
+  height: 1px;
+  margin-top: 0.45em;
+  background: linear-gradient(90deg, transparent, ${c["tooltip-header-color"]}99 8%, ${c["tooltip-header-color"]}99 92%, transparent);
+}`);
+  }
+  if (t.slotFlourish) {
+    out.push(`
+${HUD} .feature-spell-slots .spell-cantrip::before,
+${HUD} .feature-spell-slots .spell-cantrip::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 110px;
+  height: 28px;
+  background: ${cssUrl(t.slotFlourish)} center / contain no-repeat;
+  pointer-events: none;
+}
+${HUD} .feature-spell-slots .spell-cantrip::before { right: calc(100% + 6px); transform: translateY(-50%) scaleX(-1); }
+${HUD} .feature-spell-slots .spell-cantrip::after { left: calc(100% + 6px); transform: translateY(-50%); }`);
+  }
+  if (t.tooltipDrape) {
+    out.push(`
+.ech-tooltip-container::before {
+  content: "";
+  position: absolute;
+  left: 14%;
+  bottom: -46px;
+  width: 64px;
+  height: 120px;
+  background: ${cssUrl(t.tooltipDrape)} center bottom / contain no-repeat;
+  pointer-events: none;
+  z-index: -1;
 }`);
   }
   if (s.tooltipTitleLeft) {

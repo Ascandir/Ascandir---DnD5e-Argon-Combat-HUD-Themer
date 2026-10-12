@@ -211,6 +211,7 @@ export class ThemeEditor extends ApplicationV2 {
         <label>${L("editor.ornLayer")}<select data-path="${p}.layer">${opt(["front", "back"], o.layer, "layer")}</select></label>
         ${num("width", L("editor.ornWidth"))}
         ${num("height", L("editor.ornHeight"))}
+        <label class="act-orn-flip"><input type="checkbox" data-path="${p}.flip" ${o.flip ? "checked" : ""}> ${L("editor.ornFlip")}</label>
       </div>`;
   }
 
@@ -277,6 +278,11 @@ export class ThemeEditor extends ApplicationV2 {
           <div class="act-field"><label>${L("editor.joinedStats")}</label>${check("style.joinedStats", s.joinedStats)}</div>
           <div class="act-field"><label>${L("editor.continuousBar")}</label>${check("style.continuousBar", s.continuousBar)}</div>
           <div class="act-field"><label>${L("editor.hideName")}</label>${check("style.hideName", s.hideName)}</div>
+          <div class="act-field"><label>${L("editor.abilityMedallions")}</label>${check("style.abilityMedallions", s.abilityMedallions)}</div>
+          <div class="act-field"><label>${L("editor.highlightProficient")}</label>${check("style.highlightProficient", s.highlightProficient)}</div>
+          <div class="act-field"><label>${L("editor.tintIcons")}</label>${check("style.tintIcons", s.tintIcons)}</div>
+          <div class="act-field"><label>${L("editor.statBoxColors")}</label>${check("style.statBoxColors", s.statBoxColors)}</div>
+          <div class="act-field"><label>${L("editor.tooltipDivider")}</label>${check("style.tooltipDivider", s.tooltipDivider)}</div>
           <div class="act-field"><label>${L("editor.glowSize")}</label>${range("style.glowSize", s.glowSize, 0, 40, 1, "px")}</div>
           ${this.#colorRow("style.glowColor", L("editor.glowColor"), s.glowColor)}
         </details>
@@ -297,6 +303,8 @@ export class ThemeEditor extends ApplicationV2 {
           ${this.#pathRow("textures.frame", L("editor.texFrame"), tx.frame)}
           <div class="act-field"><label>${L("editor.texSlice")}</label>${range("textures.frameSlice", tx.frameSlice, 1, 200, 1, "")}</div>
           <div class="act-field"><label>${L("editor.texWidth")}</label>${range("textures.frameWidth", tx.frameWidth, 1, 48, 1, "px")}</div>
+          <div class="act-field"><label>${L("editor.texImageWidth")}</label>${range("textures.frameImageWidth", tx.frameImageWidth, 0, 200, 1, "px")}</div>
+          <div class="act-field"><label>${L("editor.texOutset")}</label>${range("textures.frameOutset", tx.frameOutset, 0, 80, 1, "px")}</div>
           <div class="act-field"><label>${L("editor.texRepeat")}</label><select data-path="textures.frameRepeat">
             <option value="stretch" ${tx.frameRepeat === "stretch" ? "selected" : ""}>${L("editor.texRepeatStretch")}</option>
             <option value="round" ${tx.frameRepeat === "round" ? "selected" : ""}>${L("editor.texRepeatRound")}</option>
@@ -304,14 +312,22 @@ export class ThemeEditor extends ApplicationV2 {
           ${this.#pathRow("textures.tooltipFrame", L("editor.texTooltipFrame"), tx.tooltipFrame)}
           <div class="act-field"><label>${L("editor.texSlice")}</label>${range("textures.tooltipFrameSlice", tx.tooltipFrameSlice, 1, 200, 1, "")}</div>
           <div class="act-field"><label>${L("editor.texWidth")}</label>${range("textures.tooltipFrameWidth", tx.tooltipFrameWidth, 1, 48, 1, "px")}</div>
+          <div class="act-field"><label>${L("editor.texImageWidth")}</label>${range("textures.tooltipFrameImageWidth", tx.tooltipFrameImageWidth, 0, 200, 1, "px")}</div>
+          <div class="act-field"><label>${L("editor.texOutset")}</label>${range("textures.tooltipFrameOutset", tx.tooltipFrameOutset, 0, 80, 1, "px")}</div>
           ${this.#pathRow("textures.barFrame", L("editor.texBarFrame"), tx.barFrame)}
           <div class="act-field"><label>${L("editor.texSlice")}</label>${range("textures.barFrameSlice", tx.barFrameSlice, 1, 200, 1, "")}</div>
           <div class="act-field"><label>${L("editor.texWidth")}</label>${range("textures.barFrameWidth", tx.barFrameWidth, 1, 48, 1, "px")}</div>
+          <div class="act-field"><label>${L("editor.texImageWidth")}</label>${range("textures.barFrameImageWidth", tx.barFrameImageWidth, 0, 200, 1, "px")}</div>
+          <div class="act-field"><label>${L("editor.texOutset")}</label>${range("textures.barFrameOutset", tx.barFrameOutset, 0, 80, 1, "px")}</div>
           ${this.#pathRow("textures.buttonFrame", L("editor.texButtonFrame"), tx.buttonFrame)}
           <div class="act-field"><label>${L("editor.texSlice")}</label>${range("textures.buttonFrameSlice", tx.buttonFrameSlice, 1, 200, 1, "")}</div>
           <div class="act-field"><label>${L("editor.texWidth")}</label>${range("textures.buttonFrameWidth", tx.buttonFrameWidth, 1, 24, 1, "px")}</div>
+          <div class="act-field"><label>${L("editor.texImageWidth")}</label>${range("textures.buttonFrameImageWidth", tx.buttonFrameImageWidth, 0, 200, 1, "px")}</div>
+          <div class="act-field"><label>${L("editor.texOutset")}</label>${range("textures.buttonFrameOutset", tx.buttonFrameOutset, 0, 80, 1, "px")}</div>
           ${this.#pathRow("textures.seal", L("editor.texSeal"), tx.seal)}
           ${this.#pathRow("textures.headerOrnament", L("editor.texHeaderOrnament"), tx.headerOrnament)}
+          ${this.#pathRow("textures.slotFlourish", L("editor.texSlotFlourish"), tx.slotFlourish)}
+          ${this.#pathRow("textures.tooltipDrape", L("editor.texTooltipDrape"), tx.tooltipDrape)}
         </details>
 
         <details class="act-group" ${t.ornaments.length ? "open" : ""}>

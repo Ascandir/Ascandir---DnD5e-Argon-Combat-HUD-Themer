@@ -125,7 +125,17 @@
       "texRepeatStretch": "strecken",
       "texRepeatRound": "wiederholen",
       "texTooltipFrame": "Eigener Tooltip-Rahmen",
-      "texBarFrame": "Rahmen der Aktionsplanke"
+      "texBarFrame": "Rahmen der Aktionsplanke",
+      "abilityMedallions": "Attribut-Symbole als Medaillons",
+      "highlightProficient": "Geübte Fertigkeiten hervorheben",
+      "tintIcons": "Aktionssymbole einfärben",
+      "statBoxColors": "HP- und RK/SG-Kästen farbig",
+      "tooltipDivider": "Trennlinie unter dem Tooltip-Titel",
+      "texSlotFlourish": "Zierpfeil am ∞ (Zaubertricks)",
+      "texTooltipDrape": "Stoff/Deko hinter dem Tooltip",
+      "ornFlip": "Spiegeln",
+      "texImageWidth": "↳ Bildbreite (0 = wie Rahmen)",
+      "texOutset": "↳ Überstand nach außen"
     },
     "labels": {
       "barBackground": "Hintergrund der Aktionsleisten",
@@ -166,7 +176,12 @@
         "pipUsed": "Punkte verbraucht",
         "statText": "Text in Werte-Kästen",
         "statBackground": "Hintergrund Werte-Kästen",
-        "panelText": "Text der Leisten-Überschriften"
+        "panelText": "Text der Leisten-Überschriften",
+        "headerBg": "Kopfleisten im Menü",
+        "highlight": "Hervorhebung geübter Fertigkeiten",
+        "iconTint": "Tönung der Symbole",
+        "hpBox": "HP-Kasten",
+        "accentBox": "RK/SG-Zahlenkasten"
       }
     },
     "notify": {

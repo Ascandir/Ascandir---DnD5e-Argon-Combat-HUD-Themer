@@ -136,6 +136,11 @@ export const EXTRA_COLOR_FIELDS = [
   ["statText", "#ffffffff"],      // Text in Werte-Kästen, Rast-Knöpfen, Waffensets
   ["statBackground", "#00000080"],// Hintergrund der Werte-Kästen, Rast-Knöpfe, Waffensets
   ["panelText", "#c8c8c8ff"],     // Überschriften der Aktionsleisten / Zauber-Akkordeon
+  ["headerBg", "#24180cff"],      // Kopfleisten im verzierten Attribute-Menü
+  ["highlight", "#00000026"],     // Hervorhebung geübter Fertigkeiten
+  ["iconTint", "#e8d3a0ff"],      // Tönung der Aktionssymbole / Medaillon-Symbole
+  ["hpBox", "#7a1018ff"],         // Hintergrund des HP-Kastens (farbige Werte-Kästen)
+  ["accentBox", "#0f2c48ff"],     // Hintergrund der Zahlen bei RK / SG (farbige Werte-Kästen)
 ];
 
 export const ALL_COLOR_KEYS = [
@@ -176,6 +181,11 @@ export function defaultTheme() {
       joinedStats: false,    // HP / RK / SG als eine durchgehende Leiste
       continuousBar: false,  // Aktionsleisten als durchgehende Planke mit innenliegender Beschriftung
       hideName: false,       // Name & Stufe am Portrait ausblenden (Zustände bleiben sichtbar)
+      abilityMedallions: false, // Attribut-Symbole als runde Medaillons
+      highlightProficient: false, // geübte Fertigkeiten hervorheben
+      tintIcons: false,      // weiße Aktionssymbole einfärben (Farbe „Tönung der Symbole“)
+      statBoxColors: false,  // HP-Kasten und RK/SG-Zahlen farbig hinterlegen
+      tooltipDivider: false, // Trennlinie unter dem Tooltip-Titel
     },
     textures: {
       panel: "",           // Textur für Leisten & Kästen (kachelt)
@@ -184,19 +194,29 @@ export function defaultTheme() {
       frame: "",           // Zierrahmen für Portrait, Attribute-Menü, Tooltip (9-Slice)
       frameSlice: 40,
       frameWidth: 16,
+      frameImageWidth: 0,  // 0 = wie Rahmenbreite; größer = Ecken ragen nach innen
+      frameOutset: 0,      // Überstand nach außen in px
       frameRepeat: "stretch", // "stretch" oder "round" (Kanten wiederholen statt strecken)
       menuPanel: "",       // eigene Textur für Menü, Rast-Knöpfe, Werteleiste (sonst wie Leisten)
       tooltipFrame: "",    // eigener Rahmen nur für Tooltips (sonst Zierrahmen)
       tooltipFrameSlice: 30,
       tooltipFrameWidth: 16,
+      tooltipFrameImageWidth: 0,  // 0 = wie Rahmenbreite; größer = Ecken ragen nach innen
+      tooltipFrameOutset: 0,      // Überstand nach außen in px
       barFrame: "",        // Rahmen um die durchgehende Aktionsplanke
       barFrameSlice: 40,
       barFrameWidth: 16,
+      barFrameImageWidth: 0,  // 0 = wie Rahmenbreite; größer = Ecken ragen nach innen
+      barFrameOutset: 0,      // Überstand nach außen in px
       buttonFrame: "",     // Rahmen für Aktions-/Zauber-Knöpfe (9-Slice)
       buttonFrameSlice: 12,
       buttonFrameWidth: 6,
+      buttonFrameImageWidth: 0,  // 0 = wie Rahmenbreite; größer = Ecken ragen nach innen
+      buttonFrameOutset: 0,      // Überstand nach außen in px
       seal: "",            // Deko-Bild oben rechts am Tooltip
       headerOrnament: "",  // Zierelement in den Kopfleisten des Attribute-Menüs
+      slotFlourish: "",    // Zierpfeil links/rechts vom ∞ der Zaubertricks
+      tooltipDrape: "",    // Stoff/Deko hinter dem Tooltip (unten links)
     },
     ornaments: [],         // frei platzierte Deko-Bilder (Laternen, Banner …)
     customCss: "",
@@ -209,7 +229,7 @@ export const ORNAMENT_CORNERS = ["top-left", "top-center", "top-right", "bottom-
 export const ORNAMENT_ANIMATIONS = ["none", "flicker", "sway"];
 
 export function defaultOrnament() {
-  return { src: "", anchor: "portrait", corner: "top-right", x: 0, y: 0, width: 80, height: 80, layer: "front", animation: "none" };
+  return { src: "", anchor: "portrait", corner: "top-right", x: 0, y: 0, width: 80, height: 80, layer: "front", animation: "none", flip: false };
 }
 
 export function normalizeOrnament(o = {}) {
@@ -224,6 +244,7 @@ export function normalizeOrnament(o = {}) {
     height: clampNumber(o.height, 4, 1000, d.height),
     layer: o.layer === "back" ? "back" : "front",
     animation: ORNAMENT_ANIMATIONS.includes(o.animation) ? o.animation : "none",
+    flip: !!o.flip,
   };
 }
 
@@ -317,6 +338,7 @@ export function normalizeTheme(data = {}) {
   theme.style.joinedStats = !!s.joinedStats;
   theme.style.continuousBar = !!s.continuousBar;
   theme.style.hideName = !!s.hideName;
+  for (const k of ["abilityMedallions", "highlightProficient", "tintIcons", "statBoxColors", "tooltipDivider"]) theme.style[k] = !!s[k];
 
   const tx = data.textures ?? {};
   theme.textures = {
@@ -326,19 +348,29 @@ export function normalizeTheme(data = {}) {
     frame: cleanPath(tx.frame),
     frameSlice: clampNumber(tx.frameSlice, 1, 500, base.textures.frameSlice),
     frameWidth: clampNumber(tx.frameWidth, 1, 64, base.textures.frameWidth),
+    frameImageWidth: clampNumber(tx.frameImageWidth, 0, 400, 0),
+    frameOutset: clampNumber(tx.frameOutset, 0, 200, 0),
     frameRepeat: tx.frameRepeat === "round" ? "round" : "stretch",
     menuPanel: cleanPath(tx.menuPanel),
     tooltipFrame: cleanPath(tx.tooltipFrame),
     tooltipFrameSlice: clampNumber(tx.tooltipFrameSlice, 1, 500, base.textures.tooltipFrameSlice),
     tooltipFrameWidth: clampNumber(tx.tooltipFrameWidth, 1, 64, base.textures.tooltipFrameWidth),
+    tooltipFrameImageWidth: clampNumber(tx.tooltipFrameImageWidth, 0, 400, 0),
+    tooltipFrameOutset: clampNumber(tx.tooltipFrameOutset, 0, 200, 0),
     barFrame: cleanPath(tx.barFrame),
     barFrameSlice: clampNumber(tx.barFrameSlice, 1, 500, base.textures.barFrameSlice),
     barFrameWidth: clampNumber(tx.barFrameWidth, 1, 64, base.textures.barFrameWidth),
+    barFrameImageWidth: clampNumber(tx.barFrameImageWidth, 0, 400, 0),
+    barFrameOutset: clampNumber(tx.barFrameOutset, 0, 200, 0),
     buttonFrame: cleanPath(tx.buttonFrame),
     buttonFrameSlice: clampNumber(tx.buttonFrameSlice, 1, 500, base.textures.buttonFrameSlice),
     buttonFrameWidth: clampNumber(tx.buttonFrameWidth, 1, 32, base.textures.buttonFrameWidth),
+    buttonFrameImageWidth: clampNumber(tx.buttonFrameImageWidth, 0, 400, 0),
+    buttonFrameOutset: clampNumber(tx.buttonFrameOutset, 0, 200, 0),
     seal: cleanPath(tx.seal),
     headerOrnament: cleanPath(tx.headerOrnament),
+    slotFlourish: cleanPath(tx.slotFlourish),
+    tooltipDrape: cleanPath(tx.tooltipDrape),
   };
 
   const list = Array.isArray(data.ornaments) ? data.ornaments : Object.values(data.ornaments ?? {});

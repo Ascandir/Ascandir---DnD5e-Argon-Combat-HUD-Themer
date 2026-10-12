@@ -125,7 +125,17 @@
       "texRepeatStretch": "stretch",
       "texRepeatRound": "repeat",
       "texTooltipFrame": "Separate tooltip frame",
-      "texBarFrame": "Action plank frame"
+      "texBarFrame": "Action plank frame",
+      "abilityMedallions": "Ability icons as medallions",
+      "highlightProficient": "Highlight proficient skills",
+      "tintIcons": "Tint action icons",
+      "statBoxColors": "Colored HP and AC/DC boxes",
+      "tooltipDivider": "Divider under tooltip title",
+      "texSlotFlourish": "Flourish beside ∞ (cantrips)",
+      "texTooltipDrape": "Cloth/decoration behind tooltip",
+      "ornFlip": "Mirror",
+      "texImageWidth": "↳ Image width (0 = same as frame)",
+      "texOutset": "↳ Outset"
     },
     "labels": {
       "barBackground": "Action bar background",
@@ -166,7 +176,12 @@
         "pipUsed": "Pips used",
         "statText": "Stat box text",
         "statBackground": "Stat box background",
-        "panelText": "Bar heading text"
+        "panelText": "Bar heading text",
+        "headerBg": "Menu header bars",
+        "highlight": "Proficient skill highlight",
+        "iconTint": "Icon tint",
+        "hpBox": "HP box",
+        "accentBox": "AC/DC number box"
       }
     },
     "notify": {

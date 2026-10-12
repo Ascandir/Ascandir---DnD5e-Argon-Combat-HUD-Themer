@@ -11,7 +11,7 @@ Eigene Themes/Skins für das **Argon Combat HUD** in Foundry VTT erstellen, spei
 - **Layout-Schalter:** durchgehende Aktionsplanke, verbundene Werteleiste (HP/RK/SG), Tooltip-Titel linksbündig, Name ausblenden
 - **Texturen & Rahmenbilder:** Holz-/Leder-Textur für Leisten, Pergament für Tooltips, Zierrahmen als 9-Slice-Bild, Deko wie ein Wachssiegel – mit eigenen Bildern aus deinen Foundry-Dateien
 - **Auswahl über die Spieleinstellungen:** Theme für alle (Welt) vom SL; optional dürfen Spieler ein eigenes wählen
-- Mitgelieferte Vorlagen: *Schmiede & Pergament*, *Drachenblut*, *Pergament & Tinte*, *Arkane Nacht*, *Waldläufer*, *Eisen & Glut*
+- Mitgelieferte Vorlagen: *Gotik & Pergament*, *Schmiede & Pergament*, *Drachenblut*, *Pergament & Tinte*, *Arkane Nacht*, *Waldläufer*, *Eisen & Glut*
 
 ## Installation
 

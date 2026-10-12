@@ -66,6 +66,100 @@ function palette(p) {
 
 const RAW = [
   {
+    id: "ascandir-gotik",
+    name: "Ascandir – Gotik & Pergament",
+    // Rahmen, Pergament, Vorhang, Zierpfeil und Stern: vom Nutzer gezeichnete Grafiken (assets/gothic)
+    colors: {
+      ...palette({
+        text: "#efe2c4ff", hoverText: "#fff6e2ff", border: "#b8893eff", hoverBorder: "#f0c870ff",
+        portrait: "#0d0b0aff", container: "#0b0908f2",
+        panel: "#141110ff", panelHover: "#2a221cff",
+        bonus: "#141110ff", bonusHover: "#2a221cff",
+        free: "#141110ff", freeHover: "#2a221cff",
+        reaction: "#141110ff", reactionHover: "#2a221cff",
+        endTurn: "#141110ff", endTurnHover: "#2a221cff",
+        ttHeader: "#00000000", ttHeaderText: "#1e140cff",
+        ttSubtitle: "#6b1a14ff", ttSubtitleText: "#f2e2c4ff",
+        ttBody: "#00000000", ttBodyText: "#24180eff",
+        textGlow: "#00000000", accentGlow: "#c9a45a66",
+        button: "#3a2a18ff", buttonHover: "#5a4024ff", buttonText: "#f2e2c4ff",
+        moveUsed: "#5a524a80", moveBase: "#efe2c2ff", moveBaseGlow: "#00000000",
+        moveDash: "#e0b040ff", moveDashGlow: "#00000000", moveDanger: "#a8241cff", moveDangerGlow: "#00000000",
+      }),
+      "abilityMenu-background": "#e9dcbfff",
+      "abilityMenu-color": "#2a1d12ff",
+      "abilityMenu-border": "#b8893eff",
+      "abilityMenu-base-color": "#2a1d12ff",
+      "abilityMenu-base-boxShadow": "#00000000",
+      "abilityMenu-hover-color": "#7a1a10ff",
+      "abilityMenu-hover-boxShadow": "#00000000",
+    },
+    extras: {
+      accent: "#5fb0ffff", hp: "#f4e6d0ff", pip: "#efe2c2ff", pipGlow: "#00000000", pipUsed: "#5a524aff",
+      statText: "#f4e6d0ff", statBackground: "#0d0b0aff", panelText: "#ecd9adff",
+      headerBg: "#1a1512ff", highlight: "#6b4a2030", iconTint: "#ecd9b0ff",
+      hpBox: "#7c1219ff", accentBox: "#0f2d4cff",
+    },
+    style: {
+      font: "Crimson Text", fontScale: 118, radius: 0, borderWidth: 1,
+      hoverGlow: true, glowColor: "#c9a45a88", glowSize: 10, textShadow: false, portraitFrame: false,
+      skillIcons: true, ornateMenu: true, squarePips: true, titleStrip: true,
+      tooltipTitleLeft: true, joinedStats: true, continuousBar: true, hideName: false,
+      abilityMedallions: true, highlightProficient: true, tintIcons: true, statBoxColors: true, tooltipDivider: true,
+    },
+    textures: {
+      panel: "", panelSize: 680,
+      menuPanel: `${ASSETS}/gothic/parchment-gpt.webp`,
+      tooltip: `${ASSETS}/gothic/parchment-gpt-sheet.webp`,
+      frame: `${ASSETS}/gothic/frame-gothic.webp`, frameSlice: 280, frameWidth: 18, frameImageWidth: 116, frameOutset: 31, frameRepeat: "round",
+      tooltipFrame: `${ASSETS}/gothic/frame-gothic.webp`, tooltipFrameSlice: 280, tooltipFrameWidth: 13, tooltipFrameImageWidth: 84, tooltipFrameOutset: 22,
+      barFrame: `${ASSETS}/gothic/frame-gothic.webp`, barFrameSlice: 280, barFrameWidth: 18, barFrameImageWidth: 116, barFrameOutset: 31,
+      buttonFrame: `${ASSETS}/gothic/frame-gothic-small.webp`, buttonFrameSlice: 90, buttonFrameWidth: 10, buttonFrameImageWidth: 34, buttonFrameOutset: 9,
+      seal: "",
+      headerOrnament: "",
+      slotFlourish: `${ASSETS}/gothic/gpt-arrow.webp`,
+      tooltipDrape: "",
+    },
+    ornaments: [
+      { src: `${ASSETS}/gothic/gpt-drape.webp`, anchor: "portrait", corner: "top-left", x: 0, y: 0, width: 44, height: 250, layer: "front", animation: "sway" },
+      { src: `${ASSETS}/gothic/gpt-drape.webp`, anchor: "portrait", corner: "top-right", x: 0, y: 0, width: 44, height: 250, layer: "front", animation: "sway", flip: true },
+      { src: `${ASSETS}/gothic/gpt-drape.webp`, anchor: "abilityMenu", corner: "top-right", x: -26, y: 60, width: 34, height: 230, layer: "back", animation: "sway", flip: true },
+      { src: `${ASSETS}/gothic/gpt-drape.webp`, anchor: "actionFirst", corner: "top-left", x: -22, y: 6, width: 36, height: 170, layer: "back", animation: "none" },
+      { src: `${ASSETS}/gothic/gpt-drape.webp`, anchor: "actionLast", corner: "top-right", x: -22, y: 6, width: 36, height: 170, layer: "back", animation: "none", flip: true },
+      { src: `${ASSETS}/gothic/gpt-star.webp`, anchor: "abilityMenu", corner: "bottom-left", x: 24, y: 22, width: 22, height: 25, layer: "front", animation: "none" },
+    ],
+    customCss: `/* Rast-Knöpfe: Pergament mit dunkler Schrift */
+.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }
+.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #2a1d12 !important; text-shadow: none !important; }
+/* Zauberleiste: freie Punkte wie im Entwurf */
+.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }
+.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #2a1d12 !important; box-shadow: 0 0 0 2px #c9a45a, 0 2px 4px #000000 !important; }
+.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #ecd9b0 !important; }
+.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }
+/* Portrait: großer Name mit goldener Unterstreichung */
+.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 2.6rem !important; }
+.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.3rem !important; font-weight: 700; color: #f4e6d0 !important; }
+.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; color: #f0e2c4 !important; border-bottom: 2px solid #c9a45a; padding-bottom: 3px; }
+/* Menü: Kopfleisten mit Goldkante, Platz für den Stern */
+.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 8px; border-color: #c9a45a !important; }
+.extended-combat-hud .ability-menu ul.ability-toggle li { padding-left: 2.8rem !important; }
+.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #00000022 !important; box-shadow: none !important; }
+.extended-combat-hud .ability-menu ul > li:not(.ability-title) > span:not(:first-child),
+.extended-combat-hud .ability-menu ul > li:not(.ability-title) > div > span { border-left: none !important; box-shadow: none !important; }
+/* Menü-Spalten: Namen bekommen den Platz, Zahlen schmale feste Spalten */
+.extended-combat-hud .ability-menu ul.collapsible-panel > li { grid-template-columns: minmax(0, 1fr) 3.1em 3.1em !important; }
+.extended-combat-hud .ability-menu ul.collapsible-panel > li > span:not(:first-child) { text-align: center; }
+/* Zierpfeile am ∞ größer */
+.extended-combat-hud .feature-spell-slots .spell-cantrip::before, .extended-combat-hud .feature-spell-slots .spell-cantrip::after { width: 150px !important; height: 40px !important; }
+/* Werteleiste größer */
+.extended-combat-hud .portrait-hud .portrait-stat-block:not(.player-details) { font-size: 1.55rem !important; padding: 0.9rem 0.6rem !important; }
+.extended-combat-hud .portrait-hud .portrait-stat-block span[style*="movement-baseMovement-background"] { margin: -0.9rem -0.6rem -0.9rem 0.4em !important; }
+/* Tooltip: Abstand zu den Zierecken */
+.ech-tooltip .ech-tooltip-header { padding: 1.2rem 1.8rem 0.3rem !important; }
+.ech-tooltip .ech-tooltip-body { padding: 0 1.8rem 1.3rem !important; }
+.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #24180e !important; }`,
+  },
+  {
     id: "ascandir-schmiede",
     name: "Ascandir – Schmiede & Pergament",
     colors: {

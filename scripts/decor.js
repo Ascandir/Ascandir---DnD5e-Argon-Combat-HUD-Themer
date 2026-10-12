@@ -60,14 +60,20 @@ function getLabelMap() {
   return labelMap;
 }
 
+const ABILITY_KEYS = new Set(["str", "dex", "con", "int", "wis", "cha"]);
+
+function keyFor(text) {
+  return getLabelMap().get(norm(text)) ?? null;
+}
+
 function iconFor(text) {
-  const key = getLabelMap().get(norm(text));
+  const key = keyFor(text);
   return key ? ICONS[key] : null;
 }
 
-function makeIcon(cls) {
+function makeIcon(cls, ability = false) {
   const i = document.createElement("i");
-  i.className = `fa-solid ${cls} asc-skill-icon`;
+  i.className = `fa-solid ${cls} asc-skill-icon${ability ? " asc-ability-icon" : ""}`;
   i.setAttribute("aria-hidden", "true");
   return i;
 }
@@ -75,20 +81,23 @@ function makeIcon(cls) {
 function syncMenuIcons(root) {
   const menu = root.querySelector(":scope > .ability-menu");
   if (!menu) return;
-  if (!theme?.style.skillIcons) {
-    menu.querySelectorAll(".asc-skill-icon").forEach((e) => e.remove());
-    return;
-  }
+  const withIcons = !!theme?.style.skillIcons;
+  if (!withIcons) menu.querySelectorAll(".asc-skill-icon").forEach((e) => e.remove());
   for (const li of menu.querySelectorAll("li")) {
     if (li.classList.contains("ability-title")) continue;
     const span = li.querySelector(":scope > span");
-    if (!span || span.querySelector(".asc-skill-icon")) continue;
-    const cls = iconFor(span.textContent);
-    if (!cls) continue;
-    // Symbol hinter den Übungs-Kreis/-Haken setzen, sonst an den Anfang
+    if (!span) continue;
+    // Geübte Fertigkeiten markieren (Haken, Doppelhaken = Expertise)
     const prof = span.querySelector(":scope > i:not(.asc-skill-icon)");
-    if (prof) prof.after(makeIcon(cls));
-    else span.prepend(makeIcon(cls));
+    li.classList.toggle("asc-proficient", !!prof?.matches(".fa-check, .fa-check-double"));
+    if (!withIcons || span.querySelector(".asc-skill-icon")) continue;
+    const key = keyFor(span.textContent);
+    if (!key || !ICONS[key]) continue;
+    const ability = ABILITY_KEYS.has(key);
+    li.classList.toggle("asc-row-ability", ability);
+    // Symbol hinter den Übungs-Kreis/-Haken setzen, sonst an den Anfang
+    if (prof) prof.after(makeIcon(ICONS[key], ability));
+    else span.prepend(makeIcon(ICONS[key], ability));
   }
 }
 
@@ -116,7 +125,7 @@ function watchTooltip() {
 /* -------------------------------------------- */
 
 function ornamentKey(o, i) {
-  return `${i}|${o.src}|${o.anchor}|${o.corner}|${o.x}|${o.y}|${o.width}|${o.height}|${o.layer}|${o.animation}`;
+  return `${i}|${o.src}|${o.anchor}|${o.corner}|${o.x}|${o.y}|${o.width}|${o.height}|${o.layer}|${o.animation}|${o.flip ? 1 : 0}`;
 }
 
 function placeStyle(o) {
@@ -143,6 +152,7 @@ function buildOrnament(o, key) {
   el.className = `asc-ornament asc-anim-${o.animation}`;
   el.dataset.ascKey = key;
   Object.assign(el.style, placeStyle(o));
+  if (o.flip) el.style.scale = "-1 1";
   let href = o.src;
   try { href = new URL(o.src, document.baseURI).href; } catch { /* unverändert */ }
   el.style.backgroundImage = `url("${href.replace(/["\\]/g, "")}")`;

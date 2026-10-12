@@ -294,3 +294,4 @@
 .ascandir-themer .act-orn label { display: flex; flex-direction: column; font-size: 0.8rem; gap: 0.1rem; opacity: 0.9; }
 .ascandir-themer .act-orn input[type="number"], .ascandir-themer .act-orn select { width: 100%; }
 .ascandir-themer .act-orn-add { width: auto; padding: 0 0.8rem; }
+.ascandir-themer .act-orn .act-orn-flip { flex-direction: row; align-items: center; gap: 0.4rem; align-self: end; }
