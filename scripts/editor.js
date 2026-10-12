@@ -31,6 +31,7 @@ function getFontChoices() {
     if (choices) fonts = Object.keys(choices);
   } catch { /* ignorieren */ }
   if (!fonts.length) fonts = Object.keys(CONFIG.fontDefinitions ?? {});
+  fonts.push("Crimson Text", "Cinzel", "EB Garamond"); // im Modul mitgeliefert
   fonts.push("Crimson Text"); // mitgelieferte Schrift
   return [...new Set(fonts)].sort((a, b) => a.localeCompare(b));
 }
@@ -143,7 +144,8 @@ export class ThemeEditor extends ApplicationV2 {
         ${t.id === worldId ? `<i class="fas fa-globe act-lib-flag" data-tooltip="${esc(L("editor.isWorldTheme"))}"></i>` : ""}
         ${t.builtin ? `<i class="fas fa-lock act-lib-flag" data-tooltip="${esc(L("editor.builtinHint"))}"></i>` : ""}
       </li>`;
-    const builtins = all.filter((t) => t.builtin);
+    const builtins = all.filter((t) => t.builtin && !t.group);
+    const sheetThemes = all.filter((t) => t.builtin && t.group === "sheet");
     const customs = all.filter((t) => !t.builtin).sort((a, b) => a.name.localeCompare(b.name));
     const unsaved = this.selectedId === null
       ? `<li class="act-lib-item active"><span class="act-lib-name"><i class="fas fa-pen"></i> ${esc(this.working.name)}</span></li>`
@@ -160,6 +162,8 @@ export class ThemeEditor extends ApplicationV2 {
         <ul class="act-lib-list">${unsaved}${customs.map(item).join("") || (unsaved ? "" : `<li class="act-lib-empty">${L("editor.noCustom")}</li>`)}</ul>
         <h4>${L("editor.builtinThemes")}</h4>
         <ul class="act-lib-list">${builtins.map(item).join("")}</ul>
+        ${sheetThemes.length ? `<h4>${L("editor.sheetThemes")}</h4>
+        <ul class="act-lib-list">${sheetThemes.map(item).join("")}</ul>` : ""}
         <p class="act-lib-world">${L("editor.worldThemeIs")}: <b>${esc(getTheme(worldId)?.name ?? L("choices.none"))}</b>
           ${worldId !== NONE ? `<a data-action="activateTheme" data-id="${NONE}">${L("editor.resetToArgon")}</a>` : ""}</p>
       </aside>`;
@@ -235,6 +239,9 @@ export class ThemeEditor extends ApplicationV2 {
     const fontOptions = [`<option value="">${L("editor.fontArgon")}</option>`]
       .concat(fonts.map((f) => `<option value="${esc(f)}" ${f === s.font ? "selected" : ""}>${esc(f)}</option>`));
     if (s.font && !fonts.includes(s.font)) fontOptions.push(`<option value="${esc(s.font)}" selected>${esc(s.font)}</option>`);
+    const headingOptions = [`<option value="">${L("editor.headingFontSame")}</option>`]
+      .concat(fonts.map((f) => `<option value="${esc(f)}" ${f === s.headingFont ? "selected" : ""}>${esc(f)}</option>`));
+    if (s.headingFont && !fonts.includes(s.headingFont)) headingOptions.push(`<option value="${esc(s.headingFont)}" selected>${esc(s.headingFont)}</option>`);
 
     const range = (path, value, min, max, step, unit) => `
       <div class="act-range">
@@ -264,6 +271,7 @@ export class ThemeEditor extends ApplicationV2 {
         <details class="act-group" open>
           <summary>${L("editor.sectionStyle")}</summary>
           <div class="act-field"><label>${L("editor.font")}</label><select data-path="style.font">${fontOptions.join("")}</select></div>
+          <div class="act-field"><label>${L("editor.headingFont")}</label><select data-path="style.headingFont">${headingOptions.join("")}</select></div>
           <div class="act-field"><label>${L("editor.fontScale")}</label>${range("style.fontScale", s.fontScale, 70, 150, 5, "%")}</div>
           <div class="act-field"><label>${L("editor.radius")}</label>${range("style.radius", s.radius, 0, 40, 1, "px")}</div>
           <div class="act-field"><label>${L("editor.borderWidth")}</label>${range("style.borderWidth", s.borderWidth, 0, 8, 1, "px")}</div>
@@ -327,6 +335,7 @@ export class ThemeEditor extends ApplicationV2 {
           ${this.#pathRow("textures.seal", L("editor.texSeal"), tx.seal)}
           ${this.#pathRow("textures.headerOrnament", L("editor.texHeaderOrnament"), tx.headerOrnament)}
           ${this.#pathRow("textures.slotFlourish", L("editor.texSlotFlourish"), tx.slotFlourish)}
+          ${this.#pathRow("textures.medallion", L("editor.texMedallion"), tx.medallion)}
           ${this.#pathRow("textures.tooltipDrape", L("editor.texTooltipDrape"), tx.tooltipDrape)}
         </details>
 

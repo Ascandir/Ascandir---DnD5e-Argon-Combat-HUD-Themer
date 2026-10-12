@@ -29,6 +29,18 @@ export function buildThemeCss(theme) {
   if (style.font) vars.push(`  --ech-font-family: ${fontStack(style.font)} !important;`);
   out.push(`:root {\n${vars.join("\n")}\n}`);
 
+  if (style.headingFont) {
+    out.push(`
+${HUD} .ability-menu ul > li.ability-title,
+${HUD} .ability-menu ul.ability-toggle li,
+${HUD} .actions-container:before,
+${HUD} .feature-accordion-title,
+${HUD} .action-element-title,
+${HUD} .button-hud-button span,
+${HUD} .portrait-hud .player-details .player-name,
+.ech-tooltip .ech-tooltip-header h2 { font-family: ${fontStack(style.headingFont)} !important; }`);
+  }
+
   // 2) Fest verdrahtete Argon-Farben
   out.push(`
 ${HUD} .portrait-hud .portrait-stat-block [data-ac-value]:after,
@@ -392,7 +404,14 @@ ${HUD} .ability-menu .asc-ability-icon {
   font-size: 0.9em;
   margin-right: 0.8ch !important;
   vertical-align: middle;
-}`);
+}${t.medallion ? `
+${HUD} .ability-menu .asc-ability-icon {
+  width: 2.3em; height: 2.3em; line-height: 2.3em;
+  background: ${cssUrl(t.medallion)} center / 100% 100% no-repeat !important;
+  border: none !important;
+  box-shadow: none !important;
+  filter: drop-shadow(0 1px 2px #000000aa);
+}` : ""}`);
   }
   if (s.highlightProficient) {
     out.push(`

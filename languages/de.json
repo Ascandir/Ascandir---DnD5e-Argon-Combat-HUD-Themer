@@ -135,7 +135,11 @@
       "texTooltipDrape": "Stoff/Deko hinter dem Tooltip",
       "ornFlip": "Spiegeln",
       "texImageWidth": "↳ Bildbreite (0 = wie Rahmen)",
-      "texOutset": "↳ Überstand nach außen"
+      "texOutset": "↳ Überstand nach außen",
+      "headingFont": "Schrift für Überschriften",
+      "headingFontSame": "wie Grundschrift",
+      "texMedallion": "Medaillon-Bild für Attribute",
+      "sheetThemes": "Charakterbogen-Themes"
     },
     "labels": {
       "barBackground": "Hintergrund der Aktionsleisten",

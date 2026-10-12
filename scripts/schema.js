@@ -165,6 +165,7 @@ export function defaultTheme() {
     extras: defaultExtraColors(),
     style: {
       font: "",            // leer = Argon-Schrift beibehalten
+      headingFont: "",     // Schrift für Überschriften (Kopfleisten, Leisten-Beschriftungen, Tooltip-Titel, Name)
       fontScale: 100,      // Prozent, wirkt auf den Text im HUD
       radius: 0,           // Eckenrundung in px
       borderWidth: 1,      // Rahmenstärke in px
@@ -216,6 +217,7 @@ export function defaultTheme() {
       seal: "",            // Deko-Bild oben rechts am Tooltip
       headerOrnament: "",  // Zierelement in den Kopfleisten des Attribute-Menüs
       slotFlourish: "",    // Zierpfeil links/rechts vom ∞ der Zaubertricks
+      medallion: "",       // Bild für die Attribut-Medaillons (rund, Mitte frei)
       tooltipDrape: "",    // Stoff/Deko hinter dem Tooltip (unten links)
     },
     ornaments: [],         // frei platzierte Deko-Bilder (Laternen, Banner …)
@@ -322,6 +324,7 @@ export function normalizeTheme(data = {}) {
 
   const s = data.style ?? {};
   theme.style.font = typeof s.font === "string" ? s.font.slice(0, 80) : "";
+  theme.style.headingFont = typeof s.headingFont === "string" ? s.headingFont.slice(0, 80) : "";
   theme.style.fontScale = clampNumber(s.fontScale, 70, 150, 100);
   theme.style.radius = clampNumber(s.radius, 0, 40, 0);
   theme.style.borderWidth = clampNumber(s.borderWidth, 0, 8, 1);
@@ -370,6 +373,7 @@ export function normalizeTheme(data = {}) {
     seal: cleanPath(tx.seal),
     headerOrnament: cleanPath(tx.headerOrnament),
     slotFlourish: cleanPath(tx.slotFlourish),
+    medallion: cleanPath(tx.medallion),
     tooltipDrape: cleanPath(tx.tooltipDrape),
   };
 

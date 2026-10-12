@@ -5,6 +5,13 @@
 @font-face { font-family: "Crimson Text"; font-style: italic; font-weight: 400; font-display: swap; src: url("../assets/fonts/CrimsonText-400-italic.woff2") format("woff2"); }
 @font-face { font-family: "Crimson Text"; font-style: normal; font-weight: 600; font-display: swap; src: url("../assets/fonts/CrimsonText-600.woff2") format("woff2"); }
 @font-face { font-family: "Crimson Text"; font-style: normal; font-weight: 700 900; font-display: swap; src: url("../assets/fonts/CrimsonText-700.woff2") format("woff2"); }
+@font-face { font-family: "Cinzel"; font-style: normal; font-weight: 400; font-display: swap; src: url("../assets/fonts/cinzel-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Cinzel"; font-style: normal; font-weight: 600; font-display: swap; src: url("../assets/fonts/cinzel-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Cinzel"; font-style: normal; font-weight: 700 900; font-display: swap; src: url("../assets/fonts/cinzel-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family: "EB Garamond"; font-style: normal; font-weight: 400; font-display: swap; src: url("../assets/fonts/eb-garamond-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "EB Garamond"; font-style: italic; font-weight: 400; font-display: swap; src: url("../assets/fonts/eb-garamond-latin-400-italic.woff2") format("woff2"); }
+@font-face { font-family: "EB Garamond"; font-style: normal; font-weight: 600; font-display: swap; src: url("../assets/fonts/eb-garamond-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "EB Garamond"; font-style: normal; font-weight: 700 900; font-display: swap; src: url("../assets/fonts/eb-garamond-latin-700-normal.woff2") format("woff2"); }
 
 /* ============================================================
    Deko-Elemente am HUD

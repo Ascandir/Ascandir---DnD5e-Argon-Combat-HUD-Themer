@@ -11,6 +11,7 @@ Eigene Themes/Skins für das **Argon Combat HUD** in Foundry VTT erstellen, spei
 - **Layout-Schalter:** durchgehende Aktionsplanke, verbundene Werteleiste (HP/RK/SG), Tooltip-Titel linksbündig, Name ausblenden
 - **Texturen & Rahmenbilder:** Holz-/Leder-Textur für Leisten, Pergament für Tooltips, Zierrahmen als 9-Slice-Bild, Deko wie ein Wachssiegel – mit eigenen Bildern aus deinen Foundry-Dateien
 - **Auswahl über die Spieleinstellungen:** Theme für alle (Welt) vom SL; optional dürfen Spieler ein eigenes wählen
+- **Alle 30 Themes aus „Ascandir - DnD5e Character Sheet“** als passende HUD-Vorlagen (Grund-, Schadenstyp- und Klassen-Themes)
 - Mitgelieferte Vorlagen: *Gotik & Pergament*, *Schmiede & Pergament*, *Drachenblut*, *Pergament & Tinte*, *Arkane Nacht*, *Waldläufer*, *Eisen & Glut*
 
 ## Installation
@@ -38,7 +39,15 @@ Rahmen werden als **9-Slice** gestreckt: Die vier Ecken des Bildes bleiben unver
 
 ## Schrift
 
-Mitgeliefert ist die Schrift **Crimson Text** (SIL Open Font License, siehe `assets/fonts`).
+Mitgeliefert sind die Schriften **Crimson Text**, **Cinzel** und **EB Garamond** (SIL Open Font License, siehe `assets/fonts`).
+
+## Charakterbogen-Themes aktualisieren
+
+Wenn im Charakterbogen-Modul Themes dazukommen oder sich ändern:
+
+```
+python3 tools/import-sheet-themes.py <pfad/zum/Ascandir---DnD5e-Character-Sheet>
+```
 
 ## Für Makros
 

@@ -135,7 +135,11 @@
       "texTooltipDrape": "Cloth/decoration behind tooltip",
       "ornFlip": "Mirror",
       "texImageWidth": "↳ Image width (0 = same as frame)",
-      "texOutset": "↳ Outset"
+      "texOutset": "↳ Outset",
+      "headingFont": "Heading font",
+      "headingFontSame": "same as main font",
+      "texMedallion": "Ability medallion image",
+      "sheetThemes": "Character sheet themes"
     },
     "labels": {
       "barBackground": "Action bar background",

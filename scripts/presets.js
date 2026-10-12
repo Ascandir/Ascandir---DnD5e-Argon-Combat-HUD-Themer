@@ -3,6 +3,7 @@
  * zum Anpassen im Editor "Duplizieren" verwenden.
  */
 import { MODULE_ID, defaultTheme, normalizeTheme } from "./schema.js";
+import { SHEET_PRESETS } from "./sheet-presets.js";
 
 const ASSETS = `modules/${MODULE_ID}/assets`;
 
@@ -365,8 +366,11 @@ const RAW = [
   },
 ];
 
+// Charakterbogen-Themes: Farben liegen als Palette vor und werden hier in Argon-Farben übersetzt
+const SHEET_RAW = SHEET_PRESETS.map((p) => ({ ...p, colors: { ...palette(p.colors), ...p.menu } }));
+
 export const BUILTIN_THEMES = Object.fromEntries(
-  RAW.map((t) => {
+  [...RAW, ...SHEET_RAW].map((t) => {
     const base = defaultTheme();
     const theme = normalizeTheme({
       ...t,
@@ -377,6 +381,7 @@ export const BUILTIN_THEMES = Object.fromEntries(
       ornaments: t.ornaments ?? [],
     });
     theme.builtin = true;
+    if (t.group) theme.group = t.group;
     return [theme.id, theme];
   })
 );

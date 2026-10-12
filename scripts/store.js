@@ -164,10 +164,8 @@ export async function setWorldTheme(id) {
 /* -------------------------------------------- */
 
 export function refreshChoices() {
-  const themes = Object.values(getAllThemes()).sort((a, b) => {
-    if (!!a.builtin !== !!b.builtin) return a.builtin ? -1 : 1;
-    return a.name.localeCompare(b.name);
-  });
+  const rank = (t) => (t.builtin ? (t.group ? 1 : 0) : 2);
+  const themes = Object.values(getAllThemes()).sort((a, b) => rank(a) - rank(b) || (rank(a) === 1 ? 0 : a.name.localeCompare(b.name)));
   const fill = (target, head) => {
     for (const k of Object.keys(target)) delete target[k];
     Object.assign(target, head);
