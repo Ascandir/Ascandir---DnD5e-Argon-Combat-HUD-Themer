@@ -242,7 +242,7 @@ export function normalizeOrnament(o = {}) {
     y: clampNumber(o.y, -1000, 1000, 0),
     width: clampNumber(o.width, 4, 1000, d.width),
     height: clampNumber(o.height, 4, 1000, d.height),
-    layer: o.layer === "back" ? "back" : "front",
+    layer: ["back", "middle"].includes(o.layer) ? o.layer : "front",
     animation: ORNAMENT_ANIMATIONS.includes(o.animation) ? o.animation : "none",
     flip: !!o.flip,
   };

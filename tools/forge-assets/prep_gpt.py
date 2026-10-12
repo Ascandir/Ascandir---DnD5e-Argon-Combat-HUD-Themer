@@ -89,3 +89,48 @@ for name in ("drape", "arrow", "star"):
     a = load(name)
     save(a, f"gpt-{name}.webp")
 print("ok")
+
+# --- Großer Rahmen MIT Vorhängen (für das Portrait) ------------------------
+# Vorhänge bleiben innen erhalten; was außen über die Balken hinaushängt, wird entfernt.
+dr = load("big")
+dr = pad(dr, 40, 15, 39, 0)
+H2, W2 = dr.shape[:2]
+r, g, b, al = dr[..., 0], dr[..., 1], dr[..., 2], dr[..., 3]
+red = (al > 10) & (r > 22) & (g < 0.17 * r + 2) & (b >= g - 2)
+outside = np.zeros_like(red)
+outside[:, :74] = True            # links außerhalb des Balkens
+outside[:, W2 - 74:] = True       # rechts außerhalb
+outside[:280, :] = False          # Ecken oben unangetastet lassen
+outside[H2 - 260:, :] = False     # Ecken unten unangetastet lassen
+dr[..., 3] = np.where(red & outside, 0, al)
+# Mitte leeren, aber die Vorhänge an den Innenseiten (bis ~150 px) behalten
+dr = clear_center(dr, (160, 108, W2 - 160, H2 - 103), 280)
+save(dr, "frame-gothic-drape.webp")
+print("frame-gothic-drape", W2, H2)
+
+# --- Geraffter Theatervorhang (links; rechts per Spiegeln) ------------------
+src = load("drape")                       # 160 x 710
+sh, sw = src.shape[:2]
+CW, CH = 220, 700
+cur = np.zeros((CH, CW, 4), np.float32)
+for y in range(CH):
+    t = y / (CH - 1)
+    # oben breit und gerafft, nach unten schmaler werdend, leicht nach außen schwingend
+    width = CW * (1.0 - 0.58 * np.sin(np.pi * 0.5 * min(1.0, t / 0.85)) ** 1.2)
+    w = max(8, int(width))
+    sy = min(sh - 1, int(t * (sh - 1)))
+    row = src[sy]
+    xs = np.linspace(0, sw - 1, w).astype(int)
+    cur[y, :w] = row[xs]
+    # Schatten zur Innenkante (Bildmitte) und Licht an der Außenkante
+    shade = np.linspace(1.08, 0.62, w) ** 1.2
+    cur[y, :w, :3] *= shade[:, None]
+    # weiche Innenkante
+    fade = np.clip((w - np.arange(w)) / 6.0, 0, 1)
+    cur[y, :w, 3] *= fade
+cur[..., :3] *= 0.96                      # satter Samt wie im Entwurf
+# oben unter dem Rahmen etwas abdunkeln
+top = np.clip(np.arange(CH) / 60.0, 0, 1)[:, None]
+cur[..., :3] *= (0.6 + 0.4 * top)[:, :, None]
+save(cur, "curtain-left.webp")
+print("curtain", CW, CH)

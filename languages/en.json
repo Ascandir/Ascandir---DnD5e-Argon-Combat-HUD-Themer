@@ -218,7 +218,8 @@
     },
     "layer": {
       "front": "front",
-      "back": "back"
+      "back": "back",
+      "middle": "middle (above image, below text)"
     }
   }
 }

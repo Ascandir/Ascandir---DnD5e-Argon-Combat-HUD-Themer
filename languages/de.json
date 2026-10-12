@@ -218,7 +218,8 @@
     },
     "layer": {
       "front": "vorne",
-      "back": "hinten"
+      "back": "hinten",
+      "middle": "Mitte (über dem Bild, unter dem Text)"
     }
   }
 }

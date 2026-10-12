@@ -208,7 +208,7 @@ export class ThemeEditor extends ApplicationV2 {
         <label>${L("editor.ornAnimation")}<select data-path="${p}.animation">${opt(ORNAMENT_ANIMATIONS, o.animation, "animation")}</select></label>
         ${num("x", L("editor.ornX"))}
         ${num("y", L("editor.ornY"))}
-        <label>${L("editor.ornLayer")}<select data-path="${p}.layer">${opt(["front", "back"], o.layer, "layer")}</select></label>
+        <label>${L("editor.ornLayer")}<select data-path="${p}.layer">${opt(["front", "middle", "back"], o.layer, "layer")}</select></label>
         ${num("width", L("editor.ornWidth"))}
         ${num("height", L("editor.ornHeight"))}
         <label class="act-orn-flip"><input type="checkbox" data-path="${p}.flip" ${o.flip ? "checked" : ""}> ${L("editor.ornFlip")}</label>

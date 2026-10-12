@@ -121,11 +121,8 @@ const RAW = [
       tooltipDrape: "",
     },
     ornaments: [
-      { src: `${ASSETS}/gothic/gpt-drape.webp`, anchor: "portrait", corner: "top-left", x: 0, y: 0, width: 44, height: 250, layer: "front", animation: "sway" },
-      { src: `${ASSETS}/gothic/gpt-drape.webp`, anchor: "portrait", corner: "top-right", x: 0, y: 0, width: 44, height: 250, layer: "front", animation: "sway", flip: true },
-      { src: `${ASSETS}/gothic/gpt-drape.webp`, anchor: "abilityMenu", corner: "top-right", x: -26, y: 60, width: 34, height: 230, layer: "back", animation: "sway", flip: true },
-      { src: `${ASSETS}/gothic/gpt-drape.webp`, anchor: "actionFirst", corner: "top-left", x: -22, y: 6, width: 36, height: 170, layer: "back", animation: "none" },
-      { src: `${ASSETS}/gothic/gpt-drape.webp`, anchor: "actionLast", corner: "top-right", x: -22, y: 6, width: 36, height: 170, layer: "back", animation: "none", flip: true },
+      { src: `${ASSETS}/gothic/curtain-left.webp`, anchor: "portrait", corner: "top-left", x: 0, y: 0, width: 82, height: 250, layer: "middle", animation: "none" },
+      { src: `${ASSETS}/gothic/curtain-left.webp`, anchor: "portrait", corner: "top-right", x: 0, y: 0, width: 82, height: 250, layer: "middle", animation: "none", flip: true },
       { src: `${ASSETS}/gothic/gpt-star.webp`, anchor: "abilityMenu", corner: "bottom-left", x: 24, y: 22, width: 22, height: 25, layer: "front", animation: "none" },
     ],
     customCss: `/* Rast-Knöpfe: Pergament mit dunkler Schrift */
@@ -151,9 +148,12 @@ const RAW = [
 .extended-combat-hud .ability-menu ul.collapsible-panel > li > span:not(:first-child) { text-align: center; }
 /* Zierpfeile am ∞ größer */
 .extended-combat-hud .feature-spell-slots .spell-cantrip::before, .extended-combat-hud .feature-spell-slots .spell-cantrip::after { width: 150px !important; height: 40px !important; }
-/* Werteleiste größer */
-.extended-combat-hud .portrait-hud .portrait-stat-block:not(.player-details) { font-size: 1.55rem !important; padding: 0.9rem 0.6rem !important; }
-.extended-combat-hud .portrait-hud .portrait-stat-block span[style*="movement-baseMovement-background"] { margin: -0.9rem -0.6rem -0.9rem 0.4em !important; }
+/* Portrait: Bild oben, darunter dunkler Streifen mit den Werte-Kästen */
+.extended-combat-hud .portrait-hud { padding: 0 12px 12px !important; }
+.extended-combat-hud .portrait-hud .portrait-hud-image { top: 0 !important; left: 0 !important; height: auto !important; bottom: 70px !important; box-shadow: inset 0 0 0 2px #c9a45a, inset 0 0 0 4px #000000b0, inset 0 -40px 40px -24px #000000 !important; }
+.extended-combat-hud .portrait-hud .portrait-stat-block:not(.player-details) { font-size: 1.32rem !important; padding: 0.6rem 0.45rem !important; justify-content: center; min-width: 0 !important; white-space: nowrap; }
+.extended-combat-hud .portrait-hud .portrait-stat-block span[style*="movement-baseMovement-background"] { margin: -0.6rem -0.45rem -0.6rem 0.3em !important; padding: 0 0.45em !important; }
+.extended-combat-hud .portrait-hud .player-details .player-detail { font-size: 1.15em !important; }
 /* Tooltip: Abstand zu den Zierecken */
 .ech-tooltip .ech-tooltip-header { padding: 1.2rem 1.8rem 0.3rem !important; }
 .ech-tooltip .ech-tooltip-body { padding: 0 1.8rem 1.3rem !important; }

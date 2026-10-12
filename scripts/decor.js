@@ -133,7 +133,8 @@ function placeStyle(o) {
     position: "absolute",
     width: `${o.width}px`,
     height: `${o.height}px`,
-    zIndex: o.layer === "back" ? "-1" : "50",
+    // hinten: hinter dem Bild · Mitte: über dem Bild, unter Name/Werten · vorne: über allem
+    zIndex: o.layer === "back" ? "-1" : o.layer === "middle" ? "0" : "50",
   };
   const [v, h] = o.corner.split("-");
   if (v === "top") st.top = `${o.y}px`;

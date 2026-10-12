@@ -424,21 +424,37 @@ ${HUD} .action-element:not(.item-button)::after {
 }`);
   }
   if (s.statBoxColors) {
+    const gold = c["mainAction-base-border"];
+    const box = ".portrait-hud .portrait-stat-block:not(.player-details)";
+    const nth = (n) => `${HUD} ${box}:nth-child(${n} of .portrait-stat-block:not(.player-details))`;
     out.push(`
-${HUD} .portrait-hud .portrait-stat-block:not(.player-details):before {
+${HUD} ${box} {
+  border: 2px solid ${gold} !important;
+  border-image: none !important;
+  border-radius: 3px !important;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 1px #000000aa, inset 0 0 10px #000000cc, 0 2px 4px #000000cc !important;
+  color: ${x.statText} !important;
+  font-weight: 700;
+  text-shadow: 0 1px 2px #000000 !important;
+}
+${HUD} ${box}:before {
   background-image: none !important;
-  background-color: ${x.statBackground} !important;
+  background: linear-gradient(to bottom, color-mix(in srgb, ${x.statBackground} 85%, #ffffff 15%), ${x.statBackground} 70%) !important;
 }
-${HUD} .portrait-hud .portrait-stat-block:not(.player-details):nth-child(1 of .portrait-stat-block:not(.player-details)):before {
-  background: linear-gradient(to bottom, color-mix(in srgb, ${x.hpBox} 80%, #ffffff 20%), ${x.hpBox} 60%, color-mix(in srgb, ${x.hpBox} 60%, #000000)) !important;
+${nth(1)} { flex-grow: 1.45 !important; }
+${nth(1)}:before {
+  background: linear-gradient(to bottom, color-mix(in srgb, ${x.hpBox} 75%, #ffffff 25%), ${x.hpBox} 55%, color-mix(in srgb, ${x.hpBox} 60%, #000000)) !important;
 }
+${nth(2)} { margin-left: -2px !important; }
+${nth(3)} { margin-left: 8px !important; flex-grow: 0.9 !important; }
 ${HUD} .portrait-hud .portrait-stat-block span[style*="movement-baseMovement-background"] {
   align-self: stretch;
   display: flex; align-items: center;
   margin: -0.75rem -0.75rem -0.75rem 0.35em;
-  padding: 0 0.55em;
-  background: linear-gradient(to bottom, color-mix(in srgb, ${x.accentBox} 80%, #ffffff 20%), ${x.accentBox} 60%);
-  border-left: 1px solid ${c["mainAction-base-border"]};
+  padding: 0 0.6em;
+  background: linear-gradient(to bottom, color-mix(in srgb, ${x.accentBox} 70%, #ffffff 30%), ${x.accentBox} 60%, color-mix(in srgb, ${x.accentBox} 70%, #000000));
+  box-shadow: inset 1px 0 0 #00000088;
 }`);
   }
   if (s.tooltipDivider) {
