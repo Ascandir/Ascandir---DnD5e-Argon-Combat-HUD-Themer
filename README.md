@@ -1,4 +1,4 @@
-# Ascandir - Argon Combat HUD Themer
+# Ascandir - DnD5e Argon Combat HUD Themer
 
 Eigene Themes/Skins für das **Argon Combat HUD** in Foundry VTT erstellen, speichern und über die Spieleinstellungen auswählen.
 
@@ -18,14 +18,14 @@ Eigene Themes/Skins für das **Argon Combat HUD** in Foundry VTT erstellen, spei
 In Foundry unter **Add-on Modules → Install Module** diese Manifest-URL eintragen:
 
 ```
-https://github.com/Ascandir/Ascandir---Argon-Combat-HUD-Themer/releases/latest/download/module.json
+https://github.com/Ascandir/Ascandir---DnD5e-Argon-Combat-HUD-Themer/releases/latest/download/module.json
 ```
 
 Benötigt: **Argon - Combat HUD (CORE)** (ab 5.0). Getestet mit Foundry v14.368, dnd5e 6.0.6, Argon Core 5.0.1 und Argon dnd5e 5.2.2.
 
 ## Benutzung
 
-1. **Spieleinstellungen → Moduleinstellungen → Ascandir - Argon Combat HUD Themer → Theme-Editor öffnen** (nur SL)
+1. **Spieleinstellungen → Moduleinstellungen → Ascandir - DnD5e Argon Combat HUD Themer → Theme-Editor öffnen** (nur SL)
 2. Links ein Theme wählen oder ein neues anlegen, rechts anpassen. Einen Token auswählen, um die Änderungen auch am echten HUD zu sehen.
 3. **Speichern** – Vorlagen werden dabei automatisch als eigene Kopie gespeichert.
 4. **Für alle aktivieren** oder in den Moduleinstellungen unter „Theme für alle (Welt)“ auswählen.

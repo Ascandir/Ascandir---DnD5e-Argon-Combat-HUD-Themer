@@ -1,5 +1,5 @@
 /**
- * Ascandir - Argon Combat HUD Themer
+ * Ascandir - DnD5e Argon Combat HUD Themer
  * Eigene Themes/Skins für das Argon Combat HUD erstellen, speichern und auswählen.
  */
 import { MODULE_ID } from "./schema.js";

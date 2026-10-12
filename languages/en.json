@@ -24,7 +24,7 @@
       "world": "As set by the GM"
     },
     "editor": {
-      "title": "Argon Combat HUD Themer",
+      "title": "DnD5e Argon Combat HUD Themer",
       "library": "Theme library",
       "myThemes": "My themes",
       "builtinThemes": "Ascandir presets",
@@ -176,7 +176,7 @@
       "argonRestored": "Themer turned off – Argon uses its own look again.",
       "imported": "Theme imported. Don't forget to save!",
       "importFailed": "The file could not be read as a theme.",
-      "argonMissing": "Argon Combat HUD Themer: the module \"Argon - Combat HUD (CORE)\" is not active."
+      "argonMissing": "DnD5e Argon Combat HUD Themer: the module \"Argon - Combat HUD (CORE)\" is not active."
     },
     "anchor": {
       "portrait": "Portrait",

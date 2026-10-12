@@ -1,5 +1,6 @@
 **v0.3.0**
 
+- **Neuer Name:** „Ascandir - DnD5e Argon Combat HUD Themer“ (Repo: Ascandir---DnD5e-Argon-Combat-HUD-Themer). Gespeicherte Themes und Einstellungen bleiben erhalten, ein normales Update genügt.
 - **„Schmiede & Pergament“ komplett nach dem neuen Ascandir-Entwurf** umgebaut: schwere Holzrahmen mit Bronzebeschlägen, dunkle Menütafel, durchgehende Aktionsplanke mit eingelassenen Beschriftungen, verbrannter Pergament-Tooltip mit Wachssiegel, Knöpfe mit Bronzedornen, Schriftrolle mit Seil, Kette und Laterne
 - Neue Schalter im Editor: **Tooltip-Titel linksbündig mit Symbol**, **HP / RK / SG als durchgehende Leiste**, **Aktionsleisten als durchgehende Planke**, **Name & Stufe ausblenden**
 - Neue Bildfelder: **eigene Textur für Menü & Rast-Knöpfe**, **eigener Tooltip-Rahmen**, **Rahmen der Aktionsplanke**, Rahmenkanten **strecken oder wiederholen**
@@ -7,4 +8,4 @@
 - Lange Namen im Attribute-Menü brechen nicht mehr um; lange Knopftitel laufen nicht mehr über
 - Kopfleisten im verzierten Menü als eingelassene Planke, Zierstern mittig
 
-Manifest-URL: `https://github.com/Ascandir/Ascandir---Argon-Combat-HUD-Themer/releases/latest/download/module.json`
+Manifest-URL: `https://github.com/Ascandir/Ascandir---DnD5e-Argon-Combat-HUD-Themer/releases/latest/download/module.json`
