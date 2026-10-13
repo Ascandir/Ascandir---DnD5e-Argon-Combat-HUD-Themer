@@ -239,7 +239,7 @@ for kind, ids, sub in (("base", BASE, ""), ("damage", DAMAGE, "damage/"), ("clas
             print("WARNUNG: keine Farben für", tid)
         label = labels.get(tid, tid)
         label = re.sub(r"^(Klasse|Schadenstyp):\s*", lambda m: m.group(1) + " – ", label)
-        preset = build(tid, f"Charakterbogen · {label}", vars_, src_dir, kind)
+        preset = build(tid, label, vars_, src_dir, kind)
         if os.path.exists(os.path.join(src_dir, "emblem.svg")):
             gl = to_rgba(vars_.get("asc-gold-light")) or (236, 213, 156, 1)
             tint_svg(os.path.join(src_dir, "emblem.svg"), os.path.join(dst_dir, "emblem.svg"), hx(gl)[:7])

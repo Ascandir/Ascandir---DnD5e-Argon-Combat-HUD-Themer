@@ -9,7 +9,7 @@ const ASSETS = `modules/${MODULE_ID}/assets`;
 export const SHEET_PRESETS = [
   {
     "id": "sheet-parchment",
-    "name": "Charakterbogen · Pergament & Holz",
+    "name": "Pergament & Holz",
     "group": "sheet",
     "colors": {
       "text": "#f0dfb6ff",
@@ -121,7 +121,7 @@ export const SHEET_PRESETS = [
   },
   {
     "id": "sheet-nightwatch",
-    "name": "Charakterbogen · Nachtwache",
+    "name": "Nachtwache",
     "group": "sheet",
     "colors": {
       "text": "#e2ebf4ff",
@@ -233,7 +233,7 @@ export const SHEET_PRESETS = [
   },
   {
     "id": "sheet-crimson",
-    "name": "Charakterbogen · Blutmond",
+    "name": "Blutmond",
     "group": "sheet",
     "colors": {
       "text": "#f2e2c0ff",
@@ -345,7 +345,7 @@ export const SHEET_PRESETS = [
   },
   {
     "id": "sheet-arcane",
-    "name": "Charakterbogen · Arkanum",
+    "name": "Arkanum",
     "group": "sheet",
     "colors": {
       "text": "#e8eeffff",
@@ -457,7 +457,7 @@ export const SHEET_PRESETS = [
   },
   {
     "id": "sheet-acid",
-    "name": "Charakterbogen · Schadenstyp – Säure",
+    "name": "Schadenstyp – Säure",
     "group": "sheet",
     "colors": {
       "text": "#e6eed7ff",
@@ -569,7 +569,7 @@ export const SHEET_PRESETS = [
   },
   {
     "id": "sheet-bludgeoning",
-    "name": "Charakterbogen · Schadenstyp – Wucht",
+    "name": "Schadenstyp – Wucht",
     "group": "sheet",
     "colors": {
       "text": "#e4e2e0ff",
@@ -681,7 +681,7 @@ export const SHEET_PRESETS = [
   },
   {
     "id": "sheet-cold",
-    "name": "Charakterbogen · Schadenstyp – Kälte",
+    "name": "Schadenstyp – Kälte",
     "group": "sheet",
     "colors": {
       "text": "#e6ecf3ff",
@@ -793,7 +793,7 @@ export const SHEET_PRESETS = [
   },
   {
     "id": "sheet-fire",
-    "name": "Charakterbogen · Schadenstyp – Feuer",
+    "name": "Schadenstyp – Feuer",
     "group": "sheet",
     "colors": {
       "text": "#f2e8d6ff",
@@ -905,7 +905,7 @@ export const SHEET_PRESETS = [
   },
   {
     "id": "sheet-force",
-    "name": "Charakterbogen · Schadenstyp – Energie",
+    "name": "Schadenstyp – Energie",
     "group": "sheet",
     "colors": {
       "text": "#ece6f3ff",
@@ -1017,7 +1017,7 @@ export const SHEET_PRESETS = [
   },
   {
     "id": "sheet-lightning",
-    "name": "Charakterbogen · Schadenstyp – Blitz",
+    "name": "Schadenstyp – Blitz",
     "group": "sheet",
     "colors": {
       "text": "#e8ebf2ff",
@@ -1129,7 +1129,7 @@ export const SHEET_PRESETS = [
   },
   {
     "id": "sheet-necrotic",
-    "name": "Charakterbogen · Schadenstyp – Nekrotisch",
+    "name": "Schadenstyp – Nekrotisch",
     "group": "sheet",
     "colors": {
       "text": "#ebeae4ff",
@@ -1241,7 +1241,7 @@ export const SHEET_PRESETS = [
   },
   {
     "id": "sheet-piercing",
-    "name": "Charakterbogen · Schadenstyp – Stich",
+    "name": "Schadenstyp – Stich",
     "group": "sheet",
     "colors": {
       "text": "#e7e9ecff",
@@ -1353,7 +1353,7 @@ export const SHEET_PRESETS = [
   },
   {
     "id": "sheet-poison",
-    "name": "Charakterbogen · Schadenstyp – Gift",
+    "name": "Schadenstyp – Gift",
     "group": "sheet",
     "colors": {
       "text": "#e4eedaff",
@@ -1465,7 +1465,7 @@ export const SHEET_PRESETS = [
   },
   {
     "id": "sheet-psychic",
-    "name": "Charakterbogen · Schadenstyp – Psychisch",
+    "name": "Schadenstyp – Psychisch",
     "group": "sheet",
     "colors": {
       "text": "#f1e6eeff",
@@ -1577,7 +1577,7 @@ export const SHEET_PRESETS = [
   },
   {
     "id": "sheet-radiant",
-    "name": "Charakterbogen · Schadenstyp – Gleißend",
+    "name": "Schadenstyp – Gleißend",
     "group": "sheet",
     "colors": {
       "text": "#f2e8d6ff",
@@ -1689,7 +1689,7 @@ export const SHEET_PRESETS = [
   },
   {
     "id": "sheet-slashing",
-    "name": "Charakterbogen · Schadenstyp – Hieb",
+    "name": "Schadenstyp – Hieb",
     "group": "sheet",
     "colors": {
       "text": "#e8e9ebff",
@@ -1801,7 +1801,7 @@ export const SHEET_PRESETS = [
   },
   {
     "id": "sheet-thunder",
-    "name": "Charakterbogen · Schadenstyp – Schall",
+    "name": "Schadenstyp – Schall",
     "group": "sheet",
     "colors": {
       "text": "#efe4dbff",
@@ -1913,7 +1913,7 @@ export const SHEET_PRESETS = [
   },
   {
     "id": "sheet-barbarian",
-    "name": "Charakterbogen · Klasse – Barbar",
+    "name": "Klasse – Barbar",
     "group": "sheet",
     "colors": {
       "text": "#e7e4e0ff",
@@ -2037,7 +2037,7 @@ export const SHEET_PRESETS = [
   },
   {
     "id": "sheet-bard",
-    "name": "Charakterbogen · Klasse – Barde",
+    "name": "Klasse – Barde",
     "group": "sheet",
     "colors": {
       "text": "#f2e8d6ff",
@@ -2161,7 +2161,7 @@ export const SHEET_PRESETS = [
   },
   {
     "id": "sheet-cleric",
-    "name": "Charakterbogen · Klasse – Kleriker",
+    "name": "Klasse – Kleriker",
     "group": "sheet",
     "colors": {
       "text": "#f2e8d6ff",
@@ -2285,7 +2285,7 @@ export const SHEET_PRESETS = [
   },
   {
     "id": "sheet-druid",
-    "name": "Charakterbogen · Klasse – Druide",
+    "name": "Klasse – Druide",
     "group": "sheet",
     "colors": {
       "text": "#eee7dbff",
@@ -2409,7 +2409,7 @@ export const SHEET_PRESETS = [
   },
   {
     "id": "sheet-fighter",
-    "name": "Charakterbogen · Klasse – Kämpfer",
+    "name": "Klasse – Kämpfer",
     "group": "sheet",
     "colors": {
       "text": "#e7e9ebff",
@@ -2533,7 +2533,7 @@ export const SHEET_PRESETS = [
   },
   {
     "id": "sheet-monk",
-    "name": "Charakterbogen · Klasse – Mönch",
+    "name": "Klasse – Mönch",
     "group": "sheet",
     "colors": {
       "text": "#eee5daff",
@@ -2657,7 +2657,7 @@ export const SHEET_PRESETS = [
   },
   {
     "id": "sheet-paladin",
-    "name": "Charakterbogen · Klasse – Paladin",
+    "name": "Klasse – Paladin",
     "group": "sheet",
     "colors": {
       "text": "#f2e8d6ff",
@@ -2781,7 +2781,7 @@ export const SHEET_PRESETS = [
   },
   {
     "id": "sheet-ranger",
-    "name": "Charakterbogen · Klasse – Waldläufer",
+    "name": "Klasse – Waldläufer",
     "group": "sheet",
     "colors": {
       "text": "#eee7dbff",
@@ -2905,7 +2905,7 @@ export const SHEET_PRESETS = [
   },
   {
     "id": "sheet-rogue",
-    "name": "Charakterbogen · Klasse – Schurke",
+    "name": "Klasse – Schurke",
     "group": "sheet",
     "colors": {
       "text": "#e4e5e8ff",
@@ -3029,7 +3029,7 @@ export const SHEET_PRESETS = [
   },
   {
     "id": "sheet-sorcerer",
-    "name": "Charakterbogen · Klasse – Zauberer",
+    "name": "Klasse – Zauberer",
     "group": "sheet",
     "colors": {
       "text": "#f2e8d6ff",
@@ -3153,7 +3153,7 @@ export const SHEET_PRESETS = [
   },
   {
     "id": "sheet-warlock",
-    "name": "Charakterbogen · Klasse – Hexenmeister",
+    "name": "Klasse – Hexenmeister",
     "group": "sheet",
     "colors": {
       "text": "#eae4f1ff",
@@ -3277,7 +3277,7 @@ export const SHEET_PRESETS = [
   },
   {
     "id": "sheet-wizard",
-    "name": "Charakterbogen · Klasse – Magier",
+    "name": "Klasse – Magier",
     "group": "sheet",
     "colors": {
       "text": "#e8eaf1ff",
@@ -3401,7 +3401,7 @@ export const SHEET_PRESETS = [
   },
   {
     "id": "sheet-artificer",
-    "name": "Charakterbogen · Klasse – Magieschmied",
+    "name": "Klasse – Magieschmied",
     "group": "sheet",
     "colors": {
       "text": "#f1e1d6ff",
