@@ -1,8 +1,13 @@
 name: Release
 
+# Sobald sich "version" in module.json auf main ändert, wird automatisch ein Release
+# v<version> mit module.json und module.zip erstellt (Foundry kann dann updaten).
+# Lässt sich auch manuell unter "Actions" starten.
 on:
-  release:
-    types: [published]
+  push:
+    branches: [main]
+    paths: [module.json, .github/workflows/release.yml]
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -13,24 +18,34 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Version im Manifest prüfen
+      - name: Version lesen
+        id: v
         run: |
-          RAW_TAG="${{ github.event.release.tag_name || github.ref_name }}"
-          TAG="${RAW_TAG#v}"
           VERSION=$(jq -r .version module.json)
-          if [ "$TAG" != "$VERSION" ]; then
-            echo "Tag v$TAG passt nicht zur module.json-Version $VERSION" >&2
-            exit 1
-          fi
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "tag=v$VERSION" >> "$GITHUB_OUTPUT"
+          if gh release view "v$VERSION" >/dev/null 2>&1; then echo "exists=true" >> "$GITHUB_OUTPUT"; else echo "exists=false" >> "$GITHUB_OUTPUT"; fi
+        env:
+          GH_TOKEN: ${{ github.token }}
 
-      - name: Modul-Paket bauen
+      - name: Download-Link prüfen
+        if: steps.v.outputs.exists == 'false'
+        run: |
+          jq --arg tag "${{ steps.v.outputs.tag }}" \
+            '.download = "https://github.com/\(env.GITHUB_REPOSITORY)/releases/download/\($tag)/module.zip"' \
+            module.json > module.tmp && mv module.tmp module.json
+
+      - name: ZIP bauen
+        if: steps.v.outputs.exists == 'false'
         run: zip -r module.zip module.json README.md scripts styles languages assets
 
-      - name: Release anlegen
+      - name: Release erstellen
+        if: steps.v.outputs.exists == 'false'
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: ${{ github.event.release.tag_name || github.ref_name }}
-          name: ${{ github.event.release.tag_name || github.ref_name }}
+          tag_name: ${{ steps.v.outputs.tag }}
+          name: ${{ steps.v.outputs.tag }}
+          target_commitish: ${{ github.sha }}
           body_path: CHANGELOG-latest.md
           files: |
             module.json
