@@ -153,8 +153,8 @@ def build(theme_id, label, vars_, asset_dir, group_kind):
         "abilityMenu-hover-boxShadow": "#00000000",
     }
     extras = {
-        "accent": hx(mix(gem, WHITE, 0.62)), "hp": hx(badge_text), "pip": hx(gem), "pipGlow": hx(gem, 0.5),
-        "pipUsed": hx(meter), "statText": hx(badge_text), "statBackground": hx(badge),
+        "accent": hx(mix(gem, WHITE, 0.62)), "hp": "#8fe08aff", "pip": hx(gem), "pipGlow": hx(gem, 0.5),
+        "pipUsed": hx(meter), "statText": "#f3e7cfff", "statBackground": hx(mix(header, BLACK, 0.35), 0.92),
         "panelText": hx(header_text), "headerBg": hx(header),
         "highlight": hx(row_hover, max(0.18, row_hover[3])), "iconTint": hx(gold_light),
         "hpBox": hx(hd2), "accentBox": hx(mix(gem, BLACK, 0.55)),
@@ -169,22 +169,14 @@ def build(theme_id, label, vars_, asset_dir, group_kind):
 .extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) {{ border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px {gold_css}, 0 2px 4px #000000 !important; }}
 .extended-combat-hud .feature-spell-slots .spell-cantrip {{ color: {hx(gold_light)[:7]} !important; }}
 .extended-combat-hud .feature-element .feature-element-title {{ font-size: 1.1em !important; text-transform: none !important; }}
-/* Portrait: Name groß, Werte-Streifen unter dem Bild */
+/* Portrait: Name groß */
 .extended-combat-hud .portrait-hud .player-details {{ background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }}
 .extended-combat-hud .portrait-hud .player-details .player-name {{ font-size: 2.1rem !important; font-weight: 700; color: {hx(gold_light)[:7]} !important; }}
 .extended-combat-hud .portrait-hud .player-details .player-detail {{ display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid {gold_css}; padding-bottom: 3px; }}
-.extended-combat-hud .portrait-hud {{ padding: 0 12px 12px !important; }}
-.extended-combat-hud .portrait-hud .portrait-hud-image {{ top: 0 !important; left: 0 !important; height: auto !important; bottom: 70px !important; box-shadow: inset 0 0 0 2px {gold_css}, inset 0 0 0 4px #000000b0, inset 0 -40px 40px -24px #000000 !important; }}
-.extended-combat-hud .portrait-hud .portrait-stat-block:not(.player-details) {{ font-size: 1.32rem !important; padding: 0.6rem 0.45rem !important; justify-content: center; min-width: 0 !important; white-space: nowrap; }}
-.extended-combat-hud .portrait-hud .portrait-stat-block span[style*="movement-baseMovement-background"] {{ margin: -0.6rem -0.45rem -0.6rem 0.3em !important; padding: 0 0.45em !important; }}
 /* Menü */
 .extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li {{ border-radius: 6px; border-color: {gold_css} !important; }}
 .extended-combat-hud .ability-menu ul > li:not(.ability-title) {{ border-top-color: {hx(gold, 0.18)} !important; box-shadow: none !important; }}
-.extended-combat-hud .ability-menu ul > li:not(.ability-title) > span:not(:first-child),
-.extended-combat-hud .ability-menu ul > li:not(.ability-title) > div > span {{ border-left: none !important; box-shadow: none !important; }}
-.extended-combat-hud .ability-menu ul.collapsible-panel > li {{ grid-template-columns: minmax(0, 1fr) 3.6em 3.6em !important; }}
 .extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) {{ font-size: 0.78em; letter-spacing: 0; }}
-.extended-combat-hud .ability-menu ul.collapsible-panel > li > span:not(:first-child) {{ text-align: center; }}
 /* Tooltip */
 .ech-tooltip .ech-tooltip-header {{ padding: 1rem 1.3rem 0.3rem !important; }}
 .ech-tooltip .ech-tooltip-body {{ padding: 0 1.3rem 1.1rem !important; }}
@@ -204,8 +196,8 @@ def build(theme_id, label, vars_, asset_dir, group_kind):
             "font": "EB Garamond", "headingFont": "Cinzel", "fontScale": 115, "radius": 0, "borderWidth": 1,
             "hoverGlow": True, "glowColor": hx(glow, 0.65), "glowSize": 10, "textShadow": False, "portraitFrame": False,
             "skillIcons": True, "ornateMenu": True, "squarePips": True, "titleStrip": True,
-            "tooltipTitleLeft": True, "joinedStats": True, "continuousBar": True, "hideName": False,
-            "abilityMedallions": True, "highlightProficient": True, "tintIcons": True, "statBoxColors": True,
+            "tooltipTitleLeft": True, "joinedStats": False, "continuousBar": True, "hideName": False,
+            "abilityMedallions": False, "highlightProficient": True, "tintIcons": True, "statBoxColors": False,
             "tooltipDivider": True,
         },
         "textures": {

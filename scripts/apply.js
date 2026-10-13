@@ -250,7 +250,7 @@ ${HUD} .feature-element,
 ${bar ? "" : `${HUD} .actions-container:before,`}
 ${HUD} .movement-hud:not(:has(.button-hud-button)),
 ${HUD} .weapon-sets .weapon-set,
-${HUD} .portrait-hud .player-button${style.joinedStats ? "" : `,\n${HUD} .portrait-hud .portrait-stat-block:not(.player-details)`} {
+${HUD} .portrait-hud .player-button {
   ${borderImage(t.buttonFrame, t.buttonFrameSlice, t.buttonFrameWidth, t.frameRepeat, t.buttonFrameImageWidth, t.buttonFrameOutset)}
 }`);
   }
@@ -287,13 +287,29 @@ function buildLayoutFixCss({ textures: t, style }) {
   const out = [];
   const portraitBorder = t.frame ? t.frameWidth : style.portraitFrame ? Math.max(1, style.borderWidth) : 1;
   const extraP = portraitBorder - 1;
-  if (extraP > 0) {
+
+  // Wie viel höher die eingeklappte Menüleiste („Saves / Skills / Tools“) durch Rahmen,
+  // Kopfleisten-Stil und Schriftgröße wird. Um so viel rücken Quickslots und die
+  // Knöpfe daneben nach oben, damit sie nicht dahinter verschwinden.
+  const menuExtra = Math.max(0, Math.round(
+    (t.frame ? 2 * t.frameWidth + (t.frameOutset || 0) : 0)
+    + (style.ornateMenu ? 8 : 0)
+    + Math.max(0, (style.fontScale / 100 - 1) * 22),
+  ));
+  if (extraP > 0 || menuExtra > 0) {
     out.push(`
 ${HUD} .portrait-hud .player-buttons {
   right: calc(-115px - ${extraP}px) !important;
-  top: calc(-50px - 1rem - 37px - ${extraP}px) !important;
-}
+  top: calc(-50px - 1rem - 37px - ${extraP + menuExtra}px) !important;
+}`);
+  }
+  if (extraP > 0) {
+    out.push(`
 ${HUD} .portrait-hud .portrait-actor-configuration { top: ${extraP}px !important; right: ${extraP}px !important; }`);
+  }
+  if (menuExtra > 0) {
+    out.push(`
+${HUD} .weapon-sets { top: calc(-50px - 37px - 1rem - ${menuExtra}px) !important; }`);
   }
   const setBorder = t.buttonFrame ? t.buttonFrameWidth : style.borderWidth;
   const extraS = Math.max(0, setBorder - 1) * 2;
@@ -304,7 +320,27 @@ ${HUD} .weapon-sets .weapon-set > .set {
   min-width: calc(50px - ${extraS}px) !important;
 }`);
   }
+
+  // Todesrettungen: statt Argons greller roter Fläche ein dunkler Schleier in Theme-Farben
+  out.push(buildDeathSaveCss(arguments[0]));
   return out.join("\n");
+}
+
+function buildDeathSaveCss({ extras: x, colors: c }) {
+  return `
+${HUD} .portrait-hud .death-saves {
+  background: radial-gradient(ellipse at 50% 45%, color-mix(in srgb, ${x.hpBox} 30%, transparent) 0%, #000000cc 70%, #000000e6 100%) !important;
+  backdrop-filter: grayscale(0.85) brightness(0.55);
+  color: ${x.statText} !important;
+  text-shadow: 0 2px 4px #000000;
+}
+${HUD} .portrait-hud .portrait-stat-block, ${HUD} .portrait-hud .player-buttons { z-index: 2; }
+${HUD} .portrait-hud .death-saves .death-save-btn { font-size: 5.5rem !important; color: ${x.iconTint} !important; filter: drop-shadow(0 0 10px #000000); cursor: pointer; }
+${HUD} .portrait-hud .death-saves .death-save-btn:hover { color: ${c["mainAction-hover-color"]} !important; filter: drop-shadow(0 0 12px ${x.iconTint}); }
+${HUD} .portrait-hud .death-saves.no-buttons .death-save-btn { opacity: 0.85; }
+${HUD} .portrait-hud .death-saves .death-save-result-container { font-size: 2.2rem !important; gap: 0.3rem; font-weight: 700; }
+${HUD} .portrait-hud .death-saves .death-save-success i { color: #7cc47f; }
+${HUD} .portrait-hud .death-saves .death-save-fail i { color: color-mix(in srgb, ${x.hpBox} 50%, #ffffff); }`;
 }
 
 function buildFeatureCss({ style: s, textures: t, extras: x, colors: c }) {
@@ -394,7 +430,7 @@ ${HUD} .ability-menu .asc-skill-icon {
   if (s.abilityMedallions) {
     out.push(`
 ${HUD} .ability-menu .asc-ability-icon {
-  width: 1.9em; height: 1.9em; line-height: calc(1.9em - 4px);
+  width: 1.6em; height: 1.6em; line-height: calc(1.6em - 4px);
   border-radius: 50%;
   background: radial-gradient(circle at 35% 30%, #3e3732, #0c0a09 72%);
   border: 2px solid ${c["abilityMenu-border"]};
@@ -406,7 +442,8 @@ ${HUD} .ability-menu .asc-ability-icon {
   vertical-align: middle;
 }${t.medallion ? `
 ${HUD} .ability-menu .asc-ability-icon {
-  width: 2.3em; height: 2.3em; line-height: 2.3em;
+  width: 1.85em; height: 1.85em; line-height: 1.85em;
+  font-size: 0.8em;
   background: ${cssUrl(t.medallion)} center / 100% 100% no-repeat !important;
   border: none !important;
   box-shadow: none !important;
@@ -532,6 +569,19 @@ ${HUD} .feature-spell-slots .spell-cantrip::after { left: calc(100% + 6px); tran
 ${HUD} .portrait-hud .player-details .player-name,
 ${HUD} .portrait-hud .player-details .player-detail { display: none !important; }
 ${HUD} .portrait-hud .portrait-stat-block.player-details { background: none !important; -webkit-mask-image: none !important; mask-image: none !important; }`);
+  }
+  if (!s.joinedStats) {
+    // Getrennte Werte-Kästen: schlicht, dunkel, dünner Rand – lesbar auf jedem Theme
+    out.push(`
+${HUD} .portrait-hud .portrait-stat-block:not(.player-details) {
+  border: 1px solid ${c["mainAction-base-border"]} !important;
+  border-image: none !important;
+  background: ${x.statBackground} !important;
+  color: ${x.statText} !important;
+  box-shadow: 0 1px 4px #000000aa;
+  white-space: nowrap;
+}
+${HUD} .portrait-hud .portrait-stat-block:not(.player-details):before { background: ${x.statBackground} !important; border-image: none !important; }`);
   }
   if (s.joinedStats) {
     out.push(`

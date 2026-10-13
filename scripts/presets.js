@@ -96,7 +96,7 @@ const RAW = [
       "abilityMenu-hover-boxShadow": "#00000000",
     },
     extras: {
-      accent: "#5fb0ffff", hp: "#f4e6d0ff", pip: "#efe2c2ff", pipGlow: "#00000000", pipUsed: "#5a524aff",
+      accent: "#f0c060ff", hp: "#8fe08aff", pip: "#efe2c2ff", pipGlow: "#00000000", pipUsed: "#5a524aff",
       statText: "#f4e6d0ff", statBackground: "#0d0b0aff", panelText: "#ecd9adff",
       headerBg: "#1a1512ff", highlight: "#6b4a2030", iconTint: "#ecd9b0ff",
       hpBox: "#7c1219ff", accentBox: "#0f2d4cff",
@@ -142,18 +142,8 @@ const RAW = [
 .extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 8px; border-color: #c9a45a !important; }
 .extended-combat-hud .ability-menu ul.ability-toggle li { padding-left: 2.8rem !important; }
 .extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #00000022 !important; box-shadow: none !important; }
-.extended-combat-hud .ability-menu ul > li:not(.ability-title) > span:not(:first-child),
-.extended-combat-hud .ability-menu ul > li:not(.ability-title) > div > span { border-left: none !important; box-shadow: none !important; }
-/* Menü-Spalten: Namen bekommen den Platz, Zahlen schmale feste Spalten */
-.extended-combat-hud .ability-menu ul.collapsible-panel > li { grid-template-columns: minmax(0, 1fr) 3.1em 3.1em !important; }
-.extended-combat-hud .ability-menu ul.collapsible-panel > li > span:not(:first-child) { text-align: center; }
 /* Zierpfeile am ∞ größer */
 .extended-combat-hud .feature-spell-slots .spell-cantrip::before, .extended-combat-hud .feature-spell-slots .spell-cantrip::after { width: 150px !important; height: 40px !important; }
-/* Portrait: Bild oben, darunter dunkler Streifen mit den Werte-Kästen */
-.extended-combat-hud .portrait-hud { padding: 0 12px 12px !important; }
-.extended-combat-hud .portrait-hud .portrait-hud-image { top: 0 !important; left: 0 !important; height: auto !important; bottom: 70px !important; box-shadow: inset 0 0 0 2px #c9a45a, inset 0 0 0 4px #000000b0, inset 0 -40px 40px -24px #000000 !important; }
-.extended-combat-hud .portrait-hud .portrait-stat-block:not(.player-details) { font-size: 1.32rem !important; padding: 0.6rem 0.45rem !important; justify-content: center; min-width: 0 !important; white-space: nowrap; }
-.extended-combat-hud .portrait-hud .portrait-stat-block span[style*="movement-baseMovement-background"] { margin: -0.6rem -0.45rem -0.6rem 0.3em !important; padding: 0 0.45em !important; }
 .extended-combat-hud .portrait-hud .player-details .player-detail { font-size: 1.15em !important; }
 /* Tooltip: Abstand zu den Zierecken */
 .ech-tooltip .ech-tooltip-header { padding: 1.2rem 1.8rem 0.3rem !important; }
@@ -188,7 +178,7 @@ const RAW = [
       "abilityMenu-hover-boxShadow": "#e0a05099",
     },
     extras: {
-      accent: "#3fa9ffff", hp: "#3ddc54ff", pip: "#8fd0f5ff", pipGlow: "#6ec0ffaa", pipUsed: "#2a354099",
+      accent: "#f0c060ff", hp: "#8fe08aff", pip: "#8fd0f5ff", pipGlow: "#6ec0ffaa", pipUsed: "#2a354099",
       statText: "#f0e6d2ff", statBackground: "#0b0806e6", panelText: "#ecd8aeff",
     },
     style: {
@@ -224,31 +214,7 @@ const RAW = [
 .extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 8px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }
 .extended-combat-hud .button-hud-button i { color: #e6cfa2 !important; }`,
   },
-  {
-    id: "ascandir-drachenblut",
-    name: "Ascandir – Drachenblut",
-    colors: palette({
-      text: "#f2e6d8ff", hoverText: "#ffffffff", border: "#8b1e1eff", hoverBorder: "#d43a2fff",
-      portrait: "#1a1214e6", container: "#0d0a0be0",
-      panel: "#231a1ce6", panelHover: "#5a1f22e6",
-      bonus: "#3b1f33e6", bonusHover: "#6e2a55e6",
-      free: "#2a2628e6", freeHover: "#4d4245e6",
-      reaction: "#6b1414e6", reactionHover: "#a32020e6",
-      endTurn: "#24301fe6", endTurnHover: "#3f5a33e6",
-      ttHeader: "#2a1416f2", ttHeaderText: "#f2e6d8ff",
-      ttSubtitle: "#8b1e1eff", ttSubtitleText: "#ffffffff",
-      ttBody: "#1a1214e6", ttBodyText: "#eadccaff",
-      textGlow: "#00000099", accentGlow: "#e0403fcc",
-      button: "#8b1e1eff", buttonHover: "#c22b22ff", buttonText: "#ffffffff",
-      moveUsed: "#4a3d3f80", moveBase: "#d9a441ff", moveBaseGlow: "#ffc861cc",
-      moveDash: "#e06a2cff", moveDashGlow: "#ff8a4ccc", moveDanger: "#c21b1bff", moveDangerGlow: "#ff3b3bcc",
-    }),
-    extras: {
-      accent: "#ff5a4aff", hp: "#7ee08aff", pip: "#f2c48dff", pipGlow: "#ff5a3ccc", pipUsed: "#4a3d3f99",
-      statText: "#f2e6d8ff", statBackground: "#14090acc", panelText: "#d9b8a8ff",
-    },
-    style: { font: "Crimson Text", fontScale: 110, radius: 4, borderWidth: 2, hoverGlow: true, glowColor: "#ff3b2fb3", glowSize: 14, textShadow: true, portraitFrame: true },
-  },
+
   {
     id: "ascandir-pergament",
     name: "Ascandir – Pergament & Tinte",
@@ -289,85 +255,21 @@ const RAW = [
       textShadow: false, portraitFrame: true, skillIcons: true, ornateMenu: true, squarePips: true, titleStrip: true,
     },
   },
-  {
-    id: "ascandir-arkane-nacht",
-    name: "Ascandir – Arkane Nacht",
-    colors: palette({
-      text: "#cfd8ffff", hoverText: "#ffffffff", border: "#4b5bd6ff", hoverBorder: "#9a8cffff",
-      portrait: "#10142ae6", container: "#050714d9",
-      panel: "#141a33e6", panelHover: "#2b3570e6",
-      bonus: "#2a1650e6", bonusHover: "#4a2a8ae6",
-      free: "#14304ae6", freeHover: "#22507ae6",
-      reaction: "#4a1438e6", reactionHover: "#7a2460e6",
-      endTurn: "#123a36e6", endTurnHover: "#1e5e57e6",
-      ttHeader: "#1c2250f2", ttHeaderText: "#e6ebffff",
-      ttSubtitle: "#4b5bd6ff", ttSubtitleText: "#ffffffff",
-      ttBody: "#10142ae6", ttBodyText: "#d8deffff",
-      textGlow: "#6a7cff66", accentGlow: "#9a8cffcc",
-      button: "#4b5bd6ff", buttonHover: "#7a6cffff", buttonText: "#ffffffff",
-      moveUsed: "#3a3f6080", moveBase: "#7aa2ffff", moveBaseGlow: "#9ab8ffcc",
-      moveDash: "#c08aff", moveDashGlow: "#d6a8ffcc", moveDanger: "#ff5a8aff", moveDangerGlow: "#ff7aa2cc",
-    }),
-    extras: {
-      accent: "#a8b8ffff", hp: "#6af0c8ff", pip: "#b4c4ffff", pipGlow: "#7a5cffcc", pipUsed: "#3a3f6099",
-      statText: "#e6ebffff", statBackground: "#080b1ccc", panelText: "#aab4e6ff",
-    },
-    style: { font: "", fontScale: 100, radius: 10, borderWidth: 1, hoverGlow: true, glowColor: "#7a5cffcc", glowSize: 18, textShadow: true, portraitFrame: true },
-  },
-  {
-    id: "ascandir-waldlaeufer",
-    name: "Ascandir – Waldläufer",
-    colors: palette({
-      text: "#e2ead2ff", hoverText: "#ffffffff", border: "#6f8a4eff", hoverBorder: "#a8c770ff",
-      portrait: "#1b2419e6", container: "#0a1008d9",
-      panel: "#1d2a1ee6", panelHover: "#34502fe6",
-      bonus: "#2d3a1ee6", bonusHover: "#4d6330e6",
-      free: "#1f3330e6", freeHover: "#33554fe6",
-      reaction: "#4a2a1ae6", reactionHover: "#734228e6",
-      endTurn: "#26402ae6", endTurnHover: "#3e6644e6",
-      ttHeader: "#2a3a22f2", ttHeaderText: "#eef4e0ff",
-      ttSubtitle: "#5a7040ff", ttSubtitleText: "#ffffffff",
-      ttBody: "#1b2419e6", ttBodyText: "#e2ead2ff",
-      textGlow: "#00000099", accentGlow: "#b6d36bcc",
-      button: "#5a7040ff", buttonHover: "#7a9452ff", buttonText: "#ffffffff",
-      moveUsed: "#4a523f80", moveBase: "#8fc25aff", moveBaseGlow: "#a8dc70cc",
-      moveDash: "#d4b44aff", moveDashGlow: "#ecd06acc", moveDanger: "#c2552aff", moveDangerGlow: "#e0744acc",
-    }),
-    extras: {
-      accent: "#b6d36bff", hp: "#9ff07aff", pip: "#cfe3a4ff", pipGlow: "#9ccc5acc", pipUsed: "#4a523f99",
-      statText: "#eef4e0ff", statBackground: "#0d140bcc", panelText: "#bccaa4ff",
-    },
-    style: { font: "", fontScale: 100, radius: 3, borderWidth: 1, hoverGlow: true, glowColor: "#9ccc5aaa", glowSize: 10, textShadow: true, portraitFrame: false },
-  },
-  {
-    id: "ascandir-eisen-glut",
-    name: "Ascandir – Eisen & Glut",
-    colors: palette({
-      text: "#e8e1d6ff", hoverText: "#ffffffff", border: "#6e6a66ff", hoverBorder: "#ff9a3cff",
-      portrait: "#1c1d20e6", container: "#0a0a0bd9",
-      panel: "#1e1f22e6", panelHover: "#3a2a20e6",
-      bonus: "#3b2b1ce6", bonusHover: "#6a4422e6",
-      free: "#263038e6", freeHover: "#3c4c58e6",
-      reaction: "#5a2014e6", reactionHover: "#8a3018e6",
-      endTurn: "#22301fe6", endTurnHover: "#3a5234e6",
-      ttHeader: "#2a2724f2", ttHeaderText: "#f4ece0ff",
-      ttSubtitle: "#8a4a1aff", ttSubtitleText: "#ffffffff",
-      ttBody: "#1c1d20e6", ttBodyText: "#e8e1d6ff",
-      textGlow: "#00000099", accentGlow: "#ff9a3ccc",
-      button: "#8a4a1aff", buttonHover: "#c4651fff", buttonText: "#ffffffff",
-      moveUsed: "#4a464280", moveBase: "#ffb35cff", moveBaseGlow: "#ffc87acc",
-      moveDash: "#e0d05aff", moveDashGlow: "#f0e07acc", moveDanger: "#e0402aff", moveDangerGlow: "#ff604acc",
-    }),
-    extras: {
-      accent: "#ff9a3cff", hp: "#8ee07aff", pip: "#ffb35cff", pipGlow: "#ff6a00cc", pipUsed: "#4a464299",
-      statText: "#f4ece0ff", statBackground: "#0e0e10cc", panelText: "#c8bcaaff",
-    },
-    style: { font: "", fontScale: 100, radius: 2, borderWidth: 2, hoverGlow: true, glowColor: "#ff7a1acc", glowSize: 14, textShadow: true, portraitFrame: true },
-  },
+
+
+
 ];
 
 // Charakterbogen-Themes: Farben liegen als Palette vor und werden hier in Argon-Farben übersetzt
 const SHEET_RAW = SHEET_PRESETS.map((p) => ({ ...p, colors: { ...palette(p.colors), ...p.menu } }));
+
+/** Frühere Vorlagen, die es jetzt nur noch als Charakterbogen-Theme gibt. */
+export const THEME_ALIASES = {
+  "ascandir-drachenblut": "sheet-crimson",
+  "ascandir-arkane-nacht": "sheet-arcane",
+  "ascandir-waldlaeufer": "sheet-ranger",
+  "ascandir-eisen-glut": "sheet-fire",
+};
 
 export const BUILTIN_THEMES = Object.fromEntries(
   [...RAW, ...SHEET_RAW].map((t) => {
@@ -376,7 +278,8 @@ export const BUILTIN_THEMES = Object.fromEntries(
       ...t,
       colors: { ...base.colors, ...t.colors },
       extras: { ...base.extras, ...t.extras },
-      style: { ...base.style, ...t.style },
+      // Einheitlich für alle Vorlagen: getrennte HP/AC/DC-Kästen und schlichtes Menü (wie „Pergament & Tinte“)
+      style: { ...base.style, ...t.style, joinedStats: false, statBoxColors: false, abilityMedallions: false },
       textures: { ...base.textures, ...t.textures },
       ornaments: t.ornaments ?? [],
     });

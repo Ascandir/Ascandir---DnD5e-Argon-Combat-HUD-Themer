@@ -1,8 +1,8 @@
-**v0.4.0**
+## 0.4.1
 
-- **Alle 30 Themes aus „Ascandir - DnD5e Character Sheet“ als HUD-Vorlagen**: Pergament & Holz, Nachtwache, Blutmond, Arkanum, die 13 Schadenstyp-Themes und die 13 Klassen-Themes. Farben, Rahmen, Pergament, Holz und Medaillons stammen direkt aus dem Charakterbogen, Klassen-Themes zeigen das Klassen-Symbol im Portrait. Im Editor in der eigenen Gruppe „Charakterbogen-Themes“.
-- Neue Einstellung **Schrift für Überschriften** (Kopfleisten, Leisten-Beschriftungen, Tooltip-Titel, Name)
-- Neues Bildfeld **Medaillon-Bild für Attribute**
-- Mitgelieferte Schriften **Cinzel** und **EB Garamond** (wie im Charakterbogen)
-
-Manifest-URL: `https://github.com/Ascandir/Ascandir---DnD5e-Argon-Combat-HUD-Themer/releases/latest/download/module.json`
+- **Quickslots & Knöpfe** rutschen nicht mehr hinter die „Saves / Skills / Tools“-Leiste – gilt für alle Themes mit Rahmen.
+- **HP / AC / DC** bei allen Vorlagen als getrennte, dunkle Kästen (wie bei „Pergament & Tinte“): grüne Trefferpunkte, gut lesbare Werte.
+- **Attribute & Fertigkeiten** bei allen Vorlagen in der schlichten Spaltenansicht (Check / Save), keine überlappenden Werte mehr.
+- **Todesrettungen**: statt der grellen roten Fläche ein dunkler Schleier in den Theme-Farben, kleinerer Totenkopf.
+- **Doppelte Vorlagen entfernt**: Drachenblut, Arkane Nacht, Waldläufer und Eisen & Glut gibt es nur noch als Charakterbogen-Theme (Blutmond, Arkanum, Klasse – Waldläufer, Schadenstyp – Feuer). Wer sie ausgewählt hatte, bekommt automatisch das Gegenstück.
+- **Theme-Namen** folgen jetzt der in Foundry eingestellten Sprache (Deutsch / Englisch).

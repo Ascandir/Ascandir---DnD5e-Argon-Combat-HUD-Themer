@@ -2,7 +2,7 @@
  * Einstellungen, Theme-Bibliothek und Auswahl des aktiven Themes.
  */
 import { MODULE_ID, normalizeTheme } from "./schema.js";
-import { BUILTIN_THEMES } from "./presets.js";
+import { BUILTIN_THEMES, THEME_ALIASES } from "./presets.js";
 import { applyTheme } from "./apply.js";
 import { setDecorTheme } from "./decor.js";
 
@@ -122,6 +122,7 @@ export function getAllThemes() {
 
 export function getTheme(id) {
   if (!id || id === NONE) return null;
+  id = THEME_ALIASES[id] ?? id;
   return BUILTIN_THEMES[id] ?? getCustomThemes()[id] ?? null;
 }
 
@@ -163,7 +164,17 @@ export async function setWorldTheme(id) {
 /*  Auswahllisten                               */
 /* -------------------------------------------- */
 
+/** Namen der Vorlagen in der eingestellten Foundry-Sprache. */
+export function localizeBuiltinNames() {
+  if (typeof game.i18n?.has !== "function") return;
+  for (const t of Object.values(BUILTIN_THEMES)) {
+    const key = `${MODULE_ID}.themes.${t.id}`;
+    if (game.i18n.has(key)) t.name = game.i18n.localize(key);
+  }
+}
+
 export function refreshChoices() {
+  localizeBuiltinNames();
   const rank = (t) => (t.builtin ? (t.group ? 1 : 0) : 2);
   const themes = Object.values(getAllThemes()).sort((a, b) => rank(a) - rank(b) || (rank(a) === 1 ? 0 : a.name.localeCompare(b.name)));
   const fill = (target, head) => {

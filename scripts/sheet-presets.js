@@ -58,12 +58,12 @@ export const SHEET_PRESETS = [
     },
     "extras": {
       "accent": "#b6d3f3ff",
-      "hp": "#f5ead0ff",
+      "hp": "#8fe08aff",
       "pip": "#3f8ae0ff",
       "pipGlow": "#3f8ae080",
       "pipUsed": "#0e0906ff",
-      "statText": "#f5ead0ff",
-      "statBackground": "#16100aff",
+      "statText": "#f3e7cfff",
+      "statBackground": "#120c08eb",
       "panelText": "#f0dfb6ff",
       "headerBg": "#1c130cff",
       "highlight": "#a0783c38",
@@ -87,13 +87,13 @@ export const SHEET_PRESETS = [
       "squarePips": true,
       "titleStrip": true,
       "tooltipTitleLeft": true,
-      "joinedStats": true,
+      "joinedStats": false,
       "continuousBar": true,
       "hideName": false,
-      "abilityMedallions": true,
+      "abilityMedallions": false,
       "highlightProficient": true,
       "tintIcons": true,
-      "statBoxColors": true,
+      "statBoxColors": false,
       "tooltipDivider": true
     },
     "textures": {
@@ -117,7 +117,7 @@ export const SHEET_PRESETS = [
       "medallion": `${ASSETS}/sheet/parchment/medallion.webp`
     },
     "ornaments": [],
-    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #2b1f14 !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #c9a35c, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #ecd59c !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß, Werte-Streifen unter dem Bild */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #ecd59c !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #c9a35c; padding-bottom: 3px; }\n.extended-combat-hud .portrait-hud { padding: 0 12px 12px !important; }\n.extended-combat-hud .portrait-hud .portrait-hud-image { top: 0 !important; left: 0 !important; height: auto !important; bottom: 70px !important; box-shadow: inset 0 0 0 2px #c9a35c, inset 0 0 0 4px #000000b0, inset 0 -40px 40px -24px #000000 !important; }\n.extended-combat-hud .portrait-hud .portrait-stat-block:not(.player-details) { font-size: 1.32rem !important; padding: 0.6rem 0.45rem !important; justify-content: center; min-width: 0 !important; white-space: nowrap; }\n.extended-combat-hud .portrait-hud .portrait-stat-block span[style*=\"movement-baseMovement-background\"] { margin: -0.6rem -0.45rem -0.6rem 0.3em !important; padding: 0 0.45em !important; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #c9a35c !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #c9a35c2e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > span:not(:first-child),\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > div > span { border-left: none !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li { grid-template-columns: minmax(0, 1fr) 3.6em 3.6em !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li > span:not(:first-child) { text-align: center; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #2b1f14 !important; }"
+    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #2b1f14 !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #c9a35c, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #ecd59c !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #ecd59c !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #c9a35c; padding-bottom: 3px; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #c9a35c !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #c9a35c2e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #2b1f14 !important; }"
   },
   {
     "id": "sheet-nightwatch",
@@ -170,12 +170,12 @@ export const SHEET_PRESETS = [
     },
     "extras": {
       "accent": "#bce8eeff",
-      "hp": "#e2ebf4ff",
+      "hp": "#8fe08aff",
       "pip": "#4ec3d3ff",
       "pipGlow": "#4ec3d380",
       "pipUsed": "#0a0c0fff",
-      "statText": "#e2ebf4ff",
-      "statBackground": "#0c0f13ff",
+      "statText": "#f3e7cfff",
+      "statBackground": "#0c0e12eb",
       "panelText": "#e2ebf4ff",
       "headerBg": "#12161bff",
       "highlight": "#2a9a9e33",
@@ -199,13 +199,13 @@ export const SHEET_PRESETS = [
       "squarePips": true,
       "titleStrip": true,
       "tooltipTitleLeft": true,
-      "joinedStats": true,
+      "joinedStats": false,
       "continuousBar": true,
       "hideName": false,
-      "abilityMedallions": true,
+      "abilityMedallions": false,
       "highlightProficient": true,
       "tintIcons": true,
-      "statBoxColors": true,
+      "statBoxColors": false,
       "tooltipDivider": true
     },
     "textures": {
@@ -229,7 +229,7 @@ export const SHEET_PRESETS = [
       "medallion": `${ASSETS}/sheet/nightwatch/medallion.webp`
     },
     "ornaments": [],
-    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #d8e0e9 !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #a9bccf, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #e2ebf4 !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß, Werte-Streifen unter dem Bild */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #e2ebf4 !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #a9bccf; padding-bottom: 3px; }\n.extended-combat-hud .portrait-hud { padding: 0 12px 12px !important; }\n.extended-combat-hud .portrait-hud .portrait-hud-image { top: 0 !important; left: 0 !important; height: auto !important; bottom: 70px !important; box-shadow: inset 0 0 0 2px #a9bccf, inset 0 0 0 4px #000000b0, inset 0 -40px 40px -24px #000000 !important; }\n.extended-combat-hud .portrait-hud .portrait-stat-block:not(.player-details) { font-size: 1.32rem !important; padding: 0.6rem 0.45rem !important; justify-content: center; min-width: 0 !important; white-space: nowrap; }\n.extended-combat-hud .portrait-hud .portrait-stat-block span[style*=\"movement-baseMovement-background\"] { margin: -0.6rem -0.45rem -0.6rem 0.3em !important; padding: 0 0.45em !important; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #a9bccf !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #a9bccf2e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > span:not(:first-child),\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > div > span { border-left: none !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li { grid-template-columns: minmax(0, 1fr) 3.6em 3.6em !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li > span:not(:first-child) { text-align: center; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #d8e0e9 !important; }"
+    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #d8e0e9 !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #a9bccf, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #e2ebf4 !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #e2ebf4 !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #a9bccf; padding-bottom: 3px; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #a9bccf !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #a9bccf2e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #d8e0e9 !important; }"
   },
   {
     "id": "sheet-crimson",
@@ -282,12 +282,12 @@ export const SHEET_PRESETS = [
     },
     "extras": {
       "accent": "#b6d3f3ff",
-      "hp": "#f6ead2ff",
+      "hp": "#8fe08aff",
       "pip": "#3f8ae0ff",
       "pipGlow": "#3f8ae080",
       "pipUsed": "#0b0606ff",
-      "statText": "#f6ead2ff",
-      "statBackground": "#110a09ff",
+      "statText": "#f3e7cfff",
+      "statBackground": "#0c0606eb",
       "panelText": "#f2e2c0ff",
       "headerBg": "#120a09ff",
       "highlight": "#a3221a47",
@@ -311,13 +311,13 @@ export const SHEET_PRESETS = [
       "squarePips": true,
       "titleStrip": true,
       "tooltipTitleLeft": true,
-      "joinedStats": true,
+      "joinedStats": false,
       "continuousBar": true,
       "hideName": false,
-      "abilityMedallions": true,
+      "abilityMedallions": false,
       "highlightProficient": true,
       "tintIcons": true,
-      "statBoxColors": true,
+      "statBoxColors": false,
       "tooltipDivider": true
     },
     "textures": {
@@ -341,7 +341,7 @@ export const SHEET_PRESETS = [
       "medallion": `${ASSETS}/sheet/crimson/medallion.webp`
     },
     "ornaments": [],
-    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #e8dcc6 !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #c9a35c, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #ecd59c !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß, Werte-Streifen unter dem Bild */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #ecd59c !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #c9a35c; padding-bottom: 3px; }\n.extended-combat-hud .portrait-hud { padding: 0 12px 12px !important; }\n.extended-combat-hud .portrait-hud .portrait-hud-image { top: 0 !important; left: 0 !important; height: auto !important; bottom: 70px !important; box-shadow: inset 0 0 0 2px #c9a35c, inset 0 0 0 4px #000000b0, inset 0 -40px 40px -24px #000000 !important; }\n.extended-combat-hud .portrait-hud .portrait-stat-block:not(.player-details) { font-size: 1.32rem !important; padding: 0.6rem 0.45rem !important; justify-content: center; min-width: 0 !important; white-space: nowrap; }\n.extended-combat-hud .portrait-hud .portrait-stat-block span[style*=\"movement-baseMovement-background\"] { margin: -0.6rem -0.45rem -0.6rem 0.3em !important; padding: 0 0.45em !important; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #c9a35c !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #c9a35c2e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > span:not(:first-child),\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > div > span { border-left: none !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li { grid-template-columns: minmax(0, 1fr) 3.6em 3.6em !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li > span:not(:first-child) { text-align: center; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #e8dcc6 !important; }"
+    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #e8dcc6 !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #c9a35c, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #ecd59c !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #ecd59c !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #c9a35c; padding-bottom: 3px; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #c9a35c !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #c9a35c2e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #e8dcc6 !important; }"
   },
   {
     "id": "sheet-arcane",
@@ -394,12 +394,12 @@ export const SHEET_PRESETS = [
     },
     "extras": {
       "accent": "#bbd9ffff",
-      "hp": "#eef2ffff",
+      "hp": "#8fe08aff",
       "pip": "#4d9bffff",
       "pipGlow": "#4d9bff80",
       "pipUsed": "#050811ff",
-      "statText": "#eef2ffff",
-      "statBackground": "#070b17ff",
+      "statText": "#f3e7cfff",
+      "statBackground": "#050810eb",
       "panelText": "#e8eeffff",
       "headerBg": "#080c18ff",
       "highlight": "#3a6fe040",
@@ -423,13 +423,13 @@ export const SHEET_PRESETS = [
       "squarePips": true,
       "titleStrip": true,
       "tooltipTitleLeft": true,
-      "joinedStats": true,
+      "joinedStats": false,
       "continuousBar": true,
       "hideName": false,
-      "abilityMedallions": true,
+      "abilityMedallions": false,
       "highlightProficient": true,
       "tintIcons": true,
-      "statBoxColors": true,
+      "statBoxColors": false,
       "tooltipDivider": true
     },
     "textures": {
@@ -453,7 +453,7 @@ export const SHEET_PRESETS = [
       "medallion": `${ASSETS}/sheet/arcane/medallion.webp`
     },
     "ornaments": [],
-    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #dfe6f8 !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #c9a35c, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #ecd59c !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß, Werte-Streifen unter dem Bild */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #ecd59c !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #c9a35c; padding-bottom: 3px; }\n.extended-combat-hud .portrait-hud { padding: 0 12px 12px !important; }\n.extended-combat-hud .portrait-hud .portrait-hud-image { top: 0 !important; left: 0 !important; height: auto !important; bottom: 70px !important; box-shadow: inset 0 0 0 2px #c9a35c, inset 0 0 0 4px #000000b0, inset 0 -40px 40px -24px #000000 !important; }\n.extended-combat-hud .portrait-hud .portrait-stat-block:not(.player-details) { font-size: 1.32rem !important; padding: 0.6rem 0.45rem !important; justify-content: center; min-width: 0 !important; white-space: nowrap; }\n.extended-combat-hud .portrait-hud .portrait-stat-block span[style*=\"movement-baseMovement-background\"] { margin: -0.6rem -0.45rem -0.6rem 0.3em !important; padding: 0 0.45em !important; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #c9a35c !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #c9a35c2e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > span:not(:first-child),\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > div > span { border-left: none !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li { grid-template-columns: minmax(0, 1fr) 3.6em 3.6em !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li > span:not(:first-child) { text-align: center; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #dfe6f8 !important; }"
+    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #dfe6f8 !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #c9a35c, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #ecd59c !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #ecd59c !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #c9a35c; padding-bottom: 3px; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #c9a35c !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #c9a35c2e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #dfe6f8 !important; }"
   },
   {
     "id": "sheet-acid",
@@ -506,12 +506,12 @@ export const SHEET_PRESETS = [
     },
     "extras": {
       "accent": "#daedc1ff",
-      "hp": "#f8fcf3ff",
+      "hp": "#8fe08aff",
       "pip": "#9dcf5cff",
       "pipGlow": "#9dcf5c80",
       "pipUsed": "#070a05ff",
-      "statText": "#f8fcf3ff",
-      "statBackground": "#0a0e07ff",
+      "statText": "#f3e7cfff",
+      "statBackground": "#070a05eb",
       "panelText": "#e6eed7ff",
       "headerBg": "#0b1008ff",
       "highlight": "#8cc63f38",
@@ -535,13 +535,13 @@ export const SHEET_PRESETS = [
       "squarePips": true,
       "titleStrip": true,
       "tooltipTitleLeft": true,
-      "joinedStats": true,
+      "joinedStats": false,
       "continuousBar": true,
       "hideName": false,
-      "abilityMedallions": true,
+      "abilityMedallions": false,
       "highlightProficient": true,
       "tintIcons": true,
-      "statBoxColors": true,
+      "statBoxColors": false,
       "tooltipDivider": true
     },
     "textures": {
@@ -565,7 +565,7 @@ export const SHEET_PRESETS = [
       "medallion": `${ASSETS}/sheet/acid/medallion.webp`
     },
     "ornaments": [],
-    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #e0e5d9 !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #9cba61, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #c9d9a8 !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß, Werte-Streifen unter dem Bild */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #c9d9a8 !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #9cba61; padding-bottom: 3px; }\n.extended-combat-hud .portrait-hud { padding: 0 12px 12px !important; }\n.extended-combat-hud .portrait-hud .portrait-hud-image { top: 0 !important; left: 0 !important; height: auto !important; bottom: 70px !important; box-shadow: inset 0 0 0 2px #9cba61, inset 0 0 0 4px #000000b0, inset 0 -40px 40px -24px #000000 !important; }\n.extended-combat-hud .portrait-hud .portrait-stat-block:not(.player-details) { font-size: 1.32rem !important; padding: 0.6rem 0.45rem !important; justify-content: center; min-width: 0 !important; white-space: nowrap; }\n.extended-combat-hud .portrait-hud .portrait-stat-block span[style*=\"movement-baseMovement-background\"] { margin: -0.6rem -0.45rem -0.6rem 0.3em !important; padding: 0 0.45em !important; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #9cba61 !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #9cba612e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > span:not(:first-child),\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > div > span { border-left: none !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li { grid-template-columns: minmax(0, 1fr) 3.6em 3.6em !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li > span:not(:first-child) { text-align: center; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #e0e5d9 !important; }"
+    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #e0e5d9 !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #9cba61, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #c9d9a8 !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #c9d9a8 !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #9cba61; padding-bottom: 3px; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #9cba61 !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #9cba612e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #e0e5d9 !important; }"
   },
   {
     "id": "sheet-bludgeoning",
@@ -618,12 +618,12 @@ export const SHEET_PRESETS = [
     },
     "extras": {
       "accent": "#e9d6c1ff",
-      "hp": "#fbf7f3ff",
+      "hp": "#8fe08aff",
       "pip": "#c4935bff",
       "pipGlow": "#c4935b80",
       "pipUsed": "#0a0807ff",
-      "statText": "#fbf7f3ff",
-      "statBackground": "#0f0d0bff",
+      "statText": "#f3e7cfff",
+      "statBackground": "#0a0908eb",
       "panelText": "#e4e2e0ff",
       "headerBg": "#100e0cff",
       "highlight": "#b9803e38",
@@ -647,13 +647,13 @@ export const SHEET_PRESETS = [
       "squarePips": true,
       "titleStrip": true,
       "tooltipTitleLeft": true,
-      "joinedStats": true,
+      "joinedStats": false,
       "continuousBar": true,
       "hideName": false,
-      "abilityMedallions": true,
+      "abilityMedallions": false,
       "highlightProficient": true,
       "tintIcons": true,
-      "statBoxColors": true,
+      "statBoxColors": false,
       "tooltipDivider": true
     },
     "textures": {
@@ -677,7 +677,7 @@ export const SHEET_PRESETS = [
       "medallion": `${ASSETS}/sheet/bludgeoning/medallion.webp`
     },
     "ornaments": [],
-    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #e4dfd9 !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #958b82, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #c5bfba !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß, Werte-Streifen unter dem Bild */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #c5bfba !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #958b82; padding-bottom: 3px; }\n.extended-combat-hud .portrait-hud { padding: 0 12px 12px !important; }\n.extended-combat-hud .portrait-hud .portrait-hud-image { top: 0 !important; left: 0 !important; height: auto !important; bottom: 70px !important; box-shadow: inset 0 0 0 2px #958b82, inset 0 0 0 4px #000000b0, inset 0 -40px 40px -24px #000000 !important; }\n.extended-combat-hud .portrait-hud .portrait-stat-block:not(.player-details) { font-size: 1.32rem !important; padding: 0.6rem 0.45rem !important; justify-content: center; min-width: 0 !important; white-space: nowrap; }\n.extended-combat-hud .portrait-hud .portrait-stat-block span[style*=\"movement-baseMovement-background\"] { margin: -0.6rem -0.45rem -0.6rem 0.3em !important; padding: 0 0.45em !important; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #958b82 !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #958b822e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > span:not(:first-child),\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > div > span { border-left: none !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li { grid-template-columns: minmax(0, 1fr) 3.6em 3.6em !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li > span:not(:first-child) { text-align: center; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #e4dfd9 !important; }"
+    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #e4dfd9 !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #958b82, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #c5bfba !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #c5bfba !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #958b82; padding-bottom: 3px; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #958b82 !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #958b822e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #e4dfd9 !important; }"
   },
   {
     "id": "sheet-cold",
@@ -730,12 +730,12 @@ export const SHEET_PRESETS = [
     },
     "extras": {
       "accent": "#caedfbff",
-      "hp": "#f5fcfeff",
+      "hp": "#8fe08aff",
       "pip": "#74d0f4ff",
       "pipGlow": "#74d0f480",
       "pipUsed": "#05080dff",
-      "statText": "#f5fcfeff",
-      "statBackground": "#070d13ff",
+      "statText": "#f3e7cfff",
+      "statBackground": "#05090eeb",
       "panelText": "#e6ecf3ff",
       "headerBg": "#080e15ff",
       "highlight": "#5cc8f238",
@@ -759,13 +759,13 @@ export const SHEET_PRESETS = [
       "squarePips": true,
       "titleStrip": true,
       "tooltipTitleLeft": true,
-      "joinedStats": true,
+      "joinedStats": false,
       "continuousBar": true,
       "hideName": false,
-      "abilityMedallions": true,
+      "abilityMedallions": false,
       "highlightProficient": true,
       "tintIcons": true,
-      "statBoxColors": true,
+      "statBoxColors": false,
       "tooltipDivider": true
     },
     "textures": {
@@ -789,7 +789,7 @@ export const SHEET_PRESETS = [
       "medallion": `${ASSETS}/sheet/cold/medallion.webp`
     },
     "ornaments": [],
-    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #dce6e9 !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #9cb2d0, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #c9d5e5 !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß, Werte-Streifen unter dem Bild */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #c9d5e5 !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #9cb2d0; padding-bottom: 3px; }\n.extended-combat-hud .portrait-hud { padding: 0 12px 12px !important; }\n.extended-combat-hud .portrait-hud .portrait-hud-image { top: 0 !important; left: 0 !important; height: auto !important; bottom: 70px !important; box-shadow: inset 0 0 0 2px #9cb2d0, inset 0 0 0 4px #000000b0, inset 0 -40px 40px -24px #000000 !important; }\n.extended-combat-hud .portrait-hud .portrait-stat-block:not(.player-details) { font-size: 1.32rem !important; padding: 0.6rem 0.45rem !important; justify-content: center; min-width: 0 !important; white-space: nowrap; }\n.extended-combat-hud .portrait-hud .portrait-stat-block span[style*=\"movement-baseMovement-background\"] { margin: -0.6rem -0.45rem -0.6rem 0.3em !important; padding: 0 0.45em !important; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #9cb2d0 !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #9cb2d02e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > span:not(:first-child),\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > div > span { border-left: none !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li { grid-template-columns: minmax(0, 1fr) 3.6em 3.6em !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li > span:not(:first-child) { text-align: center; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #dce6e9 !important; }"
+    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #dce6e9 !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #9cb2d0, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #c9d5e5 !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #c9d5e5 !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #9cb2d0; padding-bottom: 3px; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #9cb2d0 !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #9cb2d02e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #dce6e9 !important; }"
   },
   {
     "id": "sheet-fire",
@@ -842,12 +842,12 @@ export const SHEET_PRESETS = [
     },
     "extras": {
       "accent": "#facfb6ff",
-      "hp": "#fef6f2ff",
+      "hp": "#8fe08aff",
       "pip": "#f28040ff",
       "pipGlow": "#f2804080",
       "pipUsed": "#0c0503ff",
-      "statText": "#fef6f2ff",
-      "statBackground": "#120804ff",
+      "statText": "#f3e7cfff",
+      "statBackground": "#0d0503eb",
       "panelText": "#f2e8d6ff",
       "headerBg": "#140804ff",
       "highlight": "#f06a1e38",
@@ -871,13 +871,13 @@ export const SHEET_PRESETS = [
       "squarePips": true,
       "titleStrip": true,
       "tooltipTitleLeft": true,
-      "joinedStats": true,
+      "joinedStats": false,
       "continuousBar": true,
       "hideName": false,
-      "abilityMedallions": true,
+      "abilityMedallions": false,
       "highlightProficient": true,
       "tintIcons": true,
-      "statBoxColors": true,
+      "statBoxColors": false,
       "tooltipDivider": true
     },
     "textures": {
@@ -901,7 +901,7 @@ export const SHEET_PRESETS = [
       "medallion": `${ASSETS}/sheet/fire/medallion.webp`
     },
     "ornaments": [],
-    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #e9ddd6 !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #c9a35c, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #e1cca5 !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß, Werte-Streifen unter dem Bild */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #e1cca5 !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #c9a35c; padding-bottom: 3px; }\n.extended-combat-hud .portrait-hud { padding: 0 12px 12px !important; }\n.extended-combat-hud .portrait-hud .portrait-hud-image { top: 0 !important; left: 0 !important; height: auto !important; bottom: 70px !important; box-shadow: inset 0 0 0 2px #c9a35c, inset 0 0 0 4px #000000b0, inset 0 -40px 40px -24px #000000 !important; }\n.extended-combat-hud .portrait-hud .portrait-stat-block:not(.player-details) { font-size: 1.32rem !important; padding: 0.6rem 0.45rem !important; justify-content: center; min-width: 0 !important; white-space: nowrap; }\n.extended-combat-hud .portrait-hud .portrait-stat-block span[style*=\"movement-baseMovement-background\"] { margin: -0.6rem -0.45rem -0.6rem 0.3em !important; padding: 0 0.45em !important; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #c9a35c !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #c9a35c2e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > span:not(:first-child),\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > div > span { border-left: none !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li { grid-template-columns: minmax(0, 1fr) 3.6em 3.6em !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li > span:not(:first-child) { text-align: center; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #e9ddd6 !important; }"
+    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #e9ddd6 !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #c9a35c, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #e1cca5 !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #e1cca5 !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #c9a35c; padding-bottom: 3px; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #c9a35c !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #c9a35c2e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #e9ddd6 !important; }"
   },
   {
     "id": "sheet-force",
@@ -954,12 +954,12 @@ export const SHEET_PRESETS = [
     },
     "extras": {
       "accent": "#e8ceffff",
-      "hp": "#fbf6ffff",
+      "hp": "#8fe08aff",
       "pip": "#c27fffff",
       "pipGlow": "#c27fff80",
       "pipUsed": "#08040dff",
-      "statText": "#fbf6ffff",
-      "statBackground": "#0c0713ff",
+      "statText": "#f3e7cfff",
+      "statBackground": "#08050eeb",
       "panelText": "#ece6f3ff",
       "headerBg": "#0d0815ff",
       "highlight": "#b768ff38",
@@ -983,13 +983,13 @@ export const SHEET_PRESETS = [
       "squarePips": true,
       "titleStrip": true,
       "tooltipTitleLeft": true,
-      "joinedStats": true,
+      "joinedStats": false,
       "continuousBar": true,
       "hideName": false,
-      "abilityMedallions": true,
+      "abilityMedallions": false,
       "highlightProficient": true,
       "tintIcons": true,
-      "statBoxColors": true,
+      "statBoxColors": false,
       "tooltipDivider": true
     },
     "textures": {
@@ -1013,7 +1013,7 @@ export const SHEET_PRESETS = [
       "medallion": `${ASSETS}/sheet/force/medallion.webp`
     },
     "ornaments": [],
-    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #e4ddeb !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #b29cd0, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #d5c9e5 !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß, Werte-Streifen unter dem Bild */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #d5c9e5 !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #b29cd0; padding-bottom: 3px; }\n.extended-combat-hud .portrait-hud { padding: 0 12px 12px !important; }\n.extended-combat-hud .portrait-hud .portrait-hud-image { top: 0 !important; left: 0 !important; height: auto !important; bottom: 70px !important; box-shadow: inset 0 0 0 2px #b29cd0, inset 0 0 0 4px #000000b0, inset 0 -40px 40px -24px #000000 !important; }\n.extended-combat-hud .portrait-hud .portrait-stat-block:not(.player-details) { font-size: 1.32rem !important; padding: 0.6rem 0.45rem !important; justify-content: center; min-width: 0 !important; white-space: nowrap; }\n.extended-combat-hud .portrait-hud .portrait-stat-block span[style*=\"movement-baseMovement-background\"] { margin: -0.6rem -0.45rem -0.6rem 0.3em !important; padding: 0 0.45em !important; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #b29cd0 !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #b29cd02e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > span:not(:first-child),\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > div > span { border-left: none !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li { grid-template-columns: minmax(0, 1fr) 3.6em 3.6em !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li > span:not(:first-child) { text-align: center; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #e4ddeb !important; }"
+    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #e4ddeb !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #b29cd0, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #d5c9e5 !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #d5c9e5 !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #b29cd0; padding-bottom: 3px; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #b29cd0 !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #b29cd02e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #e4ddeb !important; }"
   },
   {
     "id": "sheet-lightning",
@@ -1066,12 +1066,12 @@ export const SHEET_PRESETS = [
     },
     "extras": {
       "accent": "#c9e6ffff",
-      "hp": "#f5faffff",
+      "hp": "#8fe08aff",
       "pip": "#71bcffff",
       "pipGlow": "#71bcff80",
       "pipUsed": "#04060cff",
-      "statText": "#f5faffff",
-      "statBackground": "#050912ff",
+      "statText": "#f3e7cfff",
+      "statBackground": "#04060deb",
       "panelText": "#e8ebf2ff",
       "headerBg": "#060a14ff",
       "highlight": "#58b0ff38",
@@ -1095,13 +1095,13 @@ export const SHEET_PRESETS = [
       "squarePips": true,
       "titleStrip": true,
       "tooltipTitleLeft": true,
-      "joinedStats": true,
+      "joinedStats": false,
       "continuousBar": true,
       "hideName": false,
-      "abilityMedallions": true,
+      "abilityMedallions": false,
       "highlightProficient": true,
       "tintIcons": true,
-      "statBoxColors": true,
+      "statBoxColors": false,
       "tooltipDivider": true
     },
     "textures": {
@@ -1125,7 +1125,7 @@ export const SHEET_PRESETS = [
       "medallion": `${ASSETS}/sheet/lightning/medallion.webp`
     },
     "ornaments": [],
-    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #dbe3eb !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #a4b1cd, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #cdd4e3 !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß, Werte-Streifen unter dem Bild */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #cdd4e3 !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #a4b1cd; padding-bottom: 3px; }\n.extended-combat-hud .portrait-hud { padding: 0 12px 12px !important; }\n.extended-combat-hud .portrait-hud .portrait-hud-image { top: 0 !important; left: 0 !important; height: auto !important; bottom: 70px !important; box-shadow: inset 0 0 0 2px #a4b1cd, inset 0 0 0 4px #000000b0, inset 0 -40px 40px -24px #000000 !important; }\n.extended-combat-hud .portrait-hud .portrait-stat-block:not(.player-details) { font-size: 1.32rem !important; padding: 0.6rem 0.45rem !important; justify-content: center; min-width: 0 !important; white-space: nowrap; }\n.extended-combat-hud .portrait-hud .portrait-stat-block span[style*=\"movement-baseMovement-background\"] { margin: -0.6rem -0.45rem -0.6rem 0.3em !important; padding: 0 0.45em !important; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #a4b1cd !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #a4b1cd2e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > span:not(:first-child),\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > div > span { border-left: none !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li { grid-template-columns: minmax(0, 1fr) 3.6em 3.6em !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li > span:not(:first-child) { text-align: center; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #dbe3eb !important; }"
+    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #dbe3eb !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #a4b1cd, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #cdd4e3 !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #cdd4e3 !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #a4b1cd; padding-bottom: 3px; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #a4b1cd !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #a4b1cd2e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #dbe3eb !important; }"
   },
   {
     "id": "sheet-necrotic",
@@ -1178,12 +1178,12 @@ export const SHEET_PRESETS = [
     },
     "extras": {
       "accent": "#d4f0caff",
-      "hp": "#f7fcf5ff",
+      "hp": "#8fe08aff",
       "pip": "#8fd773ff",
       "pipGlow": "#8fd77380",
       "pipUsed": "#040604ff",
-      "statText": "#f7fcf5ff",
-      "statBackground": "#070907ff",
+      "statText": "#f3e7cfff",
+      "statBackground": "#050605eb",
       "panelText": "#ebeae4ff",
       "headerBg": "#080a08ff",
       "highlight": "#7bd05a38",
@@ -1207,13 +1207,13 @@ export const SHEET_PRESETS = [
       "squarePips": true,
       "titleStrip": true,
       "tooltipTitleLeft": true,
-      "joinedStats": true,
+      "joinedStats": false,
       "continuousBar": true,
       "hideName": false,
-      "abilityMedallions": true,
+      "abilityMedallions": false,
       "highlightProficient": true,
       "tintIcons": true,
-      "statBoxColors": true,
+      "statBoxColors": false,
       "tooltipDivider": true
     },
     "textures": {
@@ -1237,7 +1237,7 @@ export const SHEET_PRESETS = [
       "medallion": `${ASSETS}/sheet/necrotic/medallion.webp`
     },
     "ornaments": [],
-    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #dee6db !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #b1ab91, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #d4d1c3 !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß, Werte-Streifen unter dem Bild */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #d4d1c3 !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #b1ab91; padding-bottom: 3px; }\n.extended-combat-hud .portrait-hud { padding: 0 12px 12px !important; }\n.extended-combat-hud .portrait-hud .portrait-hud-image { top: 0 !important; left: 0 !important; height: auto !important; bottom: 70px !important; box-shadow: inset 0 0 0 2px #b1ab91, inset 0 0 0 4px #000000b0, inset 0 -40px 40px -24px #000000 !important; }\n.extended-combat-hud .portrait-hud .portrait-stat-block:not(.player-details) { font-size: 1.32rem !important; padding: 0.6rem 0.45rem !important; justify-content: center; min-width: 0 !important; white-space: nowrap; }\n.extended-combat-hud .portrait-hud .portrait-stat-block span[style*=\"movement-baseMovement-background\"] { margin: -0.6rem -0.45rem -0.6rem 0.3em !important; padding: 0 0.45em !important; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #b1ab91 !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #b1ab912e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > span:not(:first-child),\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > div > span { border-left: none !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li { grid-template-columns: minmax(0, 1fr) 3.6em 3.6em !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li > span:not(:first-child) { text-align: center; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #dee6db !important; }"
+    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #dee6db !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #b1ab91, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #d4d1c3 !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #d4d1c3 !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #b1ab91; padding-bottom: 3px; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #b1ab91 !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #b1ab912e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #dee6db !important; }"
   },
   {
     "id": "sheet-piercing",
@@ -1290,12 +1290,12 @@ export const SHEET_PRESETS = [
     },
     "extras": {
       "accent": "#f0e7c8ff",
-      "hp": "#fcfaf5ff",
+      "hp": "#8fe08aff",
       "pip": "#d7bf6fff",
       "pipGlow": "#d7bf6f80",
       "pipUsed": "#070907ff",
-      "statText": "#fcfaf5ff",
-      "statBackground": "#0a0d0bff",
+      "statText": "#f3e7cfff",
+      "statBackground": "#070908eb",
       "panelText": "#e7e9ecff",
       "headerBg": "#0b0e0cff",
       "highlight": "#d0b45638",
@@ -1319,13 +1319,13 @@ export const SHEET_PRESETS = [
       "squarePips": true,
       "titleStrip": true,
       "tooltipTitleLeft": true,
-      "joinedStats": true,
+      "joinedStats": false,
       "continuousBar": true,
       "hideName": false,
-      "abilityMedallions": true,
+      "abilityMedallions": false,
       "highlightProficient": true,
       "tintIcons": true,
-      "statBoxColors": true,
+      "statBoxColors": false,
       "tooltipDivider": true
     },
     "textures": {
@@ -1349,7 +1349,7 @@ export const SHEET_PRESETS = [
       "medallion": `${ASSETS}/sheet/piercing/medallion.webp`
     },
     "ornaments": [],
-    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #e6e4db !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #a0a7b2, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #cbcfd5 !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß, Werte-Streifen unter dem Bild */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #cbcfd5 !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #a0a7b2; padding-bottom: 3px; }\n.extended-combat-hud .portrait-hud { padding: 0 12px 12px !important; }\n.extended-combat-hud .portrait-hud .portrait-hud-image { top: 0 !important; left: 0 !important; height: auto !important; bottom: 70px !important; box-shadow: inset 0 0 0 2px #a0a7b2, inset 0 0 0 4px #000000b0, inset 0 -40px 40px -24px #000000 !important; }\n.extended-combat-hud .portrait-hud .portrait-stat-block:not(.player-details) { font-size: 1.32rem !important; padding: 0.6rem 0.45rem !important; justify-content: center; min-width: 0 !important; white-space: nowrap; }\n.extended-combat-hud .portrait-hud .portrait-stat-block span[style*=\"movement-baseMovement-background\"] { margin: -0.6rem -0.45rem -0.6rem 0.3em !important; padding: 0 0.45em !important; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #a0a7b2 !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #a0a7b22e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > span:not(:first-child),\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > div > span { border-left: none !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li { grid-template-columns: minmax(0, 1fr) 3.6em 3.6em !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li > span:not(:first-child) { text-align: center; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #e6e4db !important; }"
+    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #e6e4db !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #a0a7b2, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #cbcfd5 !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #cbcfd5 !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #a0a7b2; padding-bottom: 3px; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #a0a7b2 !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #a0a7b22e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #e6e4db !important; }"
   },
   {
     "id": "sheet-poison",
@@ -1402,12 +1402,12 @@ export const SHEET_PRESETS = [
     },
     "extras": {
       "accent": "#d1f4c4ff",
-      "hp": "#f6fdf4ff",
+      "hp": "#8fe08aff",
       "pip": "#85e165ff",
       "pipGlow": "#85e16580",
       "pipUsed": "#09050bff",
-      "statText": "#f6fdf4ff",
-      "statBackground": "#0e0810ff",
+      "statText": "#f3e7cfff",
+      "statBackground": "#0a050ceb",
       "panelText": "#e4eedaff",
       "headerBg": "#0f0812ff",
       "highlight": "#6fdc4a38",
@@ -1431,13 +1431,13 @@ export const SHEET_PRESETS = [
       "squarePips": true,
       "titleStrip": true,
       "tooltipTitleLeft": true,
-      "joinedStats": true,
+      "joinedStats": false,
       "continuousBar": true,
       "hideName": false,
-      "abilityMedallions": true,
+      "abilityMedallions": false,
       "highlightProficient": true,
       "tintIcons": true,
-      "statBoxColors": true,
+      "statBoxColors": false,
       "tooltipDivider": true
     },
     "textures": {
@@ -1461,7 +1461,7 @@ export const SHEET_PRESETS = [
       "medallion": `${ASSETS}/sheet/poison/medallion.webp`
     },
     "ornaments": [],
-    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #dde7da !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #95ba6c, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #c5d9ae !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß, Werte-Streifen unter dem Bild */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #c5d9ae !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #95ba6c; padding-bottom: 3px; }\n.extended-combat-hud .portrait-hud { padding: 0 12px 12px !important; }\n.extended-combat-hud .portrait-hud .portrait-hud-image { top: 0 !important; left: 0 !important; height: auto !important; bottom: 70px !important; box-shadow: inset 0 0 0 2px #95ba6c, inset 0 0 0 4px #000000b0, inset 0 -40px 40px -24px #000000 !important; }\n.extended-combat-hud .portrait-hud .portrait-stat-block:not(.player-details) { font-size: 1.32rem !important; padding: 0.6rem 0.45rem !important; justify-content: center; min-width: 0 !important; white-space: nowrap; }\n.extended-combat-hud .portrait-hud .portrait-stat-block span[style*=\"movement-baseMovement-background\"] { margin: -0.6rem -0.45rem -0.6rem 0.3em !important; padding: 0 0.45em !important; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #95ba6c !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #95ba6c2e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > span:not(:first-child),\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > div > span { border-left: none !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li { grid-template-columns: minmax(0, 1fr) 3.6em 3.6em !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li > span:not(:first-child) { text-align: center; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #dde7da !important; }"
+    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #dde7da !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #95ba6c, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #c5d9ae !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #c5d9ae !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #95ba6c; padding-bottom: 3px; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #95ba6c !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #95ba6c2e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #dde7da !important; }"
   },
   {
     "id": "sheet-psychic",
@@ -1514,12 +1514,12 @@ export const SHEET_PRESETS = [
     },
     "extras": {
       "accent": "#ffd1efff",
-      "hp": "#fff6fcff",
+      "hp": "#8fe08aff",
       "pip": "#ff85d6ff",
       "pipGlow": "#ff85d680",
       "pipUsed": "#0a040aff",
-      "statText": "#fff6fcff",
-      "statBackground": "#0f070fff",
+      "statText": "#f3e7cfff",
+      "statBackground": "#0b050beb",
       "panelText": "#f1e6eeff",
       "headerBg": "#110811ff",
       "highlight": "#ff6fcf38",
@@ -1543,13 +1543,13 @@ export const SHEET_PRESETS = [
       "squarePips": true,
       "titleStrip": true,
       "tooltipTitleLeft": true,
-      "joinedStats": true,
+      "joinedStats": false,
       "continuousBar": true,
       "hideName": false,
-      "abilityMedallions": true,
+      "abilityMedallions": false,
       "highlightProficient": true,
       "tintIcons": true,
-      "statBoxColors": true,
+      "statBoxColors": false,
       "tooltipDivider": true
     },
     "textures": {
@@ -1573,7 +1573,7 @@ export const SHEET_PRESETS = [
       "medallion": `${ASSETS}/sheet/psychic/medallion.webp`
     },
     "ornaments": [],
-    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #ebdde6 !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #c59cba, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #dfc9d9 !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß, Werte-Streifen unter dem Bild */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #dfc9d9 !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #c59cba; padding-bottom: 3px; }\n.extended-combat-hud .portrait-hud { padding: 0 12px 12px !important; }\n.extended-combat-hud .portrait-hud .portrait-hud-image { top: 0 !important; left: 0 !important; height: auto !important; bottom: 70px !important; box-shadow: inset 0 0 0 2px #c59cba, inset 0 0 0 4px #000000b0, inset 0 -40px 40px -24px #000000 !important; }\n.extended-combat-hud .portrait-hud .portrait-stat-block:not(.player-details) { font-size: 1.32rem !important; padding: 0.6rem 0.45rem !important; justify-content: center; min-width: 0 !important; white-space: nowrap; }\n.extended-combat-hud .portrait-hud .portrait-stat-block span[style*=\"movement-baseMovement-background\"] { margin: -0.6rem -0.45rem -0.6rem 0.3em !important; padding: 0 0.45em !important; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #c59cba !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #c59cba2e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > span:not(:first-child),\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > div > span { border-left: none !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li { grid-template-columns: minmax(0, 1fr) 3.6em 3.6em !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li > span:not(:first-child) { text-align: center; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #ebdde6 !important; }"
+    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #ebdde6 !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #c59cba, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #dfc9d9 !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #dfc9d9 !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #c59cba; padding-bottom: 3px; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #c59cba !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #c59cba2e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #ebdde6 !important; }"
   },
   {
     "id": "sheet-radiant",
@@ -1626,12 +1626,12 @@ export const SHEET_PRESETS = [
     },
     "extras": {
       "accent": "#fff1c9ff",
-      "hp": "#fffcf5ff",
+      "hp": "#8fe08aff",
       "pip": "#ffd970ff",
       "pipGlow": "#ffd97080",
       "pipUsed": "#0d0a05ff",
-      "statText": "#fffcf5ff",
-      "statBackground": "#130f08ff",
+      "statText": "#f3e7cfff",
+      "statBackground": "#0e0b06eb",
       "panelText": "#f2e8d6ff",
       "headerBg": "#151109ff",
       "highlight": "#ffd25738",
@@ -1655,13 +1655,13 @@ export const SHEET_PRESETS = [
       "squarePips": true,
       "titleStrip": true,
       "tooltipTitleLeft": true,
-      "joinedStats": true,
+      "joinedStats": false,
       "continuousBar": true,
       "hideName": false,
-      "abilityMedallions": true,
+      "abilityMedallions": false,
       "highlightProficient": true,
       "tintIcons": true,
-      "statBoxColors": true,
+      "statBoxColors": false,
       "tooltipDivider": true
     },
     "textures": {
@@ -1685,7 +1685,7 @@ export const SHEET_PRESETS = [
       "medallion": `${ASSETS}/sheet/radiant/medallion.webp`
     },
     "ornaments": [],
-    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #ebe6db !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #c9a35c, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #e1cca5 !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß, Werte-Streifen unter dem Bild */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #e1cca5 !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #c9a35c; padding-bottom: 3px; }\n.extended-combat-hud .portrait-hud { padding: 0 12px 12px !important; }\n.extended-combat-hud .portrait-hud .portrait-hud-image { top: 0 !important; left: 0 !important; height: auto !important; bottom: 70px !important; box-shadow: inset 0 0 0 2px #c9a35c, inset 0 0 0 4px #000000b0, inset 0 -40px 40px -24px #000000 !important; }\n.extended-combat-hud .portrait-hud .portrait-stat-block:not(.player-details) { font-size: 1.32rem !important; padding: 0.6rem 0.45rem !important; justify-content: center; min-width: 0 !important; white-space: nowrap; }\n.extended-combat-hud .portrait-hud .portrait-stat-block span[style*=\"movement-baseMovement-background\"] { margin: -0.6rem -0.45rem -0.6rem 0.3em !important; padding: 0 0.45em !important; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #c9a35c !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #c9a35c2e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > span:not(:first-child),\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > div > span { border-left: none !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li { grid-template-columns: minmax(0, 1fr) 3.6em 3.6em !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li > span:not(:first-child) { text-align: center; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #ebe6db !important; }"
+    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #ebe6db !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #c9a35c, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #e1cca5 !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #e1cca5 !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #c9a35c; padding-bottom: 3px; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #c9a35c !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #c9a35c2e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #ebe6db !important; }"
   },
   {
     "id": "sheet-slashing",
@@ -1738,12 +1738,12 @@ export const SHEET_PRESETS = [
     },
     "extras": {
       "accent": "#ecbcbbff",
-      "hp": "#fbf3f2ff",
+      "hp": "#8fe08aff",
       "pip": "#cd4f4bff",
       "pipGlow": "#cd4f4b80",
       "pipUsed": "#090606ff",
-      "statText": "#fbf3f2ff",
-      "statBackground": "#0e0909ff",
+      "statText": "#f3e7cfff",
+      "statBackground": "#0a0606eb",
       "panelText": "#e8e9ebff",
       "headerBg": "#0f0a0aff",
       "highlight": "#c4302b38",
@@ -1767,13 +1767,13 @@ export const SHEET_PRESETS = [
       "squarePips": true,
       "titleStrip": true,
       "tooltipTitleLeft": true,
-      "joinedStats": true,
+      "joinedStats": false,
       "continuousBar": true,
       "hideName": false,
-      "abilityMedallions": true,
+      "abilityMedallions": false,
       "highlightProficient": true,
       "tintIcons": true,
-      "statBoxColors": true,
+      "statBoxColors": false,
       "tooltipDivider": true
     },
     "textures": {
@@ -1797,7 +1797,7 @@ export const SHEET_PRESETS = [
       "medallion": `${ASSETS}/sheet/slashing/medallion.webp`
     },
     "ornaments": [],
-    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #e5d8d7 !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #a4a7b1, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #cdcfd4 !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß, Werte-Streifen unter dem Bild */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #cdcfd4 !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #a4a7b1; padding-bottom: 3px; }\n.extended-combat-hud .portrait-hud { padding: 0 12px 12px !important; }\n.extended-combat-hud .portrait-hud .portrait-hud-image { top: 0 !important; left: 0 !important; height: auto !important; bottom: 70px !important; box-shadow: inset 0 0 0 2px #a4a7b1, inset 0 0 0 4px #000000b0, inset 0 -40px 40px -24px #000000 !important; }\n.extended-combat-hud .portrait-hud .portrait-stat-block:not(.player-details) { font-size: 1.32rem !important; padding: 0.6rem 0.45rem !important; justify-content: center; min-width: 0 !important; white-space: nowrap; }\n.extended-combat-hud .portrait-hud .portrait-stat-block span[style*=\"movement-baseMovement-background\"] { margin: -0.6rem -0.45rem -0.6rem 0.3em !important; padding: 0 0.45em !important; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #a4a7b1 !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #a4a7b12e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > span:not(:first-child),\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > div > span { border-left: none !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li { grid-template-columns: minmax(0, 1fr) 3.6em 3.6em !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li > span:not(:first-child) { text-align: center; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #e5d8d7 !important; }"
+    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #e5d8d7 !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #a4a7b1, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #cdcfd4 !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #cdcfd4 !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #a4a7b1; padding-bottom: 3px; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #a4a7b1 !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #a4a7b12e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #e5d8d7 !important; }"
   },
   {
     "id": "sheet-thunder",
@@ -1850,12 +1850,12 @@ export const SHEET_PRESETS = [
     },
     "extras": {
       "accent": "#d5e2ffff",
-      "hp": "#f7faffff",
+      "hp": "#8fe08aff",
       "pip": "#91b3ffff",
       "pipGlow": "#91b3ff80",
       "pipUsed": "#06080aff",
-      "statText": "#f7faffff",
-      "statBackground": "#090b0fff",
+      "statText": "#f3e7cfff",
+      "statBackground": "#06080beb",
       "panelText": "#efe4dbff",
       "headerBg": "#0a0c11ff",
       "highlight": "#7ea6ff38",
@@ -1879,13 +1879,13 @@ export const SHEET_PRESETS = [
       "squarePips": true,
       "titleStrip": true,
       "tooltipTitleLeft": true,
-      "joinedStats": true,
+      "joinedStats": false,
       "continuousBar": true,
       "hideName": false,
-      "abilityMedallions": true,
+      "abilityMedallions": false,
       "highlightProficient": true,
       "tintIcons": true,
-      "statBoxColors": true,
+      "statBoxColors": false,
       "tooltipDivider": true
     },
     "textures": {
@@ -1909,7 +1909,7 @@ export const SHEET_PRESETS = [
       "medallion": `${ASSETS}/sheet/thunder/medallion.webp`
     },
     "ornaments": [],
-    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #dfe2eb !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #be9570, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #dbc5b0 !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß, Werte-Streifen unter dem Bild */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #dbc5b0 !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #be9570; padding-bottom: 3px; }\n.extended-combat-hud .portrait-hud { padding: 0 12px 12px !important; }\n.extended-combat-hud .portrait-hud .portrait-hud-image { top: 0 !important; left: 0 !important; height: auto !important; bottom: 70px !important; box-shadow: inset 0 0 0 2px #be9570, inset 0 0 0 4px #000000b0, inset 0 -40px 40px -24px #000000 !important; }\n.extended-combat-hud .portrait-hud .portrait-stat-block:not(.player-details) { font-size: 1.32rem !important; padding: 0.6rem 0.45rem !important; justify-content: center; min-width: 0 !important; white-space: nowrap; }\n.extended-combat-hud .portrait-hud .portrait-stat-block span[style*=\"movement-baseMovement-background\"] { margin: -0.6rem -0.45rem -0.6rem 0.3em !important; padding: 0 0.45em !important; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #be9570 !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #be95702e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > span:not(:first-child),\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > div > span { border-left: none !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li { grid-template-columns: minmax(0, 1fr) 3.6em 3.6em !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li > span:not(:first-child) { text-align: center; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #dfe2eb !important; }"
+    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #dfe2eb !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #be9570, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #dbc5b0 !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #dbc5b0 !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #be9570; padding-bottom: 3px; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #be9570 !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #be95702e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #dfe2eb !important; }"
   },
   {
     "id": "sheet-barbarian",
@@ -1962,12 +1962,12 @@ export const SHEET_PRESETS = [
     },
     "extras": {
       "accent": "#f3c8baff",
-      "hp": "#fdf5f2ff",
+      "hp": "#8fe08aff",
       "pip": "#df6e4aff",
       "pipGlow": "#df6e4a80",
       "pipUsed": "#0b0604ff",
-      "statText": "#fdf5f2ff",
-      "statBackground": "#100906ff",
+      "statText": "#f3e7cfff",
+      "statBackground": "#0c0605eb",
       "panelText": "#e7e4e0ff",
       "headerBg": "#120a07ff",
       "highlight": "#d9542a38",
@@ -1991,13 +1991,13 @@ export const SHEET_PRESETS = [
       "squarePips": true,
       "titleStrip": true,
       "tooltipTitleLeft": true,
-      "joinedStats": true,
+      "joinedStats": false,
       "continuousBar": true,
       "hideName": false,
-      "abilityMedallions": true,
+      "abilityMedallions": false,
       "highlightProficient": true,
       "tintIcons": true,
-      "statBoxColors": true,
+      "statBoxColors": false,
       "tooltipDivider": true
     },
     "textures": {
@@ -2033,7 +2033,7 @@ export const SHEET_PRESETS = [
         "animation": "none"
       }
     ],
-    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #e7dbd7 !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #a09182, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #cbc3ba !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß, Werte-Streifen unter dem Bild */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #cbc3ba !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #a09182; padding-bottom: 3px; }\n.extended-combat-hud .portrait-hud { padding: 0 12px 12px !important; }\n.extended-combat-hud .portrait-hud .portrait-hud-image { top: 0 !important; left: 0 !important; height: auto !important; bottom: 70px !important; box-shadow: inset 0 0 0 2px #a09182, inset 0 0 0 4px #000000b0, inset 0 -40px 40px -24px #000000 !important; }\n.extended-combat-hud .portrait-hud .portrait-stat-block:not(.player-details) { font-size: 1.32rem !important; padding: 0.6rem 0.45rem !important; justify-content: center; min-width: 0 !important; white-space: nowrap; }\n.extended-combat-hud .portrait-hud .portrait-stat-block span[style*=\"movement-baseMovement-background\"] { margin: -0.6rem -0.45rem -0.6rem 0.3em !important; padding: 0 0.45em !important; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #a09182 !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #a091822e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > span:not(:first-child),\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > div > span { border-left: none !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li { grid-template-columns: minmax(0, 1fr) 3.6em 3.6em !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li > span:not(:first-child) { text-align: center; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #e7dbd7 !important; }"
+    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #e7dbd7 !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #a09182, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #cbc3ba !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #cbc3ba !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #a09182; padding-bottom: 3px; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #a09182 !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #a091822e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #e7dbd7 !important; }"
   },
   {
     "id": "sheet-bard",
@@ -2086,12 +2086,12 @@ export const SHEET_PRESETS = [
     },
     "extras": {
       "accent": "#f1cbe0ff",
-      "hp": "#fcf5f9ff",
+      "hp": "#8fe08aff",
       "pip": "#da77aeff",
       "pipGlow": "#da77ae80",
       "pipUsed": "#0a0409ff",
-      "statText": "#fcf5f9ff",
-      "statBackground": "#0f070eff",
+      "statText": "#f3e7cfff",
+      "statBackground": "#0b050aeb",
       "panelText": "#f2e8d6ff",
       "headerBg": "#11080fff",
       "highlight": "#d45fa038",
@@ -2115,13 +2115,13 @@ export const SHEET_PRESETS = [
       "squarePips": true,
       "titleStrip": true,
       "tooltipTitleLeft": true,
-      "joinedStats": true,
+      "joinedStats": false,
       "continuousBar": true,
       "hideName": false,
-      "abilityMedallions": true,
+      "abilityMedallions": false,
       "highlightProficient": true,
       "tintIcons": true,
-      "statBoxColors": true,
+      "statBoxColors": false,
       "tooltipDivider": true
     },
     "textures": {
@@ -2157,7 +2157,7 @@ export const SHEET_PRESETS = [
         "animation": "none"
       }
     ],
-    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #e7dce2 !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #c9a35c, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #e1cca5 !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß, Werte-Streifen unter dem Bild */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #e1cca5 !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #c9a35c; padding-bottom: 3px; }\n.extended-combat-hud .portrait-hud { padding: 0 12px 12px !important; }\n.extended-combat-hud .portrait-hud .portrait-hud-image { top: 0 !important; left: 0 !important; height: auto !important; bottom: 70px !important; box-shadow: inset 0 0 0 2px #c9a35c, inset 0 0 0 4px #000000b0, inset 0 -40px 40px -24px #000000 !important; }\n.extended-combat-hud .portrait-hud .portrait-stat-block:not(.player-details) { font-size: 1.32rem !important; padding: 0.6rem 0.45rem !important; justify-content: center; min-width: 0 !important; white-space: nowrap; }\n.extended-combat-hud .portrait-hud .portrait-stat-block span[style*=\"movement-baseMovement-background\"] { margin: -0.6rem -0.45rem -0.6rem 0.3em !important; padding: 0 0.45em !important; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #c9a35c !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #c9a35c2e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > span:not(:first-child),\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > div > span { border-left: none !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li { grid-template-columns: minmax(0, 1fr) 3.6em 3.6em !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li > span:not(:first-child) { text-align: center; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #e7dce2 !important; }"
+    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #e7dce2 !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #c9a35c, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #e1cca5 !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #e1cca5 !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #c9a35c; padding-bottom: 3px; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #c9a35c !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #c9a35c2e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #e7dce2 !important; }"
   },
   {
     "id": "sheet-cleric",
@@ -2210,12 +2210,12 @@ export const SHEET_PRESETS = [
     },
     "extras": {
       "accent": "#fbf1d4ff",
-      "hp": "#fefcf7ff",
+      "hp": "#8fe08aff",
       "pip": "#f4d98eff",
       "pipGlow": "#f4d98e80",
       "pipUsed": "#0b0a08ff",
-      "statText": "#fefcf7ff",
-      "statBackground": "#110f0cff",
+      "statText": "#f3e7cfff",
+      "statBackground": "#0c0b08eb",
       "panelText": "#f2e8d6ff",
       "headerBg": "#13110dff",
       "highlight": "#f2d27a38",
@@ -2239,13 +2239,13 @@ export const SHEET_PRESETS = [
       "squarePips": true,
       "titleStrip": true,
       "tooltipTitleLeft": true,
-      "joinedStats": true,
+      "joinedStats": false,
       "continuousBar": true,
       "hideName": false,
-      "abilityMedallions": true,
+      "abilityMedallions": false,
       "highlightProficient": true,
       "tintIcons": true,
-      "statBoxColors": true,
+      "statBoxColors": false,
       "tooltipDivider": true
     },
     "textures": {
@@ -2281,7 +2281,7 @@ export const SHEET_PRESETS = [
         "animation": "none"
       }
     ],
-    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #e9e6de !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #c9a35c, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #e1cca5 !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß, Werte-Streifen unter dem Bild */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #e1cca5 !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #c9a35c; padding-bottom: 3px; }\n.extended-combat-hud .portrait-hud { padding: 0 12px 12px !important; }\n.extended-combat-hud .portrait-hud .portrait-hud-image { top: 0 !important; left: 0 !important; height: auto !important; bottom: 70px !important; box-shadow: inset 0 0 0 2px #c9a35c, inset 0 0 0 4px #000000b0, inset 0 -40px 40px -24px #000000 !important; }\n.extended-combat-hud .portrait-hud .portrait-stat-block:not(.player-details) { font-size: 1.32rem !important; padding: 0.6rem 0.45rem !important; justify-content: center; min-width: 0 !important; white-space: nowrap; }\n.extended-combat-hud .portrait-hud .portrait-stat-block span[style*=\"movement-baseMovement-background\"] { margin: -0.6rem -0.45rem -0.6rem 0.3em !important; padding: 0 0.45em !important; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #c9a35c !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #c9a35c2e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > span:not(:first-child),\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > div > span { border-left: none !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li { grid-template-columns: minmax(0, 1fr) 3.6em 3.6em !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li > span:not(:first-child) { text-align: center; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #e9e6de !important; }"
+    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #e9e6de !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #c9a35c, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #e1cca5 !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #e1cca5 !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #c9a35c; padding-bottom: 3px; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #c9a35c !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #c9a35c2e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #e9e6de !important; }"
   },
   {
     "id": "sheet-druid",
@@ -2334,12 +2334,12 @@ export const SHEET_PRESETS = [
     },
     "extras": {
       "accent": "#d1e6c4ff",
-      "hp": "#f6faf4ff",
+      "hp": "#8fe08aff",
       "pip": "#85be65ff",
       "pipGlow": "#85be6580",
       "pipUsed": "#050805ff",
-      "statText": "#f6faf4ff",
-      "statBackground": "#080d07ff",
+      "statText": "#f3e7cfff",
+      "statBackground": "#060905eb",
       "panelText": "#eee7dbff",
       "headerBg": "#090e08ff",
       "highlight": "#6fb34a38",
@@ -2363,13 +2363,13 @@ export const SHEET_PRESETS = [
       "squarePips": true,
       "titleStrip": true,
       "tooltipTitleLeft": true,
-      "joinedStats": true,
+      "joinedStats": false,
       "continuousBar": true,
       "hideName": false,
-      "abilityMedallions": true,
+      "abilityMedallions": false,
       "highlightProficient": true,
       "tintIcons": true,
-      "statBoxColors": true,
+      "statBoxColors": false,
       "tooltipDivider": true
     },
     "textures": {
@@ -2405,7 +2405,7 @@ export const SHEET_PRESETS = [
         "animation": "none"
       }
     ],
-    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #dde4da !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #ba9e70, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #d9cab0 !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß, Werte-Streifen unter dem Bild */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #d9cab0 !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #ba9e70; padding-bottom: 3px; }\n.extended-combat-hud .portrait-hud { padding: 0 12px 12px !important; }\n.extended-combat-hud .portrait-hud .portrait-hud-image { top: 0 !important; left: 0 !important; height: auto !important; bottom: 70px !important; box-shadow: inset 0 0 0 2px #ba9e70, inset 0 0 0 4px #000000b0, inset 0 -40px 40px -24px #000000 !important; }\n.extended-combat-hud .portrait-hud .portrait-stat-block:not(.player-details) { font-size: 1.32rem !important; padding: 0.6rem 0.45rem !important; justify-content: center; min-width: 0 !important; white-space: nowrap; }\n.extended-combat-hud .portrait-hud .portrait-stat-block span[style*=\"movement-baseMovement-background\"] { margin: -0.6rem -0.45rem -0.6rem 0.3em !important; padding: 0 0.45em !important; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #ba9e70 !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #ba9e702e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > span:not(:first-child),\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > div > span { border-left: none !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li { grid-template-columns: minmax(0, 1fr) 3.6em 3.6em !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li > span:not(:first-child) { text-align: center; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #dde4da !important; }"
+    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #dde4da !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #ba9e70, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #d9cab0 !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #d9cab0 !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #ba9e70; padding-bottom: 3px; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #ba9e70 !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #ba9e702e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #dde4da !important; }"
   },
   {
     "id": "sheet-fighter",
@@ -2458,12 +2458,12 @@ export const SHEET_PRESETS = [
     },
     "extras": {
       "accent": "#e8c2c0ff",
-      "hp": "#fbf4f3ff",
+      "hp": "#8fe08aff",
       "pip": "#c35f58ff",
       "pipGlow": "#c35f5880",
       "pipUsed": "#080809ff",
-      "statText": "#fbf4f3ff",
-      "statBackground": "#0c0c0eff",
+      "statText": "#f3e7cfff",
+      "statBackground": "#08080aeb",
       "panelText": "#e7e9ebff",
       "headerBg": "#0d0d10ff",
       "highlight": "#b8433a38",
@@ -2487,13 +2487,13 @@ export const SHEET_PRESETS = [
       "squarePips": true,
       "titleStrip": true,
       "tooltipTitleLeft": true,
-      "joinedStats": true,
+      "joinedStats": false,
       "continuousBar": true,
       "hideName": false,
-      "abilityMedallions": true,
+      "abilityMedallions": false,
       "highlightProficient": true,
       "tintIcons": true,
-      "statBoxColors": true,
+      "statBoxColors": false,
       "tooltipDivider": true
     },
     "textures": {
@@ -2529,7 +2529,7 @@ export const SHEET_PRESETS = [
         "animation": "none"
       }
     ],
-    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #e4d9d8 !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #a0a5b1, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #cbced4 !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß, Werte-Streifen unter dem Bild */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #cbced4 !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #a0a5b1; padding-bottom: 3px; }\n.extended-combat-hud .portrait-hud { padding: 0 12px 12px !important; }\n.extended-combat-hud .portrait-hud .portrait-hud-image { top: 0 !important; left: 0 !important; height: auto !important; bottom: 70px !important; box-shadow: inset 0 0 0 2px #a0a5b1, inset 0 0 0 4px #000000b0, inset 0 -40px 40px -24px #000000 !important; }\n.extended-combat-hud .portrait-hud .portrait-stat-block:not(.player-details) { font-size: 1.32rem !important; padding: 0.6rem 0.45rem !important; justify-content: center; min-width: 0 !important; white-space: nowrap; }\n.extended-combat-hud .portrait-hud .portrait-stat-block span[style*=\"movement-baseMovement-background\"] { margin: -0.6rem -0.45rem -0.6rem 0.3em !important; padding: 0 0.45em !important; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #a0a5b1 !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #a0a5b12e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > span:not(:first-child),\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > div > span { border-left: none !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li { grid-template-columns: minmax(0, 1fr) 3.6em 3.6em !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li > span:not(:first-child) { text-align: center; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #e4d9d8 !important; }"
+    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #e4d9d8 !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #a0a5b1, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #cbced4 !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #cbced4 !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #a0a5b1; padding-bottom: 3px; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #a0a5b1 !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #a0a5b12e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #e4d9d8 !important; }"
   },
   {
     "id": "sheet-monk",
@@ -2582,12 +2582,12 @@ export const SHEET_PRESETS = [
     },
     "extras": {
       "accent": "#f6dfbbff",
-      "hp": "#fdf9f2ff",
+      "hp": "#8fe08aff",
       "pip": "#e7aa4cff",
       "pipGlow": "#e7aa4c80",
       "pipUsed": "#0a0804ff",
-      "statText": "#fdf9f2ff",
-      "statBackground": "#0e0b06ff",
+      "statText": "#f3e7cfff",
+      "statBackground": "#0a0805eb",
       "panelText": "#eee5daff",
       "headerBg": "#100c07ff",
       "highlight": "#e39b2d38",
@@ -2611,13 +2611,13 @@ export const SHEET_PRESETS = [
       "squarePips": true,
       "titleStrip": true,
       "tooltipTitleLeft": true,
-      "joinedStats": true,
+      "joinedStats": false,
       "continuousBar": true,
       "hideName": false,
-      "abilityMedallions": true,
+      "abilityMedallions": false,
       "highlightProficient": true,
       "tintIcons": true,
-      "statBoxColors": true,
+      "statBoxColors": false,
       "tooltipDivider": true
     },
     "textures": {
@@ -2653,7 +2653,7 @@ export const SHEET_PRESETS = [
         "animation": "none"
       }
     ],
-    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #e8e1d7 !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #ba986c, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #d9c7ae !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß, Werte-Streifen unter dem Bild */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #d9c7ae !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #ba986c; padding-bottom: 3px; }\n.extended-combat-hud .portrait-hud { padding: 0 12px 12px !important; }\n.extended-combat-hud .portrait-hud .portrait-hud-image { top: 0 !important; left: 0 !important; height: auto !important; bottom: 70px !important; box-shadow: inset 0 0 0 2px #ba986c, inset 0 0 0 4px #000000b0, inset 0 -40px 40px -24px #000000 !important; }\n.extended-combat-hud .portrait-hud .portrait-stat-block:not(.player-details) { font-size: 1.32rem !important; padding: 0.6rem 0.45rem !important; justify-content: center; min-width: 0 !important; white-space: nowrap; }\n.extended-combat-hud .portrait-hud .portrait-stat-block span[style*=\"movement-baseMovement-background\"] { margin: -0.6rem -0.45rem -0.6rem 0.3em !important; padding: 0 0.45em !important; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #ba986c !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #ba986c2e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > span:not(:first-child),\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > div > span { border-left: none !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li { grid-template-columns: minmax(0, 1fr) 3.6em 3.6em !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li > span:not(:first-child) { text-align: center; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #e8e1d7 !important; }"
+    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #e8e1d7 !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #ba986c, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #d9c7ae !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #d9c7ae !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #ba986c; padding-bottom: 3px; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #ba986c !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #ba986c2e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #e8e1d7 !important; }"
   },
   {
     "id": "sheet-paladin",
@@ -2706,12 +2706,12 @@ export const SHEET_PRESETS = [
     },
     "extras": {
       "accent": "#f7eccaff",
-      "hp": "#fefbf5ff",
+      "hp": "#8fe08aff",
       "pip": "#ebcd73ff",
       "pipGlow": "#ebcd7380",
       "pipUsed": "#04070dff",
-      "statText": "#fefbf5ff",
-      "statBackground": "#070a13ff",
+      "statText": "#f3e7cfff",
+      "statBackground": "#05070eeb",
       "panelText": "#f2e8d6ff",
       "headerBg": "#080b15ff",
       "highlight": "#e8c45a38",
@@ -2735,13 +2735,13 @@ export const SHEET_PRESETS = [
       "squarePips": true,
       "titleStrip": true,
       "tooltipTitleLeft": true,
-      "joinedStats": true,
+      "joinedStats": false,
       "continuousBar": true,
       "hideName": false,
-      "abilityMedallions": true,
+      "abilityMedallions": false,
       "highlightProficient": true,
       "tintIcons": true,
-      "statBoxColors": true,
+      "statBoxColors": false,
       "tooltipDivider": true
     },
     "textures": {
@@ -2777,7 +2777,7 @@ export const SHEET_PRESETS = [
         "animation": "none"
       }
     ],
-    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #e8e5db !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #c9a35c, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #e1cca5 !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß, Werte-Streifen unter dem Bild */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #e1cca5 !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #c9a35c; padding-bottom: 3px; }\n.extended-combat-hud .portrait-hud { padding: 0 12px 12px !important; }\n.extended-combat-hud .portrait-hud .portrait-hud-image { top: 0 !important; left: 0 !important; height: auto !important; bottom: 70px !important; box-shadow: inset 0 0 0 2px #c9a35c, inset 0 0 0 4px #000000b0, inset 0 -40px 40px -24px #000000 !important; }\n.extended-combat-hud .portrait-hud .portrait-stat-block:not(.player-details) { font-size: 1.32rem !important; padding: 0.6rem 0.45rem !important; justify-content: center; min-width: 0 !important; white-space: nowrap; }\n.extended-combat-hud .portrait-hud .portrait-stat-block span[style*=\"movement-baseMovement-background\"] { margin: -0.6rem -0.45rem -0.6rem 0.3em !important; padding: 0 0.45em !important; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #c9a35c !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #c9a35c2e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > span:not(:first-child),\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > div > span { border-left: none !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li { grid-template-columns: minmax(0, 1fr) 3.6em 3.6em !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li > span:not(:first-child) { text-align: center; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #e8e5db !important; }"
+    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #e8e5db !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #c9a35c, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #e1cca5 !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #e1cca5 !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #c9a35c; padding-bottom: 3px; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #c9a35c !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #c9a35c2e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #e8e5db !important; }"
   },
   {
     "id": "sheet-ranger",
@@ -2830,12 +2830,12 @@ export const SHEET_PRESETS = [
     },
     "extras": {
       "accent": "#d4e6c4ff",
-      "hp": "#f7faf4ff",
+      "hp": "#8fe08aff",
       "pip": "#8dbc65ff",
       "pipGlow": "#8dbc6580",
       "pipUsed": "#090704ff",
-      "statText": "#f7faf4ff",
-      "statBackground": "#0e0b07ff",
+      "statText": "#f3e7cfff",
+      "statBackground": "#0a0805eb",
       "panelText": "#eee7dbff",
       "headerBg": "#100c08ff",
       "highlight": "#79b04a38",
@@ -2859,13 +2859,13 @@ export const SHEET_PRESETS = [
       "squarePips": true,
       "titleStrip": true,
       "tooltipTitleLeft": true,
-      "joinedStats": true,
+      "joinedStats": false,
       "continuousBar": true,
       "hideName": false,
-      "abilityMedallions": true,
+      "abilityMedallions": false,
       "highlightProficient": true,
       "tintIcons": true,
-      "statBoxColors": true,
+      "statBoxColors": false,
       "tooltipDivider": true
     },
     "textures": {
@@ -2901,7 +2901,7 @@ export const SHEET_PRESETS = [
         "animation": "none"
       }
     ],
-    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #dee3da !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #ba9e70, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #d9cab0 !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß, Werte-Streifen unter dem Bild */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #d9cab0 !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #ba9e70; padding-bottom: 3px; }\n.extended-combat-hud .portrait-hud { padding: 0 12px 12px !important; }\n.extended-combat-hud .portrait-hud .portrait-hud-image { top: 0 !important; left: 0 !important; height: auto !important; bottom: 70px !important; box-shadow: inset 0 0 0 2px #ba9e70, inset 0 0 0 4px #000000b0, inset 0 -40px 40px -24px #000000 !important; }\n.extended-combat-hud .portrait-hud .portrait-stat-block:not(.player-details) { font-size: 1.32rem !important; padding: 0.6rem 0.45rem !important; justify-content: center; min-width: 0 !important; white-space: nowrap; }\n.extended-combat-hud .portrait-hud .portrait-stat-block span[style*=\"movement-baseMovement-background\"] { margin: -0.6rem -0.45rem -0.6rem 0.3em !important; padding: 0 0.45em !important; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #ba9e70 !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #ba9e702e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > span:not(:first-child),\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > div > span { border-left: none !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li { grid-template-columns: minmax(0, 1fr) 3.6em 3.6em !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li > span:not(:first-child) { text-align: center; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #dee3da !important; }"
+    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #dee3da !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #ba9e70, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #d9cab0 !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #d9cab0 !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #ba9e70; padding-bottom: 3px; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #ba9e70 !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #ba9e702e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #dee3da !important; }"
   },
   {
     "id": "sheet-rogue",
@@ -2954,12 +2954,12 @@ export const SHEET_PRESETS = [
     },
     "extras": {
       "accent": "#d9d6f0ff",
-      "hp": "#f8f7fcff",
+      "hp": "#8fe08aff",
       "pip": "#9c92d7ff",
       "pipGlow": "#9c92d780",
       "pipUsed": "#050506ff",
-      "statText": "#f8f7fcff",
-      "statBackground": "#080809ff",
+      "statText": "#f3e7cfff",
+      "statBackground": "#050506eb",
       "panelText": "#e4e5e8ff",
       "headerBg": "#08080aff",
       "highlight": "#8b7fd038",
@@ -2983,13 +2983,13 @@ export const SHEET_PRESETS = [
       "squarePips": true,
       "titleStrip": true,
       "tooltipTitleLeft": true,
-      "joinedStats": true,
+      "joinedStats": false,
       "continuousBar": true,
       "hideName": false,
-      "abilityMedallions": true,
+      "abilityMedallions": false,
       "highlightProficient": true,
       "tintIcons": true,
-      "statBoxColors": true,
+      "statBoxColors": false,
       "tooltipDivider": true
     },
     "textures": {
@@ -3025,7 +3025,7 @@ export const SHEET_PRESETS = [
         "animation": "none"
       }
     ],
-    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #e0dfe6 !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #9598a4, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #c5c7cd !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß, Werte-Streifen unter dem Bild */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #c5c7cd !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #9598a4; padding-bottom: 3px; }\n.extended-combat-hud .portrait-hud { padding: 0 12px 12px !important; }\n.extended-combat-hud .portrait-hud .portrait-hud-image { top: 0 !important; left: 0 !important; height: auto !important; bottom: 70px !important; box-shadow: inset 0 0 0 2px #9598a4, inset 0 0 0 4px #000000b0, inset 0 -40px 40px -24px #000000 !important; }\n.extended-combat-hud .portrait-hud .portrait-stat-block:not(.player-details) { font-size: 1.32rem !important; padding: 0.6rem 0.45rem !important; justify-content: center; min-width: 0 !important; white-space: nowrap; }\n.extended-combat-hud .portrait-hud .portrait-stat-block span[style*=\"movement-baseMovement-background\"] { margin: -0.6rem -0.45rem -0.6rem 0.3em !important; padding: 0 0.45em !important; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #9598a4 !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #9598a42e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > span:not(:first-child),\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > div > span { border-left: none !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li { grid-template-columns: minmax(0, 1fr) 3.6em 3.6em !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li > span:not(:first-child) { text-align: center; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #e0dfe6 !important; }"
+    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #e0dfe6 !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #9598a4, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #c5c7cd !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #c5c7cd !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #9598a4; padding-bottom: 3px; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #9598a4 !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #9598a42e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #e0dfe6 !important; }"
   },
   {
     "id": "sheet-sorcerer",
@@ -3078,12 +3078,12 @@ export const SHEET_PRESETS = [
     },
     "extras": {
       "accent": "#f7c3caff",
-      "hp": "#fef4f5ff",
+      "hp": "#8fe08aff",
       "pip": "#eb6173ff",
       "pipGlow": "#eb617380",
       "pipUsed": "#0b0405ff",
-      "statText": "#fef4f5ff",
-      "statBackground": "#110508ff",
+      "statText": "#f3e7cfff",
+      "statBackground": "#0c0406eb",
       "panelText": "#f2e8d6ff",
       "headerBg": "#130609ff",
       "highlight": "#e8455a38",
@@ -3107,13 +3107,13 @@ export const SHEET_PRESETS = [
       "squarePips": true,
       "titleStrip": true,
       "tooltipTitleLeft": true,
-      "joinedStats": true,
+      "joinedStats": false,
       "continuousBar": true,
       "hideName": false,
-      "abilityMedallions": true,
+      "abilityMedallions": false,
       "highlightProficient": true,
       "tintIcons": true,
-      "statBoxColors": true,
+      "statBoxColors": false,
       "tooltipDivider": true
     },
     "textures": {
@@ -3149,7 +3149,7 @@ export const SHEET_PRESETS = [
         "animation": "none"
       }
     ],
-    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #e8d9db !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #c9a35c, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #e1cca5 !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß, Werte-Streifen unter dem Bild */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #e1cca5 !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #c9a35c; padding-bottom: 3px; }\n.extended-combat-hud .portrait-hud { padding: 0 12px 12px !important; }\n.extended-combat-hud .portrait-hud .portrait-hud-image { top: 0 !important; left: 0 !important; height: auto !important; bottom: 70px !important; box-shadow: inset 0 0 0 2px #c9a35c, inset 0 0 0 4px #000000b0, inset 0 -40px 40px -24px #000000 !important; }\n.extended-combat-hud .portrait-hud .portrait-stat-block:not(.player-details) { font-size: 1.32rem !important; padding: 0.6rem 0.45rem !important; justify-content: center; min-width: 0 !important; white-space: nowrap; }\n.extended-combat-hud .portrait-hud .portrait-stat-block span[style*=\"movement-baseMovement-background\"] { margin: -0.6rem -0.45rem -0.6rem 0.3em !important; padding: 0 0.45em !important; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #c9a35c !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #c9a35c2e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > span:not(:first-child),\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > div > span { border-left: none !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li { grid-template-columns: minmax(0, 1fr) 3.6em 3.6em !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li > span:not(:first-child) { text-align: center; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #e8d9db !important; }"
+    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #e8d9db !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #c9a35c, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #e1cca5 !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #e1cca5 !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #c9a35c; padding-bottom: 3px; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #c9a35c !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #c9a35c2e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #e8d9db !important; }"
   },
   {
     "id": "sheet-warlock",
@@ -3202,12 +3202,12 @@ export const SHEET_PRESETS = [
     },
     "extras": {
       "accent": "#d5f5caff",
-      "hp": "#f7fdf5ff",
+      "hp": "#8fe08aff",
       "pip": "#90e573ff",
       "pipGlow": "#90e57380",
       "pipUsed": "#060409ff",
-      "statText": "#f7fdf5ff",
-      "statBackground": "#09060eff",
+      "statText": "#f3e7cfff",
+      "statBackground": "#06040aeb",
       "panelText": "#eae4f1ff",
       "headerBg": "#0a0610ff",
       "highlight": "#7de05a38",
@@ -3231,13 +3231,13 @@ export const SHEET_PRESETS = [
       "squarePips": true,
       "titleStrip": true,
       "tooltipTitleLeft": true,
-      "joinedStats": true,
+      "joinedStats": false,
       "continuousBar": true,
       "hideName": false,
-      "abilityMedallions": true,
+      "abilityMedallions": false,
       "highlightProficient": true,
       "tintIcons": true,
-      "statBoxColors": true,
+      "statBoxColors": false,
       "tooltipDivider": true
     },
     "textures": {
@@ -3273,7 +3273,7 @@ export const SHEET_PRESETS = [
         "animation": "none"
       }
     ],
-    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #dfe8db !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #ab95c5, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #d1c5df !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß, Werte-Streifen unter dem Bild */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #d1c5df !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #ab95c5; padding-bottom: 3px; }\n.extended-combat-hud .portrait-hud { padding: 0 12px 12px !important; }\n.extended-combat-hud .portrait-hud .portrait-hud-image { top: 0 !important; left: 0 !important; height: auto !important; bottom: 70px !important; box-shadow: inset 0 0 0 2px #ab95c5, inset 0 0 0 4px #000000b0, inset 0 -40px 40px -24px #000000 !important; }\n.extended-combat-hud .portrait-hud .portrait-stat-block:not(.player-details) { font-size: 1.32rem !important; padding: 0.6rem 0.45rem !important; justify-content: center; min-width: 0 !important; white-space: nowrap; }\n.extended-combat-hud .portrait-hud .portrait-stat-block span[style*=\"movement-baseMovement-background\"] { margin: -0.6rem -0.45rem -0.6rem 0.3em !important; padding: 0 0.45em !important; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #ab95c5 !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #ab95c52e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > span:not(:first-child),\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > div > span { border-left: none !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li { grid-template-columns: minmax(0, 1fr) 3.6em 3.6em !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li > span:not(:first-child) { text-align: center; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #dfe8db !important; }"
+    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #dfe8db !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #ab95c5, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #d1c5df !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #d1c5df !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #ab95c5; padding-bottom: 3px; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #ab95c5 !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #ab95c52e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #dfe8db !important; }"
   },
   {
     "id": "sheet-wizard",
@@ -3326,12 +3326,12 @@ export const SHEET_PRESETS = [
     },
     "extras": {
       "accent": "#d4cfffff",
-      "hp": "#f7f6ffff",
+      "hp": "#8fe08aff",
       "pip": "#8e81ffff",
       "pipGlow": "#8e81ff80",
       "pipUsed": "#06050dff",
-      "statText": "#f7f6ffff",
-      "statBackground": "#090814ff",
+      "statText": "#f3e7cfff",
+      "statBackground": "#06060eeb",
       "panelText": "#e8eaf1ff",
       "headerBg": "#0a0916ff",
       "highlight": "#7a6bff38",
@@ -3355,13 +3355,13 @@ export const SHEET_PRESETS = [
       "squarePips": true,
       "titleStrip": true,
       "tooltipTitleLeft": true,
-      "joinedStats": true,
+      "joinedStats": false,
       "continuousBar": true,
       "hideName": false,
-      "abilityMedallions": true,
+      "abilityMedallions": false,
       "highlightProficient": true,
       "tintIcons": true,
-      "statBoxColors": true,
+      "statBoxColors": false,
       "tooltipDivider": true
     },
     "textures": {
@@ -3397,7 +3397,7 @@ export const SHEET_PRESETS = [
         "animation": "none"
       }
     ],
-    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #deddeb !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #a4adc9, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #cdd2e1 !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß, Werte-Streifen unter dem Bild */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #cdd2e1 !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #a4adc9; padding-bottom: 3px; }\n.extended-combat-hud .portrait-hud { padding: 0 12px 12px !important; }\n.extended-combat-hud .portrait-hud .portrait-hud-image { top: 0 !important; left: 0 !important; height: auto !important; bottom: 70px !important; box-shadow: inset 0 0 0 2px #a4adc9, inset 0 0 0 4px #000000b0, inset 0 -40px 40px -24px #000000 !important; }\n.extended-combat-hud .portrait-hud .portrait-stat-block:not(.player-details) { font-size: 1.32rem !important; padding: 0.6rem 0.45rem !important; justify-content: center; min-width: 0 !important; white-space: nowrap; }\n.extended-combat-hud .portrait-hud .portrait-stat-block span[style*=\"movement-baseMovement-background\"] { margin: -0.6rem -0.45rem -0.6rem 0.3em !important; padding: 0 0.45em !important; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #a4adc9 !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #a4adc92e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > span:not(:first-child),\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > div > span { border-left: none !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li { grid-template-columns: minmax(0, 1fr) 3.6em 3.6em !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li > span:not(:first-child) { text-align: center; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #deddeb !important; }"
+    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #deddeb !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #a4adc9, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #cdd2e1 !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #cdd2e1 !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #a4adc9; padding-bottom: 3px; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #a4adc9 !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #a4adc92e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #deddeb !important; }"
   },
   {
     "id": "sheet-artificer",
@@ -3450,12 +3450,12 @@ export const SHEET_PRESETS = [
     },
     "extras": {
       "accent": "#c1ebe8ff",
-      "hp": "#f3fbfbff",
+      "hp": "#8fe08aff",
       "pip": "#5ccac3ff",
       "pipGlow": "#5ccac380",
       "pipUsed": "#050809ff",
-      "statText": "#f3fbfbff",
-      "statBackground": "#080d0eff",
+      "statText": "#f3e7cfff",
+      "statBackground": "#06090aeb",
       "panelText": "#f1e1d6ff",
       "headerBg": "#090e0fff",
       "highlight": "#3fc1b838",
@@ -3479,13 +3479,13 @@ export const SHEET_PRESETS = [
       "squarePips": true,
       "titleStrip": true,
       "tooltipTitleLeft": true,
-      "joinedStats": true,
+      "joinedStats": false,
       "continuousBar": true,
       "hideName": false,
-      "abilityMedallions": true,
+      "abilityMedallions": false,
       "highlightProficient": true,
       "tintIcons": true,
-      "statBoxColors": true,
+      "statBoxColors": false,
       "tooltipDivider": true
     },
     "textures": {
@@ -3521,6 +3521,6 @@ export const SHEET_PRESETS = [
         "animation": "none"
       }
     ],
-    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #d9e5e4 !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #c5865d, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #dfbca6 !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß, Werte-Streifen unter dem Bild */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #dfbca6 !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #c5865d; padding-bottom: 3px; }\n.extended-combat-hud .portrait-hud { padding: 0 12px 12px !important; }\n.extended-combat-hud .portrait-hud .portrait-hud-image { top: 0 !important; left: 0 !important; height: auto !important; bottom: 70px !important; box-shadow: inset 0 0 0 2px #c5865d, inset 0 0 0 4px #000000b0, inset 0 -40px 40px -24px #000000 !important; }\n.extended-combat-hud .portrait-hud .portrait-stat-block:not(.player-details) { font-size: 1.32rem !important; padding: 0.6rem 0.45rem !important; justify-content: center; min-width: 0 !important; white-space: nowrap; }\n.extended-combat-hud .portrait-hud .portrait-stat-block span[style*=\"movement-baseMovement-background\"] { margin: -0.6rem -0.45rem -0.6rem 0.3em !important; padding: 0 0.45em !important; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #c5865d !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #c5865d2e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > span:not(:first-child),\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) > div > span { border-left: none !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li { grid-template-columns: minmax(0, 1fr) 3.6em 3.6em !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li > span:not(:first-child) { text-align: center; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #d9e5e4 !important; }"
+    "customCss": "/* Rast-Knöpfe auf Pergament */\n.extended-combat-hud .movement-hud:has(.button-hud-button) { gap: 10px; background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .button-hud-button, .extended-combat-hud .button-hud-button i { color: #d9e5e4 !important; text-shadow: none !important; }\n/* Zauberleiste: freie Punkte */\n.extended-combat-hud .feature-spell-slots { background: none !important; border: none !important; border-image: none !important; backdrop-filter: none !important; }\n.extended-combat-hud .feature-spell-slots .spell-slot:not(.spell-cantrip) { border: 2px solid #000000aa !important; box-shadow: 0 0 0 2px #c5865d, 0 2px 4px #000000 !important; }\n.extended-combat-hud .feature-spell-slots .spell-cantrip { color: #dfbca6 !important; }\n.extended-combat-hud .feature-element .feature-element-title { font-size: 1.1em !important; text-transform: none !important; }\n/* Portrait: Name groß */\n.extended-combat-hud .portrait-hud .player-details { background: linear-gradient(#000000c0, #00000000) !important; -webkit-mask-image: none !important; mask-image: none !important; padding-left: 1.6rem !important; }\n.extended-combat-hud .portrait-hud .player-details .player-name { font-size: 2.1rem !important; font-weight: 700; color: #dfbca6 !important; }\n.extended-combat-hud .portrait-hud .player-details .player-detail { display: inline-block; font-size: 1.1em !important; color: #f0e2c4 !important; border-bottom: 2px solid #c5865d; padding-bottom: 3px; }\n/* Menü */\n.extended-combat-hud .ability-menu ul > li.ability-title, .extended-combat-hud .ability-menu ul.ability-toggle li { border-radius: 6px; border-color: #c5865d !important; }\n.extended-combat-hud .ability-menu ul > li:not(.ability-title) { border-top-color: #c5865d2e !important; box-shadow: none !important; }\n.extended-combat-hud .ability-menu ul.collapsible-panel > li.ability-title > span:not(:first-child) { font-size: 0.78em; letter-spacing: 0; }\n/* Tooltip */\n.ech-tooltip .ech-tooltip-header { padding: 1rem 1.3rem 0.3rem !important; }\n.ech-tooltip .ech-tooltip-body { padding: 0 1.3rem 1.1rem !important; }\n.ech-tooltip, .ech-tooltip .ech-tooltip-description { color: #d9e5e4 !important; }"
   }
 ];
