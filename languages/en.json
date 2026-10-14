@@ -195,7 +195,8 @@
       "argonRestored": "Themer turned off – Argon uses its own look again.",
       "imported": "Theme imported. Don't forget to save!",
       "importFailed": "The file could not be read as a theme.",
-      "argonMissing": "DnD5e Argon Combat HUD Themer: the module \"Argon - Combat HUD (CORE)\" is not active."
+      "argonMissing": "DnD5e Argon Combat HUD Themer: the module \"Argon - Combat HUD (CORE)\" is not active.",
+      "gmOnly": "Only the GM can set or edit themes for everyone."
     },
     "anchor": {
       "portrait": "Portrait",

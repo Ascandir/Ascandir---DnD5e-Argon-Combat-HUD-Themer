@@ -90,10 +90,27 @@ export function registerSettings(EditorClass) {
 export function onRenderSettingsConfig(app, html) {
   refreshChoices();
   if (game.user.isGM) return;
-  if (game.settings.get(MODULE_ID, S.allowPlayerChoice)) return;
   const root = html instanceof HTMLElement ? html : html?.[0];
-  const input = root?.querySelector(`[name="${MODULE_ID}.${S.clientTheme}"]`);
-  input?.closest(".form-group")?.remove();
+  const remove = (key) => root?.querySelector(`[name="${MODULE_ID}.${key}"]`)?.closest(".form-group")?.remove();
+  // Welt-Theme, Spieler-Freigabe und Editor gehören nur dem SL – auch wenn Spieler
+  // in Foundry das Recht „Einstellungen ändern“ haben.
+  remove(S.worldTheme);
+  remove(S.allowPlayerChoice);
+  root?.querySelector(`[data-key="${MODULE_ID}.${S.editor}"]`)?.closest(".form-group")?.remove();
+  root?.querySelector(`button[data-key="${MODULE_ID}.${S.editor}"], button[data-action="openSubmenu"][data-key^="${MODULE_ID}."]`)?.closest(".form-group")?.remove();
+  if (!game.settings.get(MODULE_ID, S.allowPlayerChoice)) remove(S.clientTheme);
+}
+
+/** Welt-Einstellungen dieses Moduls dürfen nur vom SL geändert werden. */
+const GM_ONLY_KEYS = new Set([S.themes, S.worldTheme, S.allowPlayerChoice].map((k) => `${MODULE_ID}.${k}`));
+function blockNonGM(doc) {
+  if (game.user?.isGM || !GM_ONLY_KEYS.has(doc?.key)) return;
+  ui.notifications?.warn(L("notify.gmOnly"));
+  return false;
+}
+export function registerPermissionGuards() {
+  Hooks.on("preCreateSetting", blockNonGM);
+  Hooks.on("preUpdateSetting", blockNonGM);
 }
 
 /* -------------------------------------------- */
@@ -132,6 +149,7 @@ export function isBuiltin(id) {
 
 /** Speichert ein eigenes Theme (nur SL). Gibt die ID zurück. */
 export async function saveTheme(theme) {
+  if (!game.user.isGM) return null;
   const clean = normalizeTheme(theme);
   if (!clean.id || isBuiltin(clean.id)) clean.id = foundry.utils.randomID();
   if (!clean.name.trim()) clean.name = L("editor.untitled");
@@ -143,6 +161,7 @@ export async function saveTheme(theme) {
 }
 
 export async function deleteTheme(id) {
+  if (!game.user.isGM) return;
   if (isBuiltin(id)) return;
   const lib = foundry.utils.deepClone(game.settings.get(MODULE_ID, S.themes) ?? {});
   delete lib[id];
@@ -157,6 +176,7 @@ export function getWorldThemeId() {
 }
 
 export async function setWorldTheme(id) {
+  if (!game.user.isGM) return;
   await game.settings.set(MODULE_ID, S.worldTheme, id ?? NONE);
 }
 

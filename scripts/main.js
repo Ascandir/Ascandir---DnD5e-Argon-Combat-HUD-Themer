@@ -4,7 +4,7 @@
  */
 import { MODULE_ID } from "./schema.js";
 import {
-  registerSettings, refreshChoices, applyCurrentTheme, onRenderSettingsConfig,
+  registerSettings, registerPermissionGuards, refreshChoices, applyCurrentTheme, onRenderSettingsConfig,
   getAllThemes, getTheme, saveTheme, setWorldTheme,
 } from "./store.js";
 import { ThemeEditor } from "./editor.js";
@@ -13,6 +13,7 @@ import { registerDecorHooks } from "./decor.js";
 
 Hooks.once("init", () => {
   registerSettings(ThemeEditor);
+  registerPermissionGuards();
   registerDecorHooks();
 });
 
@@ -32,7 +33,7 @@ Hooks.once("ready", () => {
   const mod = game.modules.get(MODULE_ID);
   if (mod) {
     mod.api = {
-      openEditor: () => new ThemeEditor().render({ force: true }),
+      openEditor: () => game.user.isGM && new ThemeEditor().render({ force: true }),
       getThemes: () => getAllThemes(),
       getTheme,
       saveTheme,

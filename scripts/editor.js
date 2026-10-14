@@ -120,6 +120,7 @@ export class ThemeEditor extends ApplicationV2 {
 
   _onRender(context, options) {
     super._onRender?.(context, options);
+    if (!game.user.isGM) { ui.notifications.warn(game.i18n.localize("ascandir-argon-combat-hud-themer.notify.gmOnly")); this.close(); return; }
     this.#updatePreviewBox();
     setPreview(this.working);
   }
