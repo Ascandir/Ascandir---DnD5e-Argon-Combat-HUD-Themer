@@ -311,14 +311,26 @@ ${HUD} .portrait-hud .portrait-actor-configuration { top: ${extraP}px !important
     out.push(`
 ${HUD} .weapon-sets { top: calc(-50px - 37px - 1rem - ${menuExtra}px) !important; }`);
   }
-  const setBorder = t.buttonFrame ? t.buttonFrameWidth : style.borderWidth;
-  const extraS = Math.max(0, setBorder - 1) * 2;
-  if (extraS > 0) {
+  // Quickslots: Der Zierrahmen wird nach außen gezeichnet (border-image-outset), statt
+  // Platz im Inneren zu belegen. So bleiben die Slots quadratisch und in voller Größe –
+  // auch wenn Argon das HUD herunterskaliert.
+  if (t.buttonFrame) {
+    const w = t.buttonFrameWidth;
+    const iw = t.buttonFrameImageWidth || w;
+    const o = Math.max(0, w - 1) + (t.buttonFrameOutset || 0);
     out.push(`
-${HUD} .weapon-sets .weapon-set > .set {
-  height: calc(50px - ${extraS}px) !important;
-  min-width: calc(50px - ${extraS}px) !important;
+${HUD} .weapon-sets .weapon-set {
+  border-width: 1px !important;
+  border-image: ${cssUrl(t.buttonFrame)} ${t.buttonFrameSlice} / ${iw}px / ${o}px ${t.frameRepeat} !important;
+  margin: 0 ${o}px !important;
+}
+${HUD} .weapon-sets {
+  transform: scale(${Math.min(1, 339 / (306 + 6 * o)).toFixed(3)});
+  transform-origin: bottom left;
 }`);
+  } else if (style.borderWidth > 1) {
+    out.push(`
+${HUD} .weapon-sets .weapon-set { border-width: 1px !important; outline: ${style.borderWidth - 1}px solid ${style.borderWidth ? "var(--ech-mainAction-base-border)" : "transparent"}; }`);
   }
 
   // Todesrettungen: statt Argons greller roter Fläche ein dunkler Schleier in Theme-Farben
