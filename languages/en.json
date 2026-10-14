@@ -27,7 +27,7 @@
       "title": "DnD5e Argon Combat HUD Themer",
       "library": "Theme library",
       "myThemes": "My themes",
-      "builtinThemes": "Ascandir presets",
+      "builtinThemes": "Presets",
       "noCustom": "No custom themes yet.",
       "new": "New theme",
       "newName": "New theme",
@@ -226,9 +226,9 @@
       "middle": "middle (above image, below text)"
     },
     "themes": {
-      "ascandir-gotik": "Ascandir – Gothic & Parchment",
-      "ascandir-schmiede": "Ascandir – Forge & Parchment",
-      "ascandir-pergament": "Ascandir – Parchment & Ink",
+      "ascandir-gotik": "Gothic & Parchment",
+      "ascandir-schmiede": "Forge & Parchment",
+      "ascandir-pergament": "Parchment & Ink",
       "sheet-parchment": "Parchment & Wood",
       "sheet-nightwatch": "Night Watch",
       "sheet-crimson": "Blood Moon",

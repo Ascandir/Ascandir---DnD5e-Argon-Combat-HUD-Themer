@@ -68,7 +68,7 @@ function palette(p) {
 const RAW = [
   {
     id: "ascandir-gotik",
-    name: "Ascandir – Gotik & Pergament",
+    name: "Gotik & Pergament",
     // Rahmen, Pergament, Vorhang, Zierpfeil und Stern: vom Nutzer gezeichnete Grafiken (assets/gothic)
     colors: {
       ...palette({
@@ -152,7 +152,7 @@ const RAW = [
   },
   {
     id: "ascandir-schmiede",
-    name: "Ascandir – Schmiede & Pergament",
+    name: "Schmiede & Pergament",
     colors: {
       ...palette({
         text: "#f0e2c4ff", hoverText: "#fff6e0ff", border: "#6e4c26ff", hoverBorder: "#e0a050ff",
@@ -217,7 +217,7 @@ const RAW = [
 
   {
     id: "ascandir-pergament",
-    name: "Ascandir – Pergament & Tinte",
+    name: "Pergament & Tinte",
     // Pergament für Menü, Tooltip & Portrait; Knöpfe und Leisten in dunkler Tinte,
     // weil Argons Symbole weiß sind und auf hellem Grund verschwinden würden.
     colors: {
