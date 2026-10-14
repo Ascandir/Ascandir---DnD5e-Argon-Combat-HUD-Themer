@@ -16,7 +16,7 @@
       },
       "clientTheme": {
         "name": "My theme",
-        "hint": "Only for you. Only takes effect if the GM allows players to choose."
+        "hint": "Only for you – others keep their own theme. \"As set by the GM\" uses the theme for everyone."
       }
     },
     "choices": {

@@ -1,4 +1,5 @@
-## 0.4.4
+## 0.4.5
 
-- **Nur noch die Spielleitung** kann das Theme für alle festlegen, die Spieler-Auswahl freigeben und den Theme-Editor öffnen – auch wenn Spieler in Foundry das Recht „Einstellungen ändern“ haben.
-- Spieler können weiterhin ihr eigenes Theme wählen, wenn die Spielleitung das erlaubt (gilt nur für sie selbst).
+- **Spieler können immer ihr eigenes Theme wählen** (Einstellungen → „Mein Theme“). Das gilt nur für sie selbst; „Wie vom Spielleiter festgelegt“ übernimmt das Theme für alle.
+- Die Freigabe-Option „Spieler dürfen eigenes Theme wählen“ entfällt.
+- Das Theme für alle und der Theme-Editor bleiben weiterhin nur für die Spielleitung.

@@ -62,14 +62,14 @@ export function registerSettings(EditorClass) {
     onChange: () => applyCurrentTheme(),
   });
 
+  // Früher konnte der SL die eigene Auswahl der Spieler sperren. Jetzt darf jeder
+  // Spieler immer sein eigenes Theme wählen; die Einstellung bleibt nur erhalten, damit
+  // alte Welten keine Fehler werfen.
   game.settings.register(MODULE_ID, S.allowPlayerChoice, {
-    name: `${MODULE_ID}.settings.allowPlayerChoice.name`,
-    hint: `${MODULE_ID}.settings.allowPlayerChoice.hint`,
     scope: "world",
-    config: true,
+    config: false,
     type: Boolean,
-    default: false,
-    onChange: () => applyCurrentTheme(),
+    default: true,
   });
 
   game.settings.register(MODULE_ID, S.clientTheme, {
@@ -95,10 +95,8 @@ export function onRenderSettingsConfig(app, html) {
   // Welt-Theme, Spieler-Freigabe und Editor gehören nur dem SL – auch wenn Spieler
   // in Foundry das Recht „Einstellungen ändern“ haben.
   remove(S.worldTheme);
-  remove(S.allowPlayerChoice);
   root?.querySelector(`[data-key="${MODULE_ID}.${S.editor}"]`)?.closest(".form-group")?.remove();
   root?.querySelector(`button[data-key="${MODULE_ID}.${S.editor}"], button[data-action="openSubmenu"][data-key^="${MODULE_ID}."]`)?.closest(".form-group")?.remove();
-  if (!game.settings.get(MODULE_ID, S.allowPlayerChoice)) remove(S.clientTheme);
 }
 
 /** Welt-Einstellungen dieses Moduls dürfen nur vom SL geändert werden. */
@@ -212,11 +210,9 @@ export function refreshChoices() {
 
 export function resolveActiveThemeId() {
   const worldId = game.settings.get(MODULE_ID, S.worldTheme);
-  if (game.settings.get(MODULE_ID, S.allowPlayerChoice)) {
-    const clientId = game.settings.get(MODULE_ID, S.clientTheme);
-    if (clientId && clientId !== WORLD) {
-      if (clientId === NONE || getTheme(clientId)) return clientId;
-    }
+  const clientId = game.settings.get(MODULE_ID, S.clientTheme);
+  if (clientId && clientId !== WORLD) {
+    if (clientId === NONE || getTheme(clientId)) return clientId;
   }
   return worldId;
 }

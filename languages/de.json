@@ -16,7 +16,7 @@
       },
       "clientTheme": {
         "name": "Mein Theme",
-        "hint": "Nur für dich. Wirkt nur, wenn der Spielleiter die eigene Auswahl erlaubt hat."
+        "hint": "Nur für dich – die anderen sehen weiter ihr eigenes Theme. „Wie vom Spielleiter festgelegt“ übernimmt das Theme für alle."
       }
     },
     "choices": {
